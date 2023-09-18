@@ -10,7 +10,7 @@ public class NodeParser : MonoBehaviour
 
     public DialogueGraph graph;
     Coroutine _parser;
-    public Text speakerText;
+    public TMPro.TMP_Text speakerText;
     public GameObject buttonPrefab;
     public Transform buttonSpawner;
     public List<GameObject> buttonHolder;
@@ -33,6 +33,11 @@ public class NodeParser : MonoBehaviour
         }
         _parser = StartCoroutine(ParseNode());
     }
+
+
+    /// <summary>
+    /// Replace this junk
+    /// </summary>
 
     IEnumerator ParseNode() {
         foreach(GameObject go in buttonHolder) {
@@ -76,6 +81,12 @@ public class NodeParser : MonoBehaviour
     // }
 
     public void NextNode(string fieldName) {
+
+        for (int i = 0; i < buttonHolder.Count; i++) {
+            Destroy(buttonSpawner.GetChild(i).gameObject);
+        }
+
+        buttonHolder.Clear();   
         buttonTracker = 0;
         // find the port
         if(_parser != null) {
@@ -83,10 +94,16 @@ public class NodeParser : MonoBehaviour
             _parser = null;
         }
         foreach(NodePort p in graph.current.Ports) {
-            // check this port is the one we're looking for
-            if (p.fieldName == fieldName) {
-                graph.current = p.Connection.node as BaseNode;
-                break;
+            if (p != null) {
+                // check this port is the one we're looking for
+                if (p.fieldName == fieldName) {
+                    if(p.Connection != null) {
+                        graph.current = p.Connection.node as BaseNode;
+                        break;
+                    } else {
+                        Debug.Log("Ended Dialogue!");
+                    }
+                }
             }
         }
         _parser = StartCoroutine(ParseNode());
