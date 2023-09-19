@@ -10,23 +10,24 @@ public class DialogueNode : BaseNode {
     [Output] public int exitThree;
     [Output] public int exitFour;
 
-    public string speakerName;
-    public string dialogueOne;
-    public string dialogueTwo;
-    public string dialogueThree;
-    public string dialogueFour;
+    public string characterName;
+    public string speech;
+    public string optionOne;
+    public string optionTwo;
+    public string optionThree;
+    public string optionFour;
     public string animationName;
 
     public override string GetString() {
-        string stringBuilder = "DialogueNode/" + speakerName + "/" + dialogueOne;
-        if (dialogueTwo != null) {
-            stringBuilder += "/" + dialogueTwo;
+        string stringBuilder = "DialogueNode/" + characterName + "/" + speech + "/" + optionOne;
+        if (optionTwo != null) {
+            stringBuilder += "/" + optionTwo;
         }
-        if (dialogueThree != null) {
-            stringBuilder += "/" + dialogueThree;
+        if (optionThree != null) {
+            stringBuilder += "/" + optionThree;
         }
-        if (dialogueFour != null) {
-            stringBuilder += "/" + dialogueFour;
+        if (optionFour != null) {
+            stringBuilder += "/" + optionFour;
         }
         return stringBuilder;
     }

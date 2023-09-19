@@ -11,6 +11,7 @@ public class NodeParser : MonoBehaviour
     public DialogueGraph graph;
     Coroutine _parser;
     public TMPro.TMP_Text speakerText;
+    public TMPro.TMP_Text characterText;
     public GameObject buttonPrefab;
     public Transform buttonSpawner;
     public List<GameObject> buttonHolder;
@@ -45,13 +46,15 @@ public class NodeParser : MonoBehaviour
         }
         BaseNode b = graph.current;
         string data = b.GetString();
+        Debug.Log(data);
         string[] dataParts = data.Split('/');
         if (dataParts[0] == "Start") {
             NextNode("exit");
         }
         if (dataParts[0] == "DialogueNode") {
-            speakerText.text = dataParts[1];
-            for (int i = 2; i < 6; i++) {
+            characterText.text = dataParts[1];
+            speakerText.text = dataParts[2];
+            for (int i = 3; i < 7; i++) {
                 if (dataParts[i] != null && dataParts[i] != string.Empty) {
                     string option = dataParts[i];
                     GameObject buttonGO = Instantiate(buttonPrefab, buttonSpawner);

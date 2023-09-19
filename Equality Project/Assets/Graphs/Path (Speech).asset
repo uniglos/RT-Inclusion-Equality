@@ -31,6 +31,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   exit: 0
+  characters:
+  - 
 --- !u!114 &-3143103873055725488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,11 +111,12 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  speakerName: Hello I am Martin
-  dialogueOne: How are you?
-  dialogueTwo: White2
-  dialogueThree: White3
-  dialogueFour: White4
+  characterName: 
+  speech: 
+  optionOne: 
+  optionTwo: 
+  optionThree: 
+  optionFour: 
   animationName: 
 --- !u!114 &-2527660770416666340
 MonoBehaviour:
@@ -190,11 +193,12 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  speakerName: Mia
-  dialogueOne: Green1
-  dialogueTwo: Green2
-  dialogueThree: Green3
-  dialogueFour: Green4
+  characterName: 
+  speech: 
+  optionOne: 
+  optionTwo: 
+  optionThree: 
+  optionFour: 
   animationName: 
 --- !u!114 &-2360784969679328853
 MonoBehaviour:
@@ -271,11 +275,12 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  speakerName: Skylar
-  dialogueOne: Blue1
-  dialogueTwo: Blue2
-  dialogueThree: Blue3
-  dialogueFour: Blue4
+  characterName: 
+  speech: 
+  optionOne: 
+  optionTwo: 
+  optionThree: 
+  optionFour: 
   animationName: 
 --- !u!114 &-2315017653816614006
 MonoBehaviour:
@@ -364,11 +369,12 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  speakerName: Who do you want to talk to?
-  dialogueOne: Rory
-  dialogueTwo: Skylar
-  dialogueThree: Mia
-  dialogueFour: Martin
+  characterName: jo
+  speech: yes
+  optionOne: 1
+  optionTwo: 2
+  optionThree: 3
+  optionFour: 4
   animationName: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -380,7 +386,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4552bc887346c348af62012cea6dc05, type: 3}
-  m_Name: Path
+  m_Name: Path (Speech)
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -2315017653816614006}
@@ -390,7 +396,7 @@ MonoBehaviour:
   - {fileID: -2527660770416666340}
   - {fileID: -3143103873055725488}
   - {fileID: 6295052208476115207}
-  current: {fileID: -3143103873055725488}
+  current: {fileID: -2315017653816614006}
 --- !u!114 &6295052208476115207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,11 +472,12 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  speakerName: I am Good
-  dialogueOne: 
-  dialogueTwo: 
-  dialogueThree: 
-  dialogueFour: 
+  characterName: 
+  speech: 
+  optionOne: 
+  optionTwo: 
+  optionThree: 
+  optionFour: 
   animationName: 
 --- !u!114 &8076199325885367103
 MonoBehaviour:
@@ -547,9 +554,10 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  speakerName: Rory
-  dialogueOne: Red1
-  dialogueTwo: Red2
-  dialogueThree: Red3
-  dialogueFour: Red4
+  characterName: 
+  speech: 
+  optionOne: 
+  optionTwo: 
+  optionThree: 
+  optionFour: 
   animationName: 
