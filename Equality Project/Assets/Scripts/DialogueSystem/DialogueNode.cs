@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
+using static XNode.Node;
+using XnodeDialogue;
+
 
 public class DialogueNode : BaseNode {
+
     [Input] public int entry;
     [Output] public int exitOne;
     [Output] public int exitTwo;
@@ -31,4 +35,7 @@ public class DialogueNode : BaseNode {
         return stringBuilder;
     }
 
+    public override object GetValue(NodePort port) {
+        return null;
+    }
 }

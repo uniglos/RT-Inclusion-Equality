@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
+using XnodeDialogue;
 
 public class NodeParser : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class NodeParser : MonoBehaviour
     public DialogueGraph graph;
     Coroutine _parser;
     public TMPro.TMP_Text speakerText;
+    public GameObject dialoguePanel;
     public GameObject buttonPrefab;
     public Transform buttonSpawner;
     public List<GameObject> buttonHolder;
@@ -101,12 +103,22 @@ public class NodeParser : MonoBehaviour
                         graph.current = p.Connection.node as BaseNode;
                         break;
                     } else {
-                        Debug.Log("Ended Dialogue!");
+                        EndDialogue();
                     }
                 }
             }
         }
         _parser = StartCoroutine(ParseNode());
+    }
 
+    private void EndDialogue() {
+        dialoguePanel.SetActive(false);
+
+        for (int i = 0; i < buttonHolder.Count; i++) {
+            Destroy(buttonSpawner.GetChild(i).gameObject);
+        }
+
+        buttonHolder.Clear();
+        buttonTracker = 0;
     }
 }
