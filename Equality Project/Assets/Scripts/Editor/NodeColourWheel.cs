@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class NodeColourWheel : EditorWindow
 {
-    private static Color nodeColour;
+    private static Color nodeColour = Color.white;
     private static BaseNodeEditor nodeEditor;
 
     public static void Init(BaseNodeEditor editor) {
