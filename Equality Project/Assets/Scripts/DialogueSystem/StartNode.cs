@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
+using XnodeDialogue;
 
 public class StartNode : BaseNode {
 
@@ -10,5 +11,4 @@ public class StartNode : BaseNode {
     public override string GetString() {
         return "Start";
     }
-
 }
