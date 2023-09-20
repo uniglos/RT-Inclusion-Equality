@@ -35,6 +35,7 @@ public class NodeParser : MonoBehaviour
                 break;
             }
         }
+        character.sprite = Resources.Load<Sprite>("Green");
         _parser = StartCoroutine(ParseNode());
     }
 
