@@ -13,10 +13,12 @@ public class NodeParser : MonoBehaviour
     Coroutine _parser;
     public TMPro.TMP_Text speakerText;
     public TMPro.TMP_Text characterText;
+    public Image character;
     public GameObject buttonPrefab;
     public Transform buttonSpawner;
     public List<GameObject> buttonHolder;
     public int buttonTracker;
+    
 
     private void Awake() {
         if(instance == null) {
@@ -55,8 +57,11 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "DialogueNode") {
             characterText.text = dataParts[1];
             speakerText.text = dataParts[2];
-            for (int i = 3; i < 7; i++) {
+            character.sprite = Resources.Load<Sprite>(dataParts[3]);
+            Debug.Log(dataParts[3]);
+            for (int i = 4; i < 8; i++) {
                 if (dataParts[i] != null && dataParts[i] != string.Empty) {
+                    Debug.Log(dataParts[i]);
                     string option = dataParts[i];
                     GameObject buttonGO = Instantiate(buttonPrefab, buttonSpawner);
                     Button button = buttonGO.GetComponent<Button>();
@@ -67,13 +72,13 @@ public class NodeParser : MonoBehaviour
                 }
             }
             yield return new WaitUntil(() => buttonTracker != 0); // change this to wait until the video has stopped playing
-            if(buttonTracker == 2) {
+            if(buttonTracker == 4) {
                 NextNode("exitOne");
-            } else if (buttonTracker == 3) {
-                NextNode("exitTwo");
-            } else if (buttonTracker == 4) {
-                NextNode("exitThree");
             } else if (buttonTracker == 5) {
+                NextNode("exitTwo");
+            } else if (buttonTracker == 6) {
+                NextNode("exitThree");
+            } else if (buttonTracker == 7) {
                 NextNode("exitFour");
             }
         }

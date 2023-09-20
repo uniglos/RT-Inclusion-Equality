@@ -31,8 +31,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   exit: 0
-  characters:
-  - 
 --- !u!114 &-3143103873055725488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,7 +44,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 136, y: 328}
+  position: {x: 248, y: -8}
   ports:
     keys:
     - entry
@@ -60,7 +58,7 @@ MonoBehaviour:
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: exitFour
+      - fieldName: exitThree
         node: {fileID: -2315017653816614006}
         reroutePoints: []
       _direction: 0
@@ -71,10 +69,7 @@ MonoBehaviour:
       _node: {fileID: -3143103873055725488}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: entry
-        node: {fileID: 6295052208476115207}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -111,13 +106,14 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
-  speech: 
+  characterName: Three
+  speech: Hello I am three
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
 --- !u!114 &-2527660770416666340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +127,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 376, y: -24}
+  position: {x: 200, y: 344}
   ports:
     keys:
     - entry
@@ -145,7 +141,7 @@ MonoBehaviour:
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: exitThree
+      - fieldName: exitFour
         node: {fileID: -2315017653816614006}
         reroutePoints: []
       _direction: 0
@@ -193,13 +189,14 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
-  speech: 
+  characterName: 4
+  speech: 44
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
 --- !u!114 &-2360784969679328853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,13 +272,14 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
-  speech: 
+  characterName: Two
+  speech: Hello I am two
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
 --- !u!114 &-2315017653816614006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +344,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -2527660770416666340}
+        node: {fileID: -3143103873055725488}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -358,7 +356,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -3143103873055725488}
+        node: {fileID: -2527660770416666340}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -369,13 +367,14 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: jo
+  characterName: Ja
   speech: yes
   optionOne: 1
   optionTwo: 2
   optionThree: 3
   optionFour: 4
   animationName: 
+  image: {fileID: 2800000, guid: 21584dd181d70d649a1f6218b23d83d0, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +395,7 @@ MonoBehaviour:
   - {fileID: -2527660770416666340}
   - {fileID: -3143103873055725488}
   - {fileID: 6295052208476115207}
-  current: {fileID: -2315017653816614006}
+  current: {fileID: -2360784969679328853}
 --- !u!114 &6295052208476115207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -410,7 +409,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 456, y: 312}
+  position: {x: 568, y: 8}
   ports:
     keys:
     - entry
@@ -423,10 +422,7 @@ MonoBehaviour:
       _node: {fileID: 6295052208476115207}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: exitOne
-        node: {fileID: -3143103873055725488}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -472,13 +468,14 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
+  characterName: Ra
   speech: 
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  image: {fileID: 2800000, guid: 12ecadf50c80f1a4e80fbdcdca63560e, type: 3}
 --- !u!114 &8076199325885367103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,10 +551,11 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
-  speech: 
+  characterName: One
+  speech: Hello I am one
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
