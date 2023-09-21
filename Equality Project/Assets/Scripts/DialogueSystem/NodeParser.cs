@@ -17,6 +17,7 @@ public class NodeParser : MonoBehaviour
     public Image characterL;
     public Image characterM;
     public Image characterR;
+    public Image background;
     public GameObject buttonPrefab;
     public Transform buttonSpawner;
     public List<GameObject> buttonHolder;
@@ -60,20 +61,12 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "DialogueNode") {
             characterText.text = dataParts[1];
             speakerText.text = dataParts[2];
-            if (dataParts[3] != null) {
-                characterL.sprite = Resources.Load<Sprite>("Invis");
-            }
-            if (dataParts[4] != null) {
-                characterL.sprite = Resources.Load<Sprite>("Invis");
-            }
-            if (dataParts[5] != null) {
-                characterL.sprite = Resources.Load<Sprite>("Invis");
-            }
             characterL.sprite = Resources.Load<Sprite>(dataParts[3]);
             characterM.sprite = Resources.Load<Sprite>(dataParts[4]);
             characterR.sprite = Resources.Load<Sprite>(dataParts[5]);
+            background.sprite = Resources.Load<Sprite>(dataParts[6]);
             //Debug.Log(dataParts[3]);
-            for (int i = 6; i < 10; i++) {
+            for (int i = 7; i < 11; i++) {
                 if (dataParts[i] != null && dataParts[i] != string.Empty) {
                     Debug.Log(dataParts[i]);
                     string option = dataParts[i];
@@ -86,13 +79,13 @@ public class NodeParser : MonoBehaviour
                 }
             }
             yield return new WaitUntil(() => buttonTracker != 0); // change this to wait until the video has stopped playing
-            if(buttonTracker == 6) {
+            if(buttonTracker == 7) {
                 NextNode("exitOne");
-            } else if (buttonTracker == 7) {
-                NextNode("exitTwo");
             } else if (buttonTracker == 8) {
-                NextNode("exitThree");
+                NextNode("exitTwo");
             } else if (buttonTracker == 9) {
+                NextNode("exitThree");
+            } else if (buttonTracker == 10) {
                 NextNode("exitFour");
             }
         }

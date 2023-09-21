@@ -24,9 +24,12 @@ public class DialogueNode : BaseNode {
     public Texture2D imageL;
     public Texture2D imageM;
     public Texture2D imageR;
+    public Texture2D background;
+
+
 
     public override string GetString() {
-        string stringBuilder = "DialogueNode/" + characterName + "/" + speech + "/" + imageL.name + "/" + imageM.name + "/"  + imageR.name + "/" + optionOne;
+        string stringBuilder = "DialogueNode/" + characterName + "/" + speech + "/" + imageL.name + "/" + imageM.name + "/"  + imageR.name + "/" + background.name + "/" + optionOne;
         if (optionTwo != null) {
             stringBuilder += "/" + optionTwo;
         }

@@ -116,9 +116,10 @@ MonoBehaviour:
   optionThree: 3
   optionFour: 4
   animationName: 
-  imageL: {fileID: 0}
-  imageM: {fileID: 0}
-  imageR: {fileID: 0}
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &-2527660770416666340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,9 +202,10 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  imageL: {fileID: 0}
-  imageM: {fileID: 0}
-  imageR: {fileID: 0}
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &-2360784969679328853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,9 +288,10 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  imageL: {fileID: 0}
-  imageM: {fileID: 0}
-  imageR: {fileID: 0}
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &-2315017653816614006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,6 +390,7 @@ MonoBehaviour:
   imageL: {fileID: 2800000, guid: 2e3f3ed8041e2e4468099bbd6dd568a4, type: 3}
   imageM: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}
   imageR: {fileID: 2800000, guid: dc4be5cd804a6e841ad87a31d391a0f1, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,9 +494,10 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  imageL: {fileID: 0}
-  imageM: {fileID: 0}
-  imageR: {fileID: 0}
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &8076199325885367103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,6 +580,7 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  imageL: {fileID: 0}
-  imageM: {fileID: 0}
-  imageR: {fileID: 0}
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
