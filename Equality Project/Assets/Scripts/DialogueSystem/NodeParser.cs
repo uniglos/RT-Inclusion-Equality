@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
@@ -35,7 +36,6 @@ public class NodeParser : MonoBehaviour
                 break;
             }
         }
-        character.sprite = Resources.Load<Sprite>("Green");
         _parser = StartCoroutine(ParseNode());
     }
 

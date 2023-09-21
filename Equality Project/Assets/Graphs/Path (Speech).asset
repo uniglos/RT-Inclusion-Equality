@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 248, y: -8}
+  position: {x: 248, y: 120}
   ports:
     keys:
     - entry
@@ -69,7 +69,10 @@ MonoBehaviour:
       _node: {fileID: -3143103873055725488}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: entry
+        node: {fileID: 6295052208476115207}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -108,10 +111,10 @@ MonoBehaviour:
   exitFour: 0
   characterName: Three
   speech: Hello I am three
-  optionOne: 
-  optionTwo: 
-  optionThree: 
-  optionFour: 
+  optionOne: 1
+  optionTwo: 2
+  optionThree: 3
+  optionFour: 4
   animationName: 
   image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
 --- !u!114 &-2527660770416666340
@@ -127,7 +130,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 200, y: 344}
+  position: {x: 248, y: 504}
   ports:
     keys:
     - entry
@@ -210,7 +213,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 376, y: -328}
+  position: {x: 248, y: -264}
   ports:
     keys:
     - entry
@@ -357,7 +360,8 @@ MonoBehaviour:
       connections:
       - fieldName: entry
         node: {fileID: -2527660770416666340}
-        reroutePoints: []
+        reroutePoints:
+        - {x: 64, y: 128}
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -395,7 +399,7 @@ MonoBehaviour:
   - {fileID: -2527660770416666340}
   - {fileID: -3143103873055725488}
   - {fileID: 6295052208476115207}
-  current: {fileID: 8076199325885367103}
+  current: {fileID: -3143103873055725488}
 --- !u!114 &6295052208476115207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,7 +413,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 568, y: 8}
+  position: {x: 536, y: 136}
   ports:
     keys:
     - entry
@@ -422,7 +426,10 @@ MonoBehaviour:
       _node: {fileID: 6295052208476115207}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections: []
+      connections:
+      - fieldName: exitOne
+        node: {fileID: -3143103873055725488}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -489,7 +496,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: -680}
+  position: {x: 248, y: -648}
   ports:
     keys:
     - entry
