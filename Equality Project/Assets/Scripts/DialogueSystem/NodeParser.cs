@@ -14,7 +14,9 @@ public class NodeParser : MonoBehaviour
     Coroutine _parser;
     public TMPro.TMP_Text speakerText;
     public TMPro.TMP_Text characterText;
-    public Image character;
+    public Image characterL;
+    public Image characterM;
+    public Image characterR;
     public GameObject buttonPrefab;
     public Transform buttonSpawner;
     public List<GameObject> buttonHolder;
@@ -50,7 +52,7 @@ public class NodeParser : MonoBehaviour
         }
         BaseNode b = graph.current;
         string data = b.GetString();
-        Debug.Log(data);
+        //Debug.Log(data);
         string[] dataParts = data.Split('/');
         if (dataParts[0] == "Start") {
             NextNode("exit");
@@ -58,9 +60,20 @@ public class NodeParser : MonoBehaviour
         if (dataParts[0] == "DialogueNode") {
             characterText.text = dataParts[1];
             speakerText.text = dataParts[2];
-            character.sprite = Resources.Load<Sprite>(dataParts[3]);
-            Debug.Log(dataParts[3]);
-            for (int i = 4; i < 8; i++) {
+            if (dataParts[3] != null) {
+                characterL.sprite = Resources.Load<Sprite>("Invis");
+            }
+            if (dataParts[4] != null) {
+                characterL.sprite = Resources.Load<Sprite>("Invis");
+            }
+            if (dataParts[5] != null) {
+                characterL.sprite = Resources.Load<Sprite>("Invis");
+            }
+            characterL.sprite = Resources.Load<Sprite>(dataParts[3]);
+            characterM.sprite = Resources.Load<Sprite>(dataParts[4]);
+            characterR.sprite = Resources.Load<Sprite>(dataParts[5]);
+            //Debug.Log(dataParts[3]);
+            for (int i = 6; i < 10; i++) {
                 if (dataParts[i] != null && dataParts[i] != string.Empty) {
                     Debug.Log(dataParts[i]);
                     string option = dataParts[i];
@@ -73,13 +86,13 @@ public class NodeParser : MonoBehaviour
                 }
             }
             yield return new WaitUntil(() => buttonTracker != 0); // change this to wait until the video has stopped playing
-            if(buttonTracker == 4) {
+            if(buttonTracker == 6) {
                 NextNode("exitOne");
-            } else if (buttonTracker == 5) {
-                NextNode("exitTwo");
-            } else if (buttonTracker == 6) {
-                NextNode("exitThree");
             } else if (buttonTracker == 7) {
+                NextNode("exitTwo");
+            } else if (buttonTracker == 8) {
+                NextNode("exitThree");
+            } else if (buttonTracker == 9) {
                 NextNode("exitFour");
             }
         }

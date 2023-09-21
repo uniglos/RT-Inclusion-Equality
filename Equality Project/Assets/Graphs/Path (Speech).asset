@@ -116,7 +116,9 @@ MonoBehaviour:
   optionThree: 3
   optionFour: 4
   animationName: 
-  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
+  imageL: {fileID: 0}
+  imageM: {fileID: 0}
+  imageR: {fileID: 0}
 --- !u!114 &-2527660770416666340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +201,9 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  image: {fileID: 2800000, guid: 12ecadf50c80f1a4e80fbdcdca63560e, type: 3}
+  imageL: {fileID: 0}
+  imageM: {fileID: 0}
+  imageR: {fileID: 0}
 --- !u!114 &-2360784969679328853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +286,9 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
+  imageL: {fileID: 0}
+  imageM: {fileID: 0}
+  imageR: {fileID: 0}
 --- !u!114 &-2315017653816614006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +384,9 @@ MonoBehaviour:
   optionThree: 3
   optionFour: 4
   animationName: 
-  image: {fileID: 2800000, guid: 21584dd181d70d649a1f6218b23d83d0, type: 3}
+  imageL: {fileID: 2800000, guid: 2e3f3ed8041e2e4468099bbd6dd568a4, type: 3}
+  imageM: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}
+  imageR: {fileID: 2800000, guid: dc4be5cd804a6e841ad87a31d391a0f1, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +407,7 @@ MonoBehaviour:
   - {fileID: -2527660770416666340}
   - {fileID: -3143103873055725488}
   - {fileID: 6295052208476115207}
-  current: {fileID: -3143103873055725488}
+  current: {fileID: -2315017653816614006}
 --- !u!114 &6295052208476115207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +490,9 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  image: {fileID: 2800000, guid: 12ecadf50c80f1a4e80fbdcdca63560e, type: 3}
+  imageL: {fileID: 0}
+  imageM: {fileID: 0}
+  imageR: {fileID: 0}
 --- !u!114 &8076199325885367103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,4 +575,6 @@ MonoBehaviour:
   optionThree: 
   optionFour: 
   animationName: 
-  image: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
+  imageL: {fileID: 0}
+  imageM: {fileID: 0}
+  imageR: {fileID: 0}
