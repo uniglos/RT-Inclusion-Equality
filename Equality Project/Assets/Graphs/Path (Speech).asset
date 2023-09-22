@@ -387,8 +387,8 @@ MonoBehaviour:
   optionThree: 3
   optionFour: 4
   animationName: 
-  imageL: {fileID: 2800000, guid: 2e3f3ed8041e2e4468099bbd6dd568a4, type: 3}
-  imageM: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}
+  imageL: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}
+  imageM: {fileID: 2800000, guid: 5cd0ff477ba3e71499d719993cd7b275, type: 3}
   imageR: {fileID: 2800000, guid: dc4be5cd804a6e841ad87a31d391a0f1, type: 3}
   background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &11400000
