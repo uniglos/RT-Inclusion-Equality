@@ -9,10 +9,7 @@ using XnodeDialogue;
 public class DialogueNode : BaseNode {
 
     [Input] public int entry;
-    [Output] public int exitOne;
-    [Output] public int exitTwo;
-    [Output] public int exitThree;
-    [Output] public int exitFour;
+    [Output(dynamicPortList = true)] public string exits;
 
     public string characterName;
     public string speech;

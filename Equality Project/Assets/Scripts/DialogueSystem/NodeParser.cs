@@ -47,7 +47,6 @@ public class NodeParser : MonoBehaviour
         }
         BaseNode b = graph.current;
         string data = b.GetString();
-        Debug.Log(data);
         string[] dataParts = data.Split('/');
         if (dataParts[0] == "Start") {
             NextNode("exit");
