@@ -21,6 +21,8 @@ public class DialogueGraphEditor : NodeGraphEditor
             return base.GetNodeMenuName(type);
         } else if (typeof(StartNode).IsAssignableFrom(type)) {
             return base.GetNodeMenuName(type);
+        } else if (typeof(BackgroundNode).IsAssignableFrom(type)) {
+            return base.GetNodeMenuName(type);
         } else return null;
     }
 
