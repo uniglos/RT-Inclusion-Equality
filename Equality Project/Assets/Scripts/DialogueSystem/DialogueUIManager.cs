@@ -16,6 +16,9 @@ public class DialogueUIManager : MonoBehaviour
     [SerializeField] private GameObject buttonObject;
     [SerializeField] private Transform buttonHolder;
 
+    [Header("Character Images")]
+    [SerializeField] private List<Image> images = new List<Image>();
+
     private List<GameObject> buttons = new List<GameObject>();
 
     private void Awake() {
@@ -55,6 +58,19 @@ public class DialogueUIManager : MonoBehaviour
     /// </summary>
     public void EndDialogue() {
 
+    }
+
+    /// <summary>
+    /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
+    /// </summary>
+    /// <param name="index">The index at the position of where the image should be (0 = left, 1 = centre, 2 = right).</param>
+    public Image GetImage(int index) {
+        if(images.Count < 0 || index < images.Count || images.Count > index) {
+            //ERROR
+            return null;
+        }
+
+        return images[index];
     }
 
     /// <summary>
