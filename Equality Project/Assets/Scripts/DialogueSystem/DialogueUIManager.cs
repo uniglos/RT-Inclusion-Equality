@@ -64,13 +64,50 @@ public class DialogueUIManager : MonoBehaviour
     /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
     /// </summary>
     /// <param name="index">The index at the position of where the image should be (0 = left, 1 = centre, 2 = right).</param>
-    public Image GetImage(int index) {
+    public Image LoadImageAtIndex(int index, Sprite imageSprite) {
         if(images.Count < 0 || index < images.Count || images.Count > index) {
             //ERROR
             return null;
         }
 
+        Image image = images[index];
+        image.sprite = imageSprite;
+
+        return image;
+    }
+
+    /// <summary>
+    /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
+    /// </summary>
+    /// <param name="index">The index at the position of where the image should be (0 = left, 1 = centre, 2 = right).</param>
+    public Image LoadImagesAtIndex(int index, Sprite[] imageSprites) {
+        if (images.Count < 0 || index < images.Count || images.Count > index) {
+            //ERROR
+            return null;
+        }
+
+        int amount = 0;
+
+        foreach(Sprite sprite in imageSprites) {
+            if (amount > 2) {
+                continue;
+            }
+
+            images[amount].sprite = sprite;
+            amount++;
+        }
+
         return images[index];
+    }
+
+    public void ClearImageAtIndex(int index) {
+        images[index].sprite = null;
+    }
+
+    public void ClearAllImages() {
+        foreach(var image in images) {
+            image.sprite = null;    
+        }   
     }
 
     /// <summary>
