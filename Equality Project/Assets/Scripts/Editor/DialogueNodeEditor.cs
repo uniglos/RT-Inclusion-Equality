@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class DialogueNodeEditor : BaseNodeEditor {
 
     private int _speechFieldHeight = 50;
     private bool _isExpanded = false;
+
+    private Vector2 _oldPosition = Vector2.zero;
 
     private List<PropertyActionChanged<DialogueNode>> _propertyActions;
 
@@ -64,7 +67,6 @@ public class DialogueNodeEditor : BaseNodeEditor {
         DialogueNode node = (DialogueNode)target;
 
         list.drawHeaderCallback = (Rect rect) => {
-            //string title = serializedObject.targetObject.name;
             EditorGUI.LabelField(rect, "Answers");
         };
     }
@@ -72,6 +74,10 @@ public class DialogueNodeEditor : BaseNodeEditor {
     private void ExpandSpeechProperty(DialogueNode node) {
         //Expanding the Speech Property
         {
+            if(Selection.objects.Length > 1) {
+                NodeEditorWindow.current.ShowNotification(new GUIContent("Graph Editor: Multiple Node editing is not supported"), 0.5f);
+                return;
+            }
             //Check if the current node is selected. If is not the same node then we don't update the text
             //However this does mean that the user has to select the node
             if (node != Selection.activeObject as DialogueNode) {

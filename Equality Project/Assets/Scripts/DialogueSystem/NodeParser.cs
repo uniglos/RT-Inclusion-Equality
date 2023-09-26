@@ -27,13 +27,18 @@ public class NodeParser : MonoBehaviour
     }
 
     private void Start() {
-        foreach (BaseNode b in graph.nodes) {
-            if (b.GetString() == "Start") {
-                graph.current = b;
-                break;
+        if (graph != null) {
+            foreach (BaseNode b in graph.nodes) {
+                if (b.GetString() == "Start") {
+                    graph.current = b;
+                    break;
+                }
             }
+            _parser = StartCoroutine(ParseNode());
+        } else {
+            Debug.LogError("Node Parser: Graph is null, please assign it in the inspector");
+            return;
         }
-        _parser = StartCoroutine(ParseNode());
     }
 
 
@@ -76,6 +81,8 @@ public class NodeParser : MonoBehaviour
                 NextNode("exitFour");
             }
         }
+
+        yield return null;
     }
 
     // public void OnOptionSelect(Button thisButton) {
