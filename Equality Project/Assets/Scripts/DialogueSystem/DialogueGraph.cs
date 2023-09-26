@@ -6,5 +6,5 @@ using XnodeDialogue;
 
 [CreateAssetMenu]
 public class DialogueGraph : NodeGraph {
-	public BaseNode current;
+
 }

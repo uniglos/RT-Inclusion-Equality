@@ -8,7 +8,10 @@ public class StartNode : BaseNode {
 
     [Output] public int exit;
 
-    public override string GetString() {
-        return "Start";
+    public override BaseNode NextNode() {
+        NodePort port = GetOutputPort("exit");
+        //Gets the next node based on the port connection to the next node
+        BaseNode nextNode = port.Connection.node as DialogueNode;
+        return nextNode as DialogueNode;
     }
 }

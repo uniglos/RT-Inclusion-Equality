@@ -16,8 +16,6 @@ public class DialogueNodeEditor : BaseNodeEditor {
     private int _speechFieldHeight = 50;
     private bool _isExpanded = false;
 
-    private Vector2 _oldPosition = Vector2.zero;
-
     private List<PropertyActionChanged<DialogueNode>> _propertyActions;
 
     private SerializedProperty _speech;
@@ -46,13 +44,12 @@ public class DialogueNodeEditor : BaseNodeEditor {
 
         //Draw Port list
         NodeEditorGUILayout.DynamicPortList(
-            "Answers", 
-            typeof(string), //TODO: Change this to Luca's struct 
+            "exits", 
+            typeof(DialogueNode), //TODO: Change this to Luca's struct 
             serializedObject, 
             NodePort.IO.Output, 
             Node.ConnectionType.Override,
-            Node.TypeConstraint.Strict,
-            OnCreateReorderableList); //Draws foreach port here
+            Node.TypeConstraint.Strict);
 
         //Change the size of the object based on an event system.
         this._propertyActions.ForEach(action => {
