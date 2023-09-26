@@ -21,6 +21,8 @@ public class GraphRunner : MonoBehaviour {
         //Gets next node to the start node and returns what the node type is
         currentNode = (currentNode as StartNode).NextNode();
 
+        currentNode = (currentNode as CharactersNode).NextNode();
+
         if (currentNode is DialogueNode) {
             //Returns the dialogue node based on the button index which is cliked in the list
             DialogueUIManager.Instance.DisplayDialogue(currentNode);
@@ -32,8 +34,15 @@ public class GraphRunner : MonoBehaviour {
     /// Returns the Dialogue node based on the connection to the index
     /// </summary>
     /// <param name="index">The index in the button panel which the user has pressed</param>
-    public DialogueNode AnswerDialogue(int index) {
-        currentNode = (currentNode as DialogueNode).AnswerQuestion(index);
-        return currentNode as DialogueNode;
+    public BaseNode AnswerDialogue(int index) {
+        if (currentNode is DialogueNode) {
+            currentNode = (currentNode as DialogueNode).AnswerQuestion(index);
+            return currentNode as DialogueNode;
+        } else if (currentNode is CharactersNode) {
+            currentNode = (currentNode as CharactersNode).NextNode();
+            return currentNode as CharactersNode;
+        }
+
+        return currentNode;
     }
 }

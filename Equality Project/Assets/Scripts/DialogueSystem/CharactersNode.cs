@@ -7,7 +7,7 @@ using XnodeDialogue;
 public class CharactersNode : BaseNode {
 
     [Input] public int entry;
-    [Output] public int exitOne;
+    [Output] public int exit;
 
     public Texture2D imageL;
     public Texture2D imageM;
@@ -23,4 +23,15 @@ public class CharactersNode : BaseNode {
 	public override object GetValue(NodePort port) {
 		return null; // Replace this
 	}
+
+    public override BaseNode NextNode() {
+        DialogueUIManager.Instance.LoadImageAtIndex(0, imageL);
+        DialogueUIManager.Instance.LoadImageAtIndex(1, imageM);
+        DialogueUIManager.Instance.LoadImageAtIndex(2, imageR);
+
+        NodePort port = GetOutputPort("exit");
+        //Gets the next node based on the port connection to the next node
+        BaseNode nextNode = port.Connection.node as DialogueNode;
+        return nextNode as DialogueNode;
+    }
 }

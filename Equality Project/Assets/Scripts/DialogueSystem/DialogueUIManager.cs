@@ -64,14 +64,16 @@ public class DialogueUIManager : MonoBehaviour
     /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
     /// </summary>
     /// <param name="index">The index at the position of where the image should be (0 = left, 1 = centre, 2 = right).</param>
-    public Image LoadImageAtIndex(int index, Sprite imageSprite) {
-        if(images.Count < 0 || index < images.Count || images.Count > index) {
+    public Image LoadImageAtIndex(int index, Texture2D imageSprite) {
+        if(images.Count < 0) {
             //ERROR
             return null;
         }
 
         Image image = images[index];
-        image.sprite = imageSprite;
+        image.sprite = Sprite.Create(imageSprite, new Rect(0, 0, imageSprite.width, imageSprite.height), Vector2.zero);
+
+        Debug.Log(image.sprite.name);
 
         return image;
     }
