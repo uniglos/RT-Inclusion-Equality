@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -8, y: -8}
+  position: {x: -472, y: -232}
   ports:
     keys:
     - exit
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1064, y: 888}
+  position: {x: 248, y: 120}
   ports:
     keys:
     - entry
@@ -58,7 +58,7 @@ MonoBehaviour:
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: exitFour
+      - fieldName: exitThree
         node: {fileID: -2315017653816614006}
         reroutePoints: []
       _direction: 0
@@ -109,13 +109,17 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
-  speech: 
-  optionOne: 
-  optionTwo: 
-  optionThree: 
-  optionFour: 
+  characterName: Three
+  speech: Hello I am three
+  optionOne: 1
+  optionTwo: 2
+  optionThree: 3
+  optionFour: 4
   animationName: 
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &-2527660770416666340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +133,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1064, y: 360}
+  position: {x: 248, y: 504}
   ports:
     keys:
     - entry
@@ -143,7 +147,7 @@ MonoBehaviour:
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: exitThree
+      - fieldName: exitFour
         node: {fileID: -2315017653816614006}
         reroutePoints: []
       _direction: 0
@@ -191,409 +195,17 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 'Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: '
-  speech: 'Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: '
+  characterName: 4
+  speech: 44
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &-2360784969679328853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,7 +219,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1064, y: -8}
+  position: {x: 248, y: -264}
   ports:
     keys:
     - entry
@@ -669,409 +281,17 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 'Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: '
-  speech: 'Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: '
+  characterName: Two
+  speech: Hello I am two
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &-2315017653816614006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,7 +305,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -8}
+  position: {x: -56, y: -200}
   ports:
     keys:
     - entry
@@ -1136,7 +356,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -2527660770416666340}
+        node: {fileID: -3143103873055725488}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1148,8 +368,9 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -3143103873055725488}
-        reroutePoints: []
+        node: {fileID: -2527660770416666340}
+        reroutePoints:
+        - {x: 64, y: 128}
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1159,15 +380,17 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: '
-
-'
-  speech: "Hello World the cureent \n\n\n\n\n\n\n\n\n"
+  characterName: Ja
+  speech: yes
   optionOne: 1
   optionTwo: 2
   optionThree: 3
   optionFour: 4
   animationName: 
+  imageL: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}
+  imageM: {fileID: 2800000, guid: 5cd0ff477ba3e71499d719993cd7b275, type: 3}
+  imageR: {fileID: 2800000, guid: dc4be5cd804a6e841ad87a31d391a0f1, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,170 +411,7 @@ MonoBehaviour:
   - {fileID: -2527660770416666340}
   - {fileID: -3143103873055725488}
   - {fileID: 6295052208476115207}
-  - {fileID: 5892403255765042398}
-  - {fileID: 724617942935073673}
-  current: {fileID: -2315017653816614006}
---- !u!114 &724617942935073673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60dff0e1d9e50104fb77bb4e6efed371, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1512, y: 1224}
-  ports:
-    keys:
-    - entry
-    - exitOne
-    - exitTwo
-    - exitThree
-    - exitFour
-    values:
-    - _fieldName: entry
-      _node: {fileID: 724617942935073673}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitOne
-      _node: {fileID: 724617942935073673}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitTwo
-      _node: {fileID: 724617942935073673}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitThree
-      _node: {fileID: 724617942935073673}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitFour
-      _node: {fileID: 724617942935073673}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: 0
-  exitOne: 0
-  exitTwo: 0
-  exitThree: 0
-  exitFour: 0
-  characterName: 
-  speech: '
-
-
-'
-  optionOne: 
-  optionTwo: 
-  optionThree: 
-  optionFour: 
-  animationName: 
---- !u!114 &5892403255765042398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60dff0e1d9e50104fb77bb4e6efed371, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1656, y: 728}
-  ports:
-    keys:
-    - entry
-    - exitOne
-    - exitTwo
-    - exitThree
-    - exitFour
-    values:
-    - _fieldName: entry
-      _node: {fileID: 5892403255765042398}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitOne
-      _node: {fileID: 5892403255765042398}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitTwo
-      _node: {fileID: 5892403255765042398}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitThree
-      _node: {fileID: 5892403255765042398}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exitFour
-      _node: {fileID: 5892403255765042398}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  entry: 0
-  exitOne: 0
-  exitTwo: 0
-  exitThree: 0
-  exitFour: 0
-  characterName: 
-  speech: he Helolo
-  optionOne: 
-  optionTwo: 
-  optionThree: 
-  optionFour: 
-  animationName: 
+  current: {fileID: 0}
 --- !u!114 &6295052208476115207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1365,7 +425,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1320, y: 712}
+  position: {x: 536, y: 136}
   ports:
     keys:
     - entry
@@ -1427,13 +487,17 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 
-  speech: Hello World
+  characterName: Ra
+  speech: 
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
 --- !u!114 &8076199325885367103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1447,7 +511,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1064, y: -376}
+  position: {x: 248, y: -648}
   ports:
     keys:
     - entry
@@ -1509,380 +573,14 @@ MonoBehaviour:
   exitTwo: 0
   exitThree: 0
   exitFour: 0
-  characterName: 'Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: Name Here: Name Here: Name Here: Name Here: Name Here: Name Here:
-    Name Here: '
-  speech: 'Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech Here: Speech
-    Here: Speech Here: Speech Here: '
+  characterName: One
+  speech: Hello I am one
   optionOne: 
   optionTwo: 
   optionThree: 
   optionFour: 
   animationName: 
+  imageL: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageM: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageR: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
