@@ -591,6 +591,7 @@ MonoBehaviour:
   - {fileID: 1129760790}
   - {fileID: 1796404600}
   - {fileID: 2051703029}
+  background: {fileID: 550651136}
 --- !u!4 &1017068228
 Transform:
   m_ObjectHideFlags: 0

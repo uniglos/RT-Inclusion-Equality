@@ -21,6 +21,8 @@ public class GraphRunner : MonoBehaviour {
         //Gets next node to the start node and returns what the node type is
         currentNode = (currentNode as StartNode).NextNode();
 
+        currentNode = (currentNode as BackgroundNode).NextNode();
+
         currentNode = (currentNode as CharactersNode).NextNode();
 
         if (currentNode is DialogueNode) {
@@ -37,9 +39,11 @@ public class GraphRunner : MonoBehaviour {
     public BaseNode AnswerDialogue(int index) {
         if (currentNode is DialogueNode) {
             currentNode = (currentNode as DialogueNode).AnswerQuestion(index);
+            Debug.Log("Dia found");
             return currentNode as DialogueNode;
         } else if (currentNode is CharactersNode) {
             currentNode = (currentNode as CharactersNode).NextNode();
+            Debug.Log("character found");
             return currentNode as CharactersNode;
         }
 

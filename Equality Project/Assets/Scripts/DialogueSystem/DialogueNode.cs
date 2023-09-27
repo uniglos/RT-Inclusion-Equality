@@ -6,7 +6,8 @@ using static XNode.Node;
 using XnodeDialogue;
 using UnityEngine.Rendering;
 using System.Linq;
-
+using Unity.VisualScripting;
+using UnityEditor.MemoryProfiler;
 
 public class DialogueNode : BaseNode {
 

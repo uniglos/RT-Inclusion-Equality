@@ -11,7 +11,7 @@ public class StartNode : BaseNode {
     public override BaseNode NextNode() {
         NodePort port = GetOutputPort("exit");
         //Gets the next node based on the port connection to the next node
-        BaseNode nextNode = port.Connection.node as CharactersNode;
-        return nextNode as CharactersNode;
+        BaseNode nextNode = port.Connection.node as BackgroundNode;
+        return nextNode as BackgroundNode;
     }
 }

@@ -7,7 +7,7 @@ using XnodeDialogue;
 public class BackgroundNode : BaseNode {
 
     [Input] public int entry;
-    [Output] public int exitOne;
+    [Output] public int exit;
 
     public Texture2D background;
 
@@ -21,4 +21,13 @@ public class BackgroundNode : BaseNode {
 	public override object GetValue(NodePort port) {
 		return null; // Replace this
 	}
+
+    public override BaseNode NextNode() {
+        DialogueUIManager.Instance.LoadBackground(background);
+
+        NodePort port = GetOutputPort("exit");
+        //Gets the next node based on the port connection to the next node
+        BaseNode nextNode = port.Connection.node as CharactersNode;
+        return nextNode as CharactersNode;
+    }
 }
