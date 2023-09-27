@@ -29,11 +29,8 @@ public class DialogueNode : BaseNode {
         }
 
         if (port != null) {
-            //loop through all the connection and get the node connecting them and return that node
-            for(int i = 0; i < port.ConnectionCount; i++) {
-                NodePort connection = port.GetConnection(i);
-                return connection.node as DialogueNode;
-            }
+			NodePort connection = port.GetConnection(0);
+			return connection.node as DialogueNode;
         }
 
         return null;
