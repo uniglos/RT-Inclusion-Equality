@@ -18,7 +18,6 @@ public class DialogueNode : BaseNode {
     public BaseNode AnswerQuestion(int index) {
         NodePort port = null;
 
-        Debug.Log("Port");
         
         //TODO: Change this to an enum
         if(exits.Count == 0) {
@@ -27,19 +26,15 @@ public class DialogueNode : BaseNode {
         {
             //Get the port according the current port with the index
             port = GetOutputPort("exits " + index);
-
-            Debug.Log(port.fieldName);
         }
-
-        Debug.Log("Port");
 
         if (port != null) {
             //loop through all the connection and get the node connecting them and return that node
             NodePort connection = port.GetConnection(0);
 
-            Debug.Log("Node in Diloauge: " + connection.node.name);
+            Debug.Log("Next Node is: " + connection.Connection.node.name);
 
-            return (connection.node as BaseNode).DetectNodeType(connection);
+            return (connection.Connection.node as BaseNode).DetectNodeType(connection);
         }
 
         return null;

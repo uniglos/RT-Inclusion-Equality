@@ -55,6 +55,8 @@ public class DialogueUIManager : MonoBehaviour
             DisplayImages(node);
         }
 
+        //TODO: Add Background loading
+
         EndRefresh();
     }
 
@@ -146,6 +148,9 @@ public class DialogueUIManager : MonoBehaviour
     private void AnswerButton(GraphRunner runner, int index) {
         //Calls the answer dialogue function in the graph runner
         runner.currentNode = runner.AnswerDialogue(index);
+
+        Debug.Log(runner.currentNode.name);
+
         //Resets the dialogue
         Draw(runner.currentNode);
     }

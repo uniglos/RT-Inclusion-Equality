@@ -31,6 +31,10 @@ public class GraphRunner : MonoBehaviour {
             //Returns the dialogue node based on the button index which is cliked in the list
             DialogueUIManager.Instance.Draw(currentNode);
         }
+
+        if(currentNode is BackgroundNode) {
+            currentNode = (currentNode as BackgroundNode).NextNode();
+        }
     }
 
     /// <summary>
@@ -44,20 +48,19 @@ public class GraphRunner : MonoBehaviour {
                     //Debug.Log("Dialogue Node");
                     (port.Connection.node as DialogueNode).AnswerQuestion(index);
                     DialogueUIManager.Instance.Draw(currentNode);
-                    currentNode = (port.Connection.node as DialogueNode).DetectNodeType(port);
-                    Debug.Log("Current Node is:" + currentNode.name);
+                    Debug.Log("Current Node is: " + currentNode.name);
                     return currentNode;
                 } else if (port.Connection.node is CharactersNode) {
                     currentNode = (port.Connection.node as CharactersNode).DetectNodeType(port);
                     DialogueUIManager.Instance.Draw(currentNode);
                     currentNode.DetectNodeType(port);
-                    Debug.Log("Current Node is:" + currentNode.name);
+                    Debug.Log("Current Node is: " + currentNode.name);
                     return currentNode;
                 } else if (port.Connection.node is BackgroundNode) {
                     currentNode = (port.Connection.node as BackgroundNode).DetectNodeType(port);
                     //DialogueUIManager.Instance.Draw(currentNode);
                     currentNode.DetectNodeType(port);
-                    Debug.Log("Current Node is:" + currentNode.name);
+                    Debug.Log("Current Node is: " + currentNode.name);
                     return currentNode;
                 }
             }

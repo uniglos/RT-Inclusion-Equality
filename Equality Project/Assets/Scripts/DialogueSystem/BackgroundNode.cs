@@ -23,7 +23,8 @@ public class BackgroundNode : BaseNode {
 	}
 
     public override BaseNode NextNode() {
-        DialogueUIManager.Instance.LoadBackground(background);
+        if(background != null)
+            DialogueUIManager.Instance.LoadBackground(background);
 
         NodePort port = GetOutputPort("exit");
         //Gets the next node based on the port connection to the next node
