@@ -4,6 +4,10 @@ using UnityEngine;
 using XNode;
 using XnodeDialogue;
 
+/// <summary>
+/// FIX On the dialogue node remove the Answer Questions and implement the NextNode function
+/// </summary>
+
 public class CharactersNode : BaseNode {
 
     [Input] public int entry;
@@ -27,7 +31,15 @@ public class CharactersNode : BaseNode {
     public override BaseNode NextNode() {
         NodePort port = GetOutputPort("exit");
         //Gets the next node based on the port connection to the next node
+
+        if (port.Connection == null) {
+            return null;
+        }
+
         BaseNode nextNode = (port.Connection.node as BaseNode).DetectNodeType(port);
+        if(nextNode is DialogueNode) { DialogueUIManager.Instance.Draw(nextNode); }
         return nextNode;
+        
+        //Need to clarify when we call the UI instance on each node!
     }
 }

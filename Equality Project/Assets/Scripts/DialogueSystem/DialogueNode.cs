@@ -16,12 +16,11 @@ public class DialogueNode : BaseNode {
     public string speech;
 
     public BaseNode AnswerQuestion(int index) {
-        NodePort port = null;
+        NodePort port = null; 
 
-        
         //TODO: Change this to an enum
         if(exits.Count == 0) {
-            Debug.LogError("Exits is zero!");
+            return null;
         }else if(exits.Count > 0)
         {
             //Get the port according the current port with the index

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.UI;
 using XnodeDialogue;
@@ -22,6 +23,8 @@ public class DialogueUIManager : MonoBehaviour
     [Header("Background Image")]
     [SerializeField] private Image background;
 
+    public bool ShouldRefresh {  get; set; }
+
     private List<GameObject> buttons = new List<GameObject>();
 
     private void Awake() {
@@ -42,11 +45,14 @@ public class DialogueUIManager : MonoBehaviour
             DialogueGraphLogger.Log("UI Manager Instance: Has not been created, please add it to the scene!", DialogueGraphLogger.ELogError.Error);
             return;
         }
-        
+
         //UI Elements should be drawn within the StartRefresh and EndRefresh functions
-        StartRefresh();
-        
-        if(node is DialogueNode) {
+
+        if (ShouldRefresh) {
+            StartRefresh();
+        }
+
+        if (node is DialogueNode) {
             DisplayText(node);
             DisplayButtons(node);
         }
@@ -81,9 +87,10 @@ public class DialogueUIManager : MonoBehaviour
     /// Clears the old UI of the screen
     /// </summary>
     private void StartRefresh() {
+
         buttons.Clear();
 
-        foreach(Transform child in buttonHolder) {
+        foreach (Transform child in buttonHolder) {
             Destroy(child.gameObject);
         }
 
@@ -104,6 +111,7 @@ public class DialogueUIManager : MonoBehaviour
     private void DisplayText(BaseNode node) {
         DialogueNode dialogueNode = (DialogueNode)node;
         characterText.text = dialogueNode.characterName;
+        Debug.Log(characterText.text);
         speechText.text = dialogueNode.speech;
     }
 
@@ -146,10 +154,10 @@ public class DialogueUIManager : MonoBehaviour
     }
 
     private void AnswerButton(GraphRunner runner, int index) {
+        Debug.Log("Cleared Buttons!");
+
         //Calls the answer dialogue function in the graph runner
         runner.currentNode = runner.AnswerDialogue(index);
-
-        Debug.Log(runner.currentNode.name);
 
         //Resets the dialogue
         Draw(runner.currentNode);

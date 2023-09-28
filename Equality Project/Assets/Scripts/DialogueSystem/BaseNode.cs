@@ -29,19 +29,26 @@ namespace XnodeDialogue {
 
             if (port.Connection.node is DialogueNode) {
                 DialogueUIManager.Instance.Draw(port.Connection.node as DialogueNode);
-                return this as DialogueNode;
+                return port.Connection.node as DialogueNode;
             }
 
             if (port.Connection.node is CharactersNode characterNode) {
-                DialogueUIManager.Instance.Draw(characterNode);
+                //DialogueUIManager.Instance.Draw(characterNode);
                 characterNode.NextNode();
-                return this as CharactersNode;
+                return port.Connection.node as CharactersNode;
             }
 
             if (port.Connection.node is BackgroundNode backgroundNode) {
                 backgroundNode.NextNode();
                 //DialogueUIManager.Instance.Draw(port.Connection.node as BackgroundNode);
-                return this as BackgroundNode;
+                return port.Connection.node as BackgroundNode;
+            }
+
+            //End Dialogue
+
+            if (port.Connection.node == null) {
+                Debug.Log("Ended Dialogue");
+                return null;
             }
 
             return null;

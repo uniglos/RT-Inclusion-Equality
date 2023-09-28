@@ -16,6 +16,12 @@ public class GraphRunner : MonoBehaviour {
         RunGraph();
     }
 
+    private void Update() {
+        if (currentNode != null) {
+            //DialogueUIManager.Instance.Draw(currentNode);
+        }
+    }
+
     public void RunGraph() {
         //Find the first node in the graph
         currentNode = graph.nodes.Find(n => n is StartNode) as BaseNode;
@@ -25,11 +31,6 @@ public class GraphRunner : MonoBehaviour {
 
         if (currentNode is CharactersNode) {
             currentNode = (currentNode as CharactersNode).NextNode();
-        }
-
-        if (currentNode is DialogueNode) {
-            //Returns the dialogue node based on the button index which is cliked in the list
-            DialogueUIManager.Instance.Draw(currentNode);
         }
 
         if(currentNode is BackgroundNode) {
@@ -44,22 +45,21 @@ public class GraphRunner : MonoBehaviour {
     public BaseNode AnswerDialogue(int index) {
         if (currentNode != null) {
             foreach (var port in currentNode.Ports) {
+
                 if (port.Connection.node is DialogueNode) {
                     //Debug.Log("Dialogue Node");
-                    (port.Connection.node as DialogueNode).AnswerQuestion(index);
+                    currentNode = (port.Connection.node as DialogueNode).AnswerQuestion(index);
                     DialogueUIManager.Instance.Draw(currentNode);
                     Debug.Log("Current Node is: " + currentNode.name);
                     return currentNode;
                 } else if (port.Connection.node is CharactersNode) {
                     currentNode = (port.Connection.node as CharactersNode).DetectNodeType(port);
-                    DialogueUIManager.Instance.Draw(currentNode);
-                    currentNode.DetectNodeType(port);
+                    //DialogueUIManager.Instance.Draw(currentNode);
                     Debug.Log("Current Node is: " + currentNode.name);
                     return currentNode;
                 } else if (port.Connection.node is BackgroundNode) {
                     currentNode = (port.Connection.node as BackgroundNode).DetectNodeType(port);
                     //DialogueUIManager.Instance.Draw(currentNode);
-                    currentNode.DetectNodeType(port);
                     Debug.Log("Current Node is: " + currentNode.name);
                     return currentNode;
                 }
