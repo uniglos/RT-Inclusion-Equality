@@ -24,7 +24,7 @@ namespace XnodeDialogue {
         public BaseNode DetectNodeType(NodePort port) {
 
             if (port.Connection.node is StartNode) {
-                return this as StartNode;
+                return port.Connection.node as StartNode;
             }
 
             if (port.Connection.node is DialogueNode) {
@@ -33,14 +33,14 @@ namespace XnodeDialogue {
             }
 
             if (port.Connection.node is CharactersNode characterNode) {
-                //DialogueUIManager.Instance.Draw(characterNode);
+                DialogueUIManager.Instance.Draw(characterNode);
                 characterNode.NextNode();
                 return port.Connection.node as CharactersNode;
             }
 
             if (port.Connection.node is BackgroundNode backgroundNode) {
+                DialogueUIManager.Instance.Draw(port.Connection.node as BackgroundNode);
                 backgroundNode.NextNode();
-                //DialogueUIManager.Instance.Draw(port.Connection.node as BackgroundNode);
                 return port.Connection.node as BackgroundNode;
             }
 

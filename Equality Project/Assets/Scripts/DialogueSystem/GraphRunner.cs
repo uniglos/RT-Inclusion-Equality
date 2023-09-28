@@ -44,7 +44,7 @@ public class GraphRunner : MonoBehaviour {
     /// <param name="index">The index in the button panel which the user has pressed</param>
     public BaseNode AnswerDialogue(int index) {
         if (currentNode != null) {
-            foreach (var port in currentNode.Ports) {
+            foreach (var port in currentNode.Outputs) {
 
                 if (port.Connection.node is DialogueNode) {
                     //Debug.Log("Dialogue Node");
