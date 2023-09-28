@@ -26,6 +26,7 @@ namespace XnodeDialogue {
             if (port.Connection.node is StartNode) {
                 return this as StartNode;
             }
+
             if (port.Connection.node is DialogueNode) {
                 DialogueUIManager.Instance.Draw(port.Connection.node as DialogueNode);
                 return this as DialogueNode;
@@ -33,6 +34,12 @@ namespace XnodeDialogue {
 
             if (port.Connection.node is CharactersNode) {
                 DialogueUIManager.Instance.Draw(port.Connection.node as CharactersNode);
+                return this;
+            }
+
+            if (port.Connection.node is BackgroundNode backgroundNode) {
+                backgroundNode.NextNode();
+                //DialogueUIManager.Instance.Draw(port.Connection.node as BackgroundNode);
                 return this;
             }
 
