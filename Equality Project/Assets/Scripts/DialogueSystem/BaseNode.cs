@@ -20,6 +20,24 @@ namespace XnodeDialogue {
             DialogueGraphLogger.Log("Node Error: NextNode function should be overriden!", DialogueGraphLogger.ELogError.Warning);
             return null;
         }
+
+        public BaseNode DetectNodeType(NodePort port) {
+
+            if (port.Connection.node is StartNode) {
+                return this as StartNode;
+            }
+            if (port.Connection.node is DialogueNode) {
+                DialogueUIManager.Instance.Draw(port.Connection.node as DialogueNode);
+                return this as DialogueNode;
+            }
+
+            if (port.Connection.node is CharactersNode) {
+                DialogueUIManager.Instance.Draw(port.Connection.node as CharactersNode);
+                return this;
+            }
+
+            return null;
+        }
     }
 }
 

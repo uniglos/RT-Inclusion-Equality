@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
-using static XNode.Node;
 using XnodeDialogue;
 using UnityEngine.Rendering;
 using System.Linq;
@@ -16,7 +15,7 @@ public class DialogueNode : BaseNode {
     public string characterName;
     public string speech;
 
-    public DialogueNode AnswerQuestion(int index) {
+    public BaseNode AnswerQuestion(int index) {
         NodePort port = null;
 
         //TODO: Change this to an enum
@@ -30,10 +29,11 @@ public class DialogueNode : BaseNode {
 
         if (port != null) {
             //loop through all the connection and get the node connecting them and return that node
-            for(int i = 0; i < port.ConnectionCount; i++) {
-                NodePort connection = port.GetConnection(i);
-                return connection.node as DialogueNode;
-            }
+            NodePort connection = port.GetConnection(0);
+
+            Debug.Log("Node in Diloauge: " + connection.node.name);
+
+            return (connection.node as BaseNode).DetectNodeType(connection);
         }
 
         return null;

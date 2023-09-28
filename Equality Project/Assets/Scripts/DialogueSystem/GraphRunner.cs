@@ -4,12 +4,13 @@ using Unity.VisualScripting;
 using UnityEngine;
 using XnodeDialogue;
 using XNodeEditor;
+using System.Linq;
 
 public class GraphRunner : MonoBehaviour {
 
     [SerializeField] private DialogueGraph graph;
 
-    [HideInInspector] public BaseNode currentNode = null;
+    public BaseNode currentNode = null;
 
     private void Start() {
         RunGraph();
@@ -18,16 +19,18 @@ public class GraphRunner : MonoBehaviour {
     public void RunGraph() {
         //Find the first node in the graph
         currentNode = graph.nodes.Find(n => n is StartNode) as BaseNode;
+
         //Gets next node to the start node and returns what the node type is
         currentNode = (currentNode as StartNode).NextNode();
 
-        currentNode = (currentNode as CharactersNode).NextNode();
+        if (currentNode is CharactersNode) {
+            currentNode = (currentNode as CharactersNode).NextNode();
+        }
 
         if (currentNode is DialogueNode) {
             //Returns the dialogue node based on the button index which is cliked in the list
-            DialogueUIManager.Instance.DisplayDialogue(currentNode);
+            DialogueUIManager.Instance.Draw(currentNode);
         }
-
     }
 
     /// <summary>
@@ -35,14 +38,26 @@ public class GraphRunner : MonoBehaviour {
     /// </summary>
     /// <param name="index">The index in the button panel which the user has pressed</param>
     public BaseNode AnswerDialogue(int index) {
-        if (currentNode is DialogueNode) {
-            currentNode = (currentNode as DialogueNode).AnswerQuestion(index);
-            return currentNode as DialogueNode;
-        } else if (currentNode is CharactersNode) {
-            currentNode = (currentNode as CharactersNode).NextNode();
-            return currentNode as CharactersNode;
+        if (currentNode != null) {
+            foreach (var port in currentNode.Ports) {
+                if (port.Connection.node is DialogueNode) {
+                    //Debug.Log("Dialogue Node");
+                    (port.Connection.node as DialogueNode).AnswerQuestion(index);
+                    DialogueUIManager.Instance.Draw(currentNode);
+                    currentNode = (port.Connection.node as DialogueNode).DetectNodeType(port);
+                    Debug.Log("Current Node is:" + currentNode.name);
+                    return currentNode;
+                } else if (port.Connection.node is CharactersNode) {
+                    currentNode = (port.Connection.node as CharactersNode).DetectNodeType(port);
+                    DialogueUIManager.Instance.Draw(currentNode);
+                    currentNode.DetectNodeType(port);
+                    return currentNode;
+                }
+            }
         }
 
-        return currentNode;
+        Debug.Log("Current Node is null");
+
+        return null;
     }
 }

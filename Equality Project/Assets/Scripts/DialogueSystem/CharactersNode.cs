@@ -25,13 +25,9 @@ public class CharactersNode : BaseNode {
 	}
 
     public override BaseNode NextNode() {
-        DialogueUIManager.Instance.LoadImageAtIndex(0, imageL);
-        DialogueUIManager.Instance.LoadImageAtIndex(1, imageM);
-        DialogueUIManager.Instance.LoadImageAtIndex(2, imageR);
-
         NodePort port = GetOutputPort("exit");
         //Gets the next node based on the port connection to the next node
-        BaseNode nextNode = port.Connection.node as DialogueNode;
-        return nextNode as DialogueNode;
+        BaseNode nextNode = (port.Connection.node as BaseNode).DetectNodeType(port); ;
+        return nextNode;
     }
 }

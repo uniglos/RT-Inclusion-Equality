@@ -33,24 +33,26 @@ public class DialogueUIManager : MonoBehaviour
     /// Dislays the Text and Buttons (if any) on the screen
     /// </summary>
     /// <param name="node">The current selected node</param>
-    public void DisplayDialogue(BaseNode node) {
+    public void Draw(BaseNode node) {
 
         if(Instance == null) {
             DialogueGraphLogger.Log("UI Manager Instance: Has not been created, please add it to the scene!", DialogueGraphLogger.ELogError.Error);
             return;
         }
         
+        //UI Elements should be drawn within the StartRefresh and EndRefresh functions
+        StartRefresh();
+        
         if(node is DialogueNode) {
-
-            //UI Elements should be drawn within the StartRefresh and EndRefresh functions
-            StartRefresh();
-
             DisplayText(node);
             DisplayButtons(node);
-
-            EndRefresh();
         }
 
+        if(node is CharactersNode) {
+            DisplayImages(node);
+        }
+
+        EndRefresh();
     }
 
     /// <summary>
@@ -58,48 +60,6 @@ public class DialogueUIManager : MonoBehaviour
     /// </summary>
     public void EndDialogue() {
 
-    }
-
-    /// <summary>
-    /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
-    /// </summary>
-    /// <param name="index">The index at the position of where the image should be (0 = left, 1 = centre, 2 = right).</param>
-    public Image LoadImageAtIndex(int index, Texture2D imageSprite) {
-        if(images.Count < 0) {
-            //ERROR
-            return null;
-        }
-
-        Image image = images[index];
-        image.sprite = Sprite.Create(imageSprite, new Rect(0, 0, imageSprite.width, imageSprite.height), Vector2.zero);
-
-        Debug.Log(image.sprite.name);
-
-        return image;
-    }
-
-    /// <summary>
-    /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
-    /// </summary>
-    /// <param name="index">The index at the position of where the image should be (0 = left, 1 = centre, 2 = right).</param>
-    public Image LoadImagesAtIndex(int index, Sprite[] imageSprites) {
-        if (images.Count < 0 || index < images.Count || images.Count > index) {
-            //ERROR
-            return null;
-        }
-
-        int amount = 0;
-
-        foreach(Sprite sprite in imageSprites) {
-            if (amount > 2) {
-                continue;
-            }
-
-            images[amount].sprite = sprite;
-            amount++;
-        }
-
-        return images[index];
     }
 
     public void ClearImageAtIndex(int index) {
@@ -166,10 +126,61 @@ public class DialogueUIManager : MonoBehaviour
         }
     }
 
+    private void DisplayImages(BaseNode node) {
+        if(node is not CharactersNode) {
+            return;
+        }
+
+        CharactersNode charactersNode = (CharactersNode)node;
+
+        ClearAllImages();
+        
+        LoadImageAtIndex(0, charactersNode.imageL);
+        LoadImageAtIndex(1, charactersNode.imageM);
+        LoadImageAtIndex(2, charactersNode.imageR);
+    }
+
     private void AnswerButton(GraphRunner runner, int index) {
         //Calls the answer dialogue function in the graph runner
         runner.currentNode = runner.AnswerDialogue(index);
         //Resets the dialogue
-        DisplayDialogue(runner.currentNode);
+        Draw(runner.currentNode);
+    }
+
+    /// <summary>
+    /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
+    /// </summary>
+    private Image LoadImageAtIndex(int index, Texture2D imageSprite) {
+        if (images.Count < 0) {
+            DialogueGraphLogger.Log("Loading Image Fatal Error: The image array on UIManager object has not be assigned!", DialogueGraphLogger.ELogError.Error);
+            return null;
+        }
+
+        Image image = images[index];
+        image.sprite = Sprite.Create(imageSprite, new Rect(0, 0, imageSprite.width, imageSprite.height), Vector2.zero);
+        return image;
+    }
+
+    /// <summary>
+    /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
+    /// </summary>
+    private Image LoadImagesAtIndex(int index, Sprite[] imageSprites) {
+        if (images.Count < 0 || index < images.Count || images.Count > index) {
+            DialogueGraphLogger.Log("Loading Image Fatal Error: The image array on UIManager object has not be assigned!", DialogueGraphLogger.ELogError.Error);
+            return null;
+        }
+
+        int amount = 0;
+
+        foreach (Sprite sprite in imageSprites) {
+            if (amount > 2) {
+                continue;
+            }
+
+            images[amount].sprite = sprite;
+            amount++;
+        }
+
+        return images[index];
     }
 }
