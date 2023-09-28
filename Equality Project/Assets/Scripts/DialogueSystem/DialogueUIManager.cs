@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class DialogueUIManager : MonoBehaviour
 
     [Header("Character Images")]
     [SerializeField] private List<Image> images = new List<Image>();
+    [Header("Background Image")]
+    [SerializeField] private Image background;
 
     private List<GameObject> buttons = new List<GameObject>();
 
@@ -182,5 +185,14 @@ public class DialogueUIManager : MonoBehaviour
         }
 
         return images[index];
+    }
+
+    public Image LoadBackground(Texture2D backgroundSprite) {
+
+        background.sprite = Sprite.Create(backgroundSprite, new Rect(0, 0, backgroundSprite.width, backgroundSprite.height), Vector2.zero);
+
+        Debug.Log(background.sprite.name);
+
+        return background;
     }
 }
