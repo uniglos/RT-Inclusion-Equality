@@ -30,9 +30,6 @@ public class DialogueNode : BaseNode {
         if (port != null) {
             //loop through all the connection and get the node connecting them and return that node
             NodePort connection = port.GetConnection(0);
-
-            Debug.Log("Next Node is: " + connection.Connection.node.name);
-
             return (connection.Connection.node as BaseNode).DetectNodeType(connection);
         }
 

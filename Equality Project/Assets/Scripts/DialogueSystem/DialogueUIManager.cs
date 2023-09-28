@@ -47,10 +47,7 @@ public class DialogueUIManager : MonoBehaviour
         }
 
         //UI Elements should be drawn within the StartRefresh and EndRefresh functions
-
-        if (ShouldRefresh) {
-            StartRefresh();
-        }
+        StartRefresh();
 
         if (node is DialogueNode) {
             DisplayText(node);
@@ -93,9 +90,6 @@ public class DialogueUIManager : MonoBehaviour
         foreach (Transform child in buttonHolder) {
             Destroy(child.gameObject);
         }
-
-        characterText.text = string.Empty;
-        speechText.text = string.Empty;
     }
 
     /// <summary>
@@ -111,7 +105,6 @@ public class DialogueUIManager : MonoBehaviour
     private void DisplayText(BaseNode node) {
         DialogueNode dialogueNode = (DialogueNode)node;
         characterText.text = dialogueNode.characterName;
-        Debug.Log(characterText.text);
         speechText.text = dialogueNode.speech;
     }
 
@@ -154,8 +147,6 @@ public class DialogueUIManager : MonoBehaviour
     }
 
     private void AnswerButton(GraphRunner runner, int index) {
-        Debug.Log("Cleared Buttons!");
-
         //Calls the answer dialogue function in the graph runner
         runner.currentNode = runner.AnswerDialogue(index);
 
