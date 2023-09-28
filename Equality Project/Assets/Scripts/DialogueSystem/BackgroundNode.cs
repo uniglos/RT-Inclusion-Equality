@@ -27,7 +27,7 @@ public class BackgroundNode : BaseNode {
 
         NodePort port = GetOutputPort("exit");
         //Gets the next node based on the port connection to the next node
-        BaseNode nextNode = port.Connection.node as CharactersNode;
-        return nextNode as CharactersNode;
+        BaseNode nextNode = (port.Connection.node as BaseNode).DetectNodeType(port);
+        return nextNode;
     }
 }

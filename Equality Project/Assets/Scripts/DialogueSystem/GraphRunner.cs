@@ -51,6 +51,13 @@ public class GraphRunner : MonoBehaviour {
                     currentNode = (port.Connection.node as CharactersNode).DetectNodeType(port);
                     DialogueUIManager.Instance.Draw(currentNode);
                     currentNode.DetectNodeType(port);
+                    Debug.Log("Current Node is:" + currentNode.name);
+                    return currentNode;
+                } else if (port.Connection.node is BackgroundNode) {
+                    currentNode = (port.Connection.node as BackgroundNode).DetectNodeType(port);
+                    //DialogueUIManager.Instance.Draw(currentNode);
+                    currentNode.DetectNodeType(port);
+                    Debug.Log("Current Node is:" + currentNode.name);
                     return currentNode;
                 }
             }

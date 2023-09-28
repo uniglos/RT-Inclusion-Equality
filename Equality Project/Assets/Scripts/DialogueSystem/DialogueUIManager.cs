@@ -191,8 +191,6 @@ public class DialogueUIManager : MonoBehaviour
 
         background.sprite = Sprite.Create(backgroundSprite, new Rect(0, 0, backgroundSprite.width, backgroundSprite.height), Vector2.zero);
 
-        Debug.Log(background.sprite.name);
-
         return background;
     }
 }
