@@ -587,6 +587,11 @@ MonoBehaviour:
   speechText: {fileID: 1873447325}
   buttonObject: {fileID: 3102500559854669764, guid: 0f09120be8c1d154ea81fbfbb4ca04bc, type: 3}
   buttonHolder: {fileID: 326830376}
+  images:
+  - {fileID: 1129760790}
+  - {fileID: 1796404600}
+  - {fileID: 2051703029}
+  background: {fileID: 550651136}
 --- !u!4 &1017068228
 Transform:
   m_ObjectHideFlags: 0
