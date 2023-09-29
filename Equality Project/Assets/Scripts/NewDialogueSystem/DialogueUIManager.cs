@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
@@ -50,7 +51,7 @@ namespace Dialogue {
 
         public void ClearAllImages() {
             foreach (var image in images) {
-                image.sprite = null;
+                image.gameObject.SetActive(false);
             }
         }
 
@@ -100,9 +101,15 @@ namespace Dialogue {
 
             ClearAllImages();
 
-            LoadImageAtIndex(0, charactersNode.imageL);
-            LoadImageAtIndex(1, charactersNode.imageM);
-            LoadImageAtIndex(2, charactersNode.imageR);
+            if(charactersNode.imageL != null) {
+                LoadImageAtIndex(0, charactersNode.imageL);
+            }
+            if(charactersNode.imageM != null) {
+                LoadImageAtIndex(1, charactersNode.imageM);
+            }
+            if (charactersNode.imageR != null) {
+                LoadImageAtIndex(2, charactersNode.imageR);
+            }
         }
 
        
@@ -120,6 +127,7 @@ namespace Dialogue {
 
             Image image = images[index];
             image.sprite = Sprite.Create(imageSprite, new Rect(0, 0, imageSprite.width, imageSprite.height), Vector2.zero);
+            image.gameObject.SetActive(true);
             return image;
         }
 

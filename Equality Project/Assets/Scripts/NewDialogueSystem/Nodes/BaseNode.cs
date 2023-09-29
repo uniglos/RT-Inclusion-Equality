@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using XNode;
 
 namespace Dialogue {
@@ -20,8 +21,13 @@ namespace Dialogue {
             foreach (NodePort port in this.Ports) {
                 if(port.fieldName == exit) {
                     //Node we have found
-                    node = port.Connection.node as BaseNode;
-                    break;
+                    if(port.Connection != null) {
+                        node = port.Connection.node as BaseNode;
+                        break;
+                    } else {
+                        Debug.LogError("Cannot find next avaible port: Please make sure that all ports are connected.");
+                    }
+
                 }
             }
 
