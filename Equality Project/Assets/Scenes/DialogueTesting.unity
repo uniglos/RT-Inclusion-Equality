@@ -411,10 +411,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 509725618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55f797622c38e4a4fb895d216b6b6881, type: 3}
+  m_Script: {fileID: 11500000, guid: 3392a00b440a3d24ba9b11efb9607259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graph: {fileID: 11400000, guid: 9f16786a18aef0f4bbbb27ae4b154cee, type: 2}
+  graph: {fileID: 11400000, guid: 304172967b9f5104e928ab75fb848504, type: 2}
   currentNode: {fileID: 0}
 --- !u!1 &550651134
 GameObject:
@@ -592,6 +592,8 @@ MonoBehaviour:
   - {fileID: 1796404600}
   - {fileID: 2051703029}
   background: {fileID: 550651136}
+  <ShouldRefresh>k__BackingField: 0
+  buttons: []
 --- !u!4 &1017068228
 Transform:
   m_ObjectHideFlags: 0
