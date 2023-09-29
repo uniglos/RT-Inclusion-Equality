@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
-using XNodeEditor;
 
 namespace Dialogue {
     public class DialogueUIManager : MonoBehaviour {
