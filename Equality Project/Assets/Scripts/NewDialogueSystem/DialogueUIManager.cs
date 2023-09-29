@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
-using XNodeEditor;
 
 namespace Dialogue {
     public class DialogueUIManager : MonoBehaviour {
@@ -133,7 +131,9 @@ namespace Dialogue {
 
         public Image LoadBackground(Texture2D backgroundSprite) {
 
-            background.sprite = Sprite.Create(backgroundSprite, new Rect(0, 0, backgroundSprite.width, backgroundSprite.height), Vector2.zero);
+            if (backgroundSprite != null) {
+                background.sprite = Sprite.Create(backgroundSprite, new Rect(0, 0, backgroundSprite.width, backgroundSprite.height), Vector2.zero);
+            }
 
             return background;
         }
