@@ -1,5 +1,53 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7604247560053376042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cf1ad251130b841af9af3cc0c39277, type: 3}
+  m_Name: Characters
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 684.01794, y: -386.035}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7604247560053376042}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exits 0
+        node: {fileID: -3462501339131891713}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -7604247560053376042}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -1817165980134557846}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  imageL: {fileID: 2800000, guid: 5cd0ff477ba3e71499d719993cd7b275, type: 3}
+  imageM: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
+  imageR: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}
 --- !u!114 &-3462501339131891713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,7 +61,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 168, y: -248}
+  position: {x: 328, y: -248}
   ports:
     keys:
     - entry
@@ -27,7 +75,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: -2798792977081820197}
+        node: {fileID: 1879047742599048718}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -49,7 +97,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -1817165980134557846}
+        node: {fileID: -7604247560053376042}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -86,7 +134,7 @@ MonoBehaviour:
   m_Name: Debug
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 552, y: -136}
+  position: {x: 1032, y: -120}
   ports:
     keys:
     - value
@@ -118,7 +166,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -152, y: -248}
+  position: {x: -312, y: -248}
   ports:
     keys:
     - exit
@@ -129,7 +177,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -3462501339131891713}
+        node: {fileID: 1879047742599048718}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -149,19 +197,20 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 552, y: -392}
+  position: {x: 1032, y: -376}
   ports:
     keys:
     - entry
     - exits
+    - exits 0
     values:
     - _fieldName: entry
       _node: {fileID: -1817165980134557846}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
-      - fieldName: exits 0
-        node: {fileID: -3462501339131891713}
+      - fieldName: exit
+        node: {fileID: -7604247560053376042}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -177,8 +226,22 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: exits 0
+      _node: {fileID: -1817165980134557846}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 1879047742599048718}
+        reroutePoints:
+        - {x: 446.01794, y: -448.035}
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   entry: 0
-  exits: []
+  exits:
+  - Return
   character: James
   speech: Very good to meet you as well
 --- !u!114 &11400000
@@ -198,3 +261,56 @@ MonoBehaviour:
   - {fileID: -3462501339131891713}
   - {fileID: -3199239671323295643}
   - {fileID: -1817165980134557846}
+  - {fileID: 1879047742599048718}
+  - {fileID: -7604247560053376042}
+--- !u!114 &1879047742599048718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72cf1ad251130b841af9af3cc0c39277, type: 3}
+  m_Name: Characters
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -72, y: -248}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 1879047742599048718}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: -2798792977081820197}
+        reroutePoints: []
+      - fieldName: exits 0
+        node: {fileID: -1817165980134557846}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 1879047742599048718}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -3462501339131891713}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  imageL: {fileID: 2800000, guid: c5c02b0d25fede14d9639e182f7c0cd2, type: 3}
+  imageM: {fileID: 2800000, guid: dc4be5cd804a6e841ad87a31d391a0f1, type: 3}
+  imageR: {fileID: 2800000, guid: 72ff80fd19317e94ebb6b9f0234f13dc, type: 3}

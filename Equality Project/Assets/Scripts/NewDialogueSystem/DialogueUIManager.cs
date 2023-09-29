@@ -131,7 +131,7 @@ namespace Dialogue {
             }
         }
 
-        /*private void DisplayImages(BaseNode node) {
+        public void DisplayImages(BaseNode node) {
             if (node is not CharactersNode) {
                 return;
             }
@@ -143,7 +143,7 @@ namespace Dialogue {
             LoadImageAtIndex(0, charactersNode.imageL);
             LoadImageAtIndex(1, charactersNode.imageM);
             LoadImageAtIndex(2, charactersNode.imageR);
-        }*/
+        }
 
         private void AnswerButton(BaseNode node, int index) {
             node.NextNode("exits " + index);
