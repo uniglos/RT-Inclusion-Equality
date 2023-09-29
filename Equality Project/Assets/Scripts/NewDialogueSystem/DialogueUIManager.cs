@@ -38,34 +38,6 @@ namespace Dialogue {
         }
 
         /// <summary>
-        /// Dislays the Text and Buttons (if any) on the screen
-        /// </summary>
-        /// <param name="node">The current selected node</param>
-        public void Draw(BaseNode node) {
-
-            //if (Instance == null) {
-            //    DialogueGraphLogger.Log("UI Manager Instance: Has not been created, please add it to the scene!", DialogueGraphLogger.ELogError.Error);
-            //    return;
-            //}
-            //
-            ////UI Elements should be drawn within the StartRefresh and EndRefresh functions
-            //StartRefresh();
-            //
-            //if (node is DialogueNode) {
-            //    DisplayText(node);
-            //    DisplayButtons(node);
-            //}
-            //
-            //if (node is CharactersNode) {
-            //    DisplayImages(node);
-            //}
-            //
-            ////TODO: Add Background loading
-            //
-            //EndRefresh();
-        }
-
-        /// <summary>
         /// Ends the Dialogue
         /// </summary>
         public void EndDialogue() {
@@ -80,25 +52,6 @@ namespace Dialogue {
             foreach (var image in images) {
                 image.sprite = null;
             }
-        }
-
-        /// <summary>
-        /// Clears the old UI of the screen
-        /// </summary>
-        private void StartRefresh() {
-
-            buttons.Clear();
-
-            foreach (Transform child in buttonHolder) {
-                Destroy(child.gameObject);
-            }
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private void EndRefresh() {
-
         }
 
         /// <summary>

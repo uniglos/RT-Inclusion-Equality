@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Characters
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 684.01794, y: -386.035}
+  position: {x: 584, y: -280}
   ports:
     keys:
     - entry
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 328, y: -248}
+  position: {x: 232, y: -232}
   ports:
     keys:
     - entry
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Name: Debug
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1032, y: -120}
+  position: {x: 584, y: -72}
   ports:
     keys:
     - value
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1032, y: -376}
+  position: {x: 888, y: -264}
   ports:
     keys:
     - entry
@@ -230,11 +230,7 @@ MonoBehaviour:
       _node: {fileID: -1817165980134557846}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: entry
-        node: {fileID: 1879047742599048718}
-        reroutePoints:
-        - {x: 446.01794, y: -448.035}
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -276,7 +272,7 @@ MonoBehaviour:
   m_Name: Characters
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -72, y: -248}
+  position: {x: -56, y: -248}
   ports:
     keys:
     - entry
@@ -289,9 +285,6 @@ MonoBehaviour:
       connections:
       - fieldName: exit
         node: {fileID: -2798792977081820197}
-        reroutePoints: []
-      - fieldName: exits 0
-        node: {fileID: -1817165980134557846}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
