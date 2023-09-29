@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using XNodeEditor;
 
 namespace DialogueEditor {
     public class DialogueGraphPanel : EditorWindow {
@@ -25,6 +26,8 @@ namespace DialogueEditor {
                 serializedNames = new UnityEditor.SerializedObject(characterNames);
 
                 characterNamesProperty = serializedNames.FindProperty("characterNames");
+            } else {
+                //TODO: Create Asset here
             }
         }
 
@@ -37,6 +40,10 @@ namespace DialogueEditor {
                 serializedNames.ApplyModifiedProperties();
 
             } else {
+                GUIStyle style = GUI.skin.textArea;
+                style.wordWrap = true;
+
+                EditorGUILayout.LabelField("Character Names asset has not been found: Please create one", style);
             }
         }
 
