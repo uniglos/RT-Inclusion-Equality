@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Characters
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 8, y: -136}
+  position: {x: -56, y: -248}
   ports:
     keys:
     - entry
@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -296, y: -136}
+  position: {x: -360, y: -248}
   ports:
     keys:
     - exit
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: 104}
+  position: {x: 568, y: -8}
   ports:
     keys:
     - entry
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: -120}
+  position: {x: 568, y: -232}
   ports:
     keys:
     - entry
@@ -208,7 +208,7 @@ MonoBehaviour:
   exits:
   - 
   characterName: Hello World
-  speech: Hey
+  speech: 
 --- !u!114 &4655958706163792184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 280, y: -120}
+  position: {x: 216, y: -232}
   ports:
     keys:
     - entry
