@@ -5,10 +5,6 @@ using UnityEngine;
 using XNode;
 using static XNode.Node;
 
-/// <summary>
-/// FIX On the dialogue node remove the Answer Questions and implement the NextNode function
-/// </summary>
-
 namespace Dialogue {
     public class BackgroundNode : BaseNode {
 
