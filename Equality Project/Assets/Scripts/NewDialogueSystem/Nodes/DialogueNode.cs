@@ -14,7 +14,6 @@ namespace Dialogue {
         public override void Run() {
             DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.DisplayButtons(this);
-            NextNode("exit");
         }
     }
 }

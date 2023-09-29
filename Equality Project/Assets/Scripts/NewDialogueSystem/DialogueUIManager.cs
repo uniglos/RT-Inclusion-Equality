@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
@@ -115,6 +116,12 @@ namespace Dialogue {
        public void DisplayButtons(BaseNode node) {
             DialogueNode dialogueNode = (DialogueNode)node;
 
+            buttons.Clear();
+
+            foreach (Transform child in buttonHolder) {
+                Destroy(child.gameObject);
+            }
+
             int index = 0;
 
             //Loops through the exits in the dialogue node
@@ -145,6 +152,7 @@ namespace Dialogue {
             LoadImageAtIndex(2, charactersNode.imageR);
         }
 
+       
         private void AnswerButton(BaseNode node, int index) {
             node.NextNode("exits " + index);
         }
@@ -160,28 +168,6 @@ namespace Dialogue {
             Image image = images[index];
             image.sprite = Sprite.Create(imageSprite, new Rect(0, 0, imageSprite.width, imageSprite.height), Vector2.zero);
             return image;
-        }
-
-        /// <summary>
-        /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
-        /// </summary>
-        private Image LoadImagesAtIndex(int index, Sprite[] imageSprites) {
-            if (images.Count < 0 || index < images.Count || images.Count > index) {
-                return null;
-            }
-
-            int amount = 0;
-
-            foreach (Sprite sprite in imageSprites) {
-                if (amount > 2) {
-                    continue;
-                }
-
-                images[amount].sprite = sprite;
-                amount++;
-            }
-
-            return images[index];
         }
 
         public Image LoadBackground(Texture2D backgroundSprite) {
