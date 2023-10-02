@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using XNode;
 
-namespace Dialogue {
+namespace Dialogue.Internal {
     public class DebugNode : BaseNode {
 
         [Input] public int value;
@@ -13,6 +13,5 @@ namespace Dialogue {
             Debug.Log(text);
         }
     }
-
 }
 

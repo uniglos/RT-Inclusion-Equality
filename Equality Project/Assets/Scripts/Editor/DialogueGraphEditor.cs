@@ -8,9 +8,9 @@ namespace DialogueEditor {
     [CustomNodeGraphEditor(typeof(DialogueGraph))]
     public class DialogueGraphEditor : NodeGraphEditor {
         public override string GetNodeMenuName(Type type) {
-            //if (type.BaseType != typeof(BaseNode)) {
-            //	return null;
-            //}
+            if (type.BaseType != typeof(BaseNode)) {
+            	return null;
+            }
 
             return base.GetNodeMenuName(type);
         }
