@@ -9,27 +9,27 @@ using XNode;
 using XNodeEditor;
 
 namespace DialogueEditor {
-    [CustomNodeEditor(typeof(DialogueQuestionNode))]
-    public class DialogueQuestionNodeEditor : BaseNodeEditor {
+    [CustomNodeEditor(typeof(QuestionNode))]
+    public class QuestionNodeEditor : BaseNodeEditor {
 
         private int _speechFieldHeight = 50;
         private bool _isExpanded = false;
 
-        private List<PropertyActionChanged<DialogueQuestionNode>> _propertyActions;
+        private List<PropertyActionChanged<QuestionNode>> _propertyActions;
 
         private SerializedProperty _speech;
 
         public override void OnCreate() {
             _speech = serializedObject.FindProperty("speech");
 
-            this._propertyActions = new List<PropertyActionChanged<DialogueQuestionNode>>
+            this._propertyActions = new List<PropertyActionChanged<QuestionNode>>
     {
-            new PropertyActionChanged<DialogueQuestionNode>(_speech, ExpandSpeechProperty),
+            new PropertyActionChanged<QuestionNode>(_speech, ExpandSpeechProperty),
         };
         }
 
         public override void OnBodyGUI() {
-            DialogueQuestionNode node = (DialogueQuestionNode)target;
+            QuestionNode node = (QuestionNode)target;
 
             serializedObject.Update();
 
@@ -43,7 +43,7 @@ namespace DialogueEditor {
             //Draw Port list
             NodeEditorGUILayout.DynamicPortList(
                 "exits",
-                typeof(DialogueNode), //TODO: Change this to Luca's struct 
+                typeof(QuestionNode), //TODO: Change this to Luca's struct 
                 serializedObject,
                 NodePort.IO.Output,
                 Node.ConnectionType.Override,
@@ -59,19 +59,19 @@ namespace DialogueEditor {
 
         private void OnCreateReorderableList(ReorderableList list) {
             // Override drawHeaderCallback to display node's name instead
-            DialogueNode node = (DialogueNode)target;
+            QuestionNode node = (QuestionNode)target;
 
             list.drawHeaderCallback = (Rect rect) => {
                 EditorGUI.LabelField(rect, "Answers");
             };
         }
 
-        private void ExpandSpeechProperty(DialogueQuestionNode node) {
+        private void ExpandSpeechProperty(QuestionNode node) {
             //Expanding the Speech Property
             {
                 //Check if the current node is selected. If is not the same node then we don't update the text
                 //However this does mean that the user has to select the node
-                if (node != Selection.activeObject as DialogueNode) {
+                if (node != Selection.activeObject as QuestionNode) {
                     _speechFieldHeight = 50;
                     _isExpanded = false;
                     return;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Dialogue {
-    public class DialogueQuestionNode : BaseNode {
+    public class QuestionNode : BaseNode {
         [Input()] public int entry;
         
         public string character;

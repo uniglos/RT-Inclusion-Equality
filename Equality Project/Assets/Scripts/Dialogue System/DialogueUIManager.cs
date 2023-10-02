@@ -57,8 +57,8 @@ namespace Dialogue {
         /// Dispalys Text on the screen
         /// </summary>
         public void DisplayText(BaseNode node) {
-            if (node is DialogueQuestionNode) {
-                DialogueQuestionNode dialogueNode = (DialogueQuestionNode)node;
+            if (node is QuestionNode) {
+                QuestionNode dialogueNode = (QuestionNode)node;
                 characterText.text = dialogueNode.character;
                 speechText.text = dialogueNode.speech;
             } else if (node is DialogueNode) {
@@ -72,7 +72,7 @@ namespace Dialogue {
         /// Displays the buttons on the screen
         /// </summary>
         public void DisplayButtons(BaseNode node) {
-            DialogueQuestionNode dialogueNode = (DialogueQuestionNode)node;
+            QuestionNode dialogueNode = (QuestionNode)node;
 
             buttons.Clear();
 
