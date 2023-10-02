@@ -9,8 +9,9 @@ namespace Dialogue.Internal {
         [Input] public int value;
         public string text;
 
-        public override void Run() {
+        public override IEnumerator Run() {
             Debug.Log(text);
+            yield return null;
         }
     }
 }

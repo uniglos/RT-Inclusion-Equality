@@ -15,13 +15,14 @@ namespace Dialogue {
         [Input] public int entry;
         [Output] public int exit;
 
-        public Texture2D imageL;
-        public Texture2D imageM;
-        public Texture2D imageR;
+        public Texture2D imageLeft;
+        public Texture2D imageMiddle;
+        public Texture2D imageRight;
 
-        public override void Run() {
+        public override IEnumerator Run() {
             DialogueUIManager.Instance.DisplayImages(this);
             NextNode("exit");
+            yield return null;
         }
     }
 }

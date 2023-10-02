@@ -13,8 +13,9 @@ namespace Dialogue {
 
         public Texture2D background;
 
-        public override void Run() {
+        public override IEnumerator Run() {
             DialogueUIManager.Instance.LoadBackground(background);
+            yield return null;
             NextNode("exit");
         }
     }

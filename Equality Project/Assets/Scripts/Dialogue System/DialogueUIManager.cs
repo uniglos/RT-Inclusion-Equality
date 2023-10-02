@@ -56,17 +56,23 @@ namespace Dialogue {
         /// <summary>
         /// Dispalys Text on the screen
         /// </summary>
-       public void DisplayText(BaseNode node) {
-            DialogueNode dialogueNode = (DialogueNode)node;
-            characterText.text = dialogueNode.character;
-            speechText.text = dialogueNode.speech;
+        public void DisplayText(BaseNode node) {
+            if (node is DialogueQuestionNode) {
+                DialogueQuestionNode dialogueNode = (DialogueQuestionNode)node;
+                characterText.text = dialogueNode.character;
+                speechText.text = dialogueNode.speech;
+            } else if (node is DialogueNode) {
+                DialogueNode dialogueNode = (DialogueNode)node;
+                characterText.text = dialogueNode.character;
+                speechText.text = dialogueNode.speech;
+            }
         }
 
         /// <summary>
         /// Displays the buttons on the screen
         /// </summary>
-       public void DisplayButtons(BaseNode node) {
-            DialogueNode dialogueNode = (DialogueNode)node;
+        public void DisplayButtons(BaseNode node) {
+            DialogueQuestionNode dialogueNode = (DialogueQuestionNode)node;
 
             buttons.Clear();
 
@@ -99,18 +105,18 @@ namespace Dialogue {
 
             ClearAllImages();
 
-            if(charactersNode.imageL != null) {
-                LoadImageAtIndex(0, charactersNode.imageL);
+            if (charactersNode.imageLeft != null) {
+                LoadImageAtIndex(0, charactersNode.imageLeft);
             }
-            if(charactersNode.imageM != null) {
-                LoadImageAtIndex(1, charactersNode.imageM);
+            if (charactersNode.imageMiddle != null) {
+                LoadImageAtIndex(1, charactersNode.imageMiddle);
             }
-            if (charactersNode.imageR != null) {
-                LoadImageAtIndex(2, charactersNode.imageR);
+            if (charactersNode.imageRight != null) {
+                LoadImageAtIndex(2, charactersNode.imageRight);
             }
         }
 
-       
+
         private void AnswerButton(BaseNode node, int index) {
             node.NextNode("exits " + index);
         }

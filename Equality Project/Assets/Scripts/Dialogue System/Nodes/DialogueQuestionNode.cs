@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Dialogue {
-    public class DialogueNode : BaseNode {
-
-        [Input] public int entry;
-        [Output] public int exit;
-
+    public class DialogueQuestionNode : BaseNode {
+        [Input()] public int entry;
+        
         public string character;
         public string speech;
 
+        [Output(dynamicPortList = true)] public List<string> exits = new List<string>();
+
         public override IEnumerator Run() {
             DialogueUIManager.Instance.DisplayText(this);
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-            NextNode("exit");
+            DialogueUIManager.Instance.DisplayButtons(this);
+            yield return null;
         }
     }
 }
-
-

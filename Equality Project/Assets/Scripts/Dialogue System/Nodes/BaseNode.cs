@@ -10,8 +10,9 @@ namespace Dialogue {
             base.Init();
         }
 
-        public virtual void Run() {
+        public virtual IEnumerator Run() {
             Debug.Log("Running Node!");
+            yield return null;
             NextNode("exit");
         }
 
@@ -34,7 +35,7 @@ namespace Dialogue {
             if (node != null) {
                 DialogueGraph graph = this.graph as DialogueGraph;
                 graph.CurrentNode = node;
-                graph.Run();
+                GraphRunner.Current.Run();
             }
         }
     }

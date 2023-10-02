@@ -8,7 +8,8 @@ namespace Dialogue {
 
         [Output()] public int exit;
 
-        public override void Run() {
+        public override IEnumerator Run() {
+            yield return null;
             NextNode("exit");
         }
     }

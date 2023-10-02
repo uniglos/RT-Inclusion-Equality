@@ -11,11 +11,6 @@ namespace Dialogue {
 
         public void StartGraph(BaseNode startNode) {
             CurrentNode = startNode;
-            Run();
-        }
-
-        public void Run() {
-            CurrentNode.Run();
         }
     }
 }

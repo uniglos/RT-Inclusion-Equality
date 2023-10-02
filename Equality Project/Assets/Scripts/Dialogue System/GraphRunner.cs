@@ -8,8 +8,21 @@ namespace Dialogue {
 
         [SerializeField] public DialogueGraph graph;
 
+        public static GraphRunner Current { get; private set; }
+
         private void Start() {
-            graph.StartGraph(graph.nodes.Find(n => n is StartNode) as BaseNode);
+            Current = this;
+            //Finds the first node in the graph
+            foreach(BaseNode node in graph.nodes) {
+                if(node is StartNode) {
+                    graph.StartGraph(node);
+                    StartCoroutine(node.Run());
+                }
+            }
+        }
+
+        public void Run() {
+            StartCoroutine(graph.CurrentNode.Run());
         }
     }
 }

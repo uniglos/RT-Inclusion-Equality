@@ -9,28 +9,27 @@ using XNode;
 using XNodeEditor;
 
 namespace DialogueEditor {
-    [CustomNodeEditor(typeof(DialogueNode))]
-    public class DialogueNodeEditor : BaseNodeEditor {
+    [CustomNodeEditor(typeof(DialogueQuestionNode))]
+    public class DialogueQuestionNodeEditor : BaseNodeEditor {
 
         private int _speechFieldHeight = 50;
         private bool _isExpanded = false;
 
-        private List<PropertyActionChanged<DialogueNode>> _propertyActions;
+        private List<PropertyActionChanged<DialogueQuestionNode>> _propertyActions;
 
         private SerializedProperty _speech;
 
         public override void OnCreate() {
             _speech = serializedObject.FindProperty("speech");
 
-            this._propertyActions = new List<PropertyActionChanged<DialogueNode>>
+            this._propertyActions = new List<PropertyActionChanged<DialogueQuestionNode>>
     {
-            new PropertyActionChanged<DialogueNode>(_speech, ExpandSpeechProperty),
+            new PropertyActionChanged<DialogueQuestionNode>(_speech, ExpandSpeechProperty),
         };
         }
 
         public override void OnBodyGUI() {
-
-            DialogueNode node = (DialogueNode)target;
+            DialogueQuestionNode node = (DialogueQuestionNode)target;
 
             serializedObject.Update();
 
@@ -67,7 +66,7 @@ namespace DialogueEditor {
             };
         }
 
-        private void ExpandSpeechProperty(DialogueNode node) {
+        private void ExpandSpeechProperty(DialogueQuestionNode node) {
             //Expanding the Speech Property
             {
                 //Check if the current node is selected. If is not the same node then we don't update the text
