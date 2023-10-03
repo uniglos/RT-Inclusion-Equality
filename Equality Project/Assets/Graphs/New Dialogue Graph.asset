@@ -328,7 +328,7 @@ MonoBehaviour:
       - fieldName: entry
         node: {fileID: 1879047742599048718}
         reroutePoints:
-        - {x: 382.54517, y: 127.49502}
+        - {x: 384, y: 128}
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -600, y: -264}
+  position: {x: -648, y: -264}
   ports:
     keys:
     - exit
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 312, y: -264}
+  position: {x: 312, y: -248}
   ports:
     keys:
     - entry
@@ -669,6 +669,7 @@ MonoBehaviour:
   exit: 0
   character: ...
   speech: Hey.. I need your help!
+  mouseColour: {r: 0, g: 0.8023877, b: 1, a: 1}
 --- !u!114 &8534876875604231978
 MonoBehaviour:
   m_ObjectHideFlags: 0

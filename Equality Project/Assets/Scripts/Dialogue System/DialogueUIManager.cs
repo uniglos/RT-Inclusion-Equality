@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
@@ -19,6 +20,8 @@ namespace Dialogue {
         [SerializeField] private GameObject buttonObject;
         [SerializeField] private Transform buttonHolder;
 
+        [SerializeField] private GameObject mouseIcon;
+
         [Header("Character Images")]
         [SerializeField] private List<Image> images = new List<Image>();
         [Header("Background Image")]
@@ -27,6 +30,8 @@ namespace Dialogue {
         public bool ShouldRefresh { get; set; }
 
         private List<GameObject> buttons = new List<GameObject>();
+
+        private Color mouseColour = Color.white;
 
         private void Awake() {
             if (Instance == null) {
@@ -143,6 +148,19 @@ namespace Dialogue {
 
             return background;
         }
+
+        public void ChangeColour(Color colour) {
+            mouseColour = colour;
+            mouseIcon.GetComponent<Image>().color = new Color(mouseColour.r, mouseColour.g, mouseColour.b, mouseColour.a);
+        }
+
+        public void SetMouseIconActive(bool active) {
+            if (mouseIcon) {
+                mouseIcon.SetActive(active);
+            }
+        }
+
+        
     }
 
 }

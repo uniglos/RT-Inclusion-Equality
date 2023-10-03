@@ -1,9 +1,10 @@
+using Dialogue;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using XNodeEditor;
-
+[CustomNodeEditor(typeof(BaseNode))]
 public class BaseNodeEditor : NodeEditor
 {
     private Color nodeColour = Color.gray;
