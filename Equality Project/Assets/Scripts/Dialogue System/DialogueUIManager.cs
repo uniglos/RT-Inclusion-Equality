@@ -20,7 +20,7 @@ namespace Dialogue {
         [SerializeField] private GameObject buttonObject;
         [SerializeField] private Transform buttonHolder;
 
-        [SerializeField] private GameObject mouseIcon;
+        [SerializeField] private Image mouseIcon;
 
         [Header("Character Images")]
         [SerializeField] private List<Image> images = new List<Image>();
@@ -156,11 +156,9 @@ namespace Dialogue {
 
         public void SetMouseIconActive(bool active) {
             if (mouseIcon) {
-                mouseIcon.SetActive(active);
+                mouseIcon.enabled = active;
             }
         }
-
-        
     }
 
 }

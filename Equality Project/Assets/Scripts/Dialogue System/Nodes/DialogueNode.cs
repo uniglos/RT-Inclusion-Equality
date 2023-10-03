@@ -21,7 +21,6 @@ namespace Dialogue {
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             NextNode("exit");
             DialogueUIManager.Instance.SetMouseIconActive(false);
-            DialogueUIManager.Instance.ChangeColour(Color.white);
         }
 
 
