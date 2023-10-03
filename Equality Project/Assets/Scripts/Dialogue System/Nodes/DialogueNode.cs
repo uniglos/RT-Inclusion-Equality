@@ -15,6 +15,7 @@ namespace Dialogue {
         public Color mouseColour;
 
         public override IEnumerator Run() {
+            DialogueUIManager.Instance.ClearButton();
             DialogueUIManager.Instance.SetMouseIconActive(true);
             DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.ChangeColour(mouseColour);

@@ -73,6 +73,15 @@ namespace Dialogue {
             }
         }
 
+        public void ClearButton()
+        {
+            buttons.Clear();
+
+            foreach (Transform child in buttonHolder) {
+                Destroy(child.gameObject);
+            }
+        }
+
         /// <summary>
         /// Displays the buttons on the screen
         /// </summary>
