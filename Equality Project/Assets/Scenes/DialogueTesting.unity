@@ -835,11 +835,11 @@ Animation:
   m_GameObject: {fileID: 1540601093}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 8dd8a1ad603efac47bbaa57ea5f81e9d, type: 2}
+  m_Animation: {fileID: 7400000, guid: 2525d275db7c420428722ed910eeceb3, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 2525d275db7c420428722ed910eeceb3, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 0
+  m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
 --- !u!1 &1591203820
