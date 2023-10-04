@@ -13,12 +13,15 @@ namespace Dialogue {
         public string character;
         public string speech;
         public Color fingerColour;
+        public Color textColour;
+        public Color nameColour;
 
         public override IEnumerator Run() {
             DialogueUIManager.Instance.ClearButton();
             DialogueUIManager.Instance.SetMouseIconActive(true);
             DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.ChangeColour(fingerColour);
+            DialogueUIManager.Instance.SetColour(nameColour, textColour);
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             NextNode("exit");
             DialogueUIManager.Instance.SetMouseIconActive(false);

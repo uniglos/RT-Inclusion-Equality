@@ -20,7 +20,7 @@ namespace Dialogue {
         [SerializeField] private GameObject buttonObject;
         [SerializeField] private Transform buttonHolder;
 
-        [SerializeField] private Image mouseIcon;
+        [SerializeField] private Image fingerIcon;
 
         [Header("Character Images")]
         [SerializeField] private List<Image> images = new List<Image>();
@@ -32,6 +32,8 @@ namespace Dialogue {
         private List<GameObject> buttons = new List<GameObject>();
 
         private Color fingerColour = Color.white;
+        private Color textColour = Color.white;
+        private Color nameColour = Color.white;
 
         private void Awake() {
             if (Instance == null) {
@@ -160,12 +162,19 @@ namespace Dialogue {
 
         public void ChangeColour(Color colour) {
             fingerColour = colour;
-            mouseIcon.GetComponent<Image>().color = new Color(fingerColour.r, fingerColour.g, fingerColour.b, fingerColour.a);
+            fingerIcon.GetComponent<Image>().color = new Color(fingerColour.r, fingerColour.g, fingerColour.b, fingerColour.a);
+        }
+
+        public void SetColour(Color Ncolour, Color colour) {
+            nameColour = Ncolour;
+            characterText.GetComponent<TMPro.TMP_Text>().color = new Color(nameColour.r, nameColour.g, nameColour.b, 1);
+            textColour = colour;
+            speechText.GetComponent<TMPro.TMP_Text>().color = new Color(textColour.r, textColour.g, textColour.b, 1);
         }
 
         public void SetMouseIconActive(bool active) {
-            if (mouseIcon) {
-                mouseIcon.enabled = active;
+            if (fingerIcon) {
+                fingerIcon.enabled = active;
             }
         }
     }
