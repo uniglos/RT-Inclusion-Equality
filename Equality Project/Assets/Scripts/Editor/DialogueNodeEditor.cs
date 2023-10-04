@@ -33,7 +33,7 @@ namespace Dialogue {
 
             EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
             EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("mouseColour"));
+            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
 
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("exit"));
             

@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: Question
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1976, y: -392}
+  position: {x: 2328, y: -392}
   ports:
     keys:
     - entry
@@ -72,7 +72,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: -7863795040202025321}
+        node: {fileID: 5338453606239727926}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -106,6 +106,54 @@ MonoBehaviour:
   speech: Ready to restart
   exits:
   - Return
+--- !u!114 &-7928953159337221062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e571c19c07fce468c356c9087136ab, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 312, y: -264}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -7928953159337221062}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 1879047742599048718}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -7928953159337221062}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 2350727214068701711}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  character: ...
+  speech: Hey.. I need your help!
+  fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
 --- !u!114 &-7863795040202025321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +191,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -8212824086208886953}
+        node: {fileID: 5338453606239727926}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -291,7 +339,7 @@ MonoBehaviour:
   m_Name: Question
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1976, y: -136}
+  position: {x: 2328, y: -136}
   ports:
     keys:
     - entry
@@ -304,7 +352,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: 8742330148275108583}
+        node: {fileID: 7100337924731504735}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -486,12 +534,14 @@ MonoBehaviour:
   - {fileID: -7863795040202025321}
   - {fileID: 8742330148275108583}
   - {fileID: -2137497597794675930}
-  - {fileID: 4705333749467806607}
   - {fileID: 2350727214068701711}
   - {fileID: 8534876875604231978}
   - {fileID: -5180030236870841224}
   - {fileID: -8212824086208886953}
   - {fileID: -4539270031964382747}
+  - {fileID: -7928953159337221062}
+  - {fileID: 5338453606239727926}
+  - {fileID: 7100337924731504735}
 --- !u!114 &1879047742599048718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,7 +588,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: 4705333749467806607}
+        node: {fileID: -7928953159337221062}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -546,9 +596,9 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  imageLeft: {fileID: 2800000, guid: 7bba764b6315b064f928eacd30eeb771, type: 3}
-  imageMiddle: {fileID: 0}
-  imageRight: {fileID: 2800000, guid: caff2d161b5ac0544ba724527d940845, type: 3}
+  imageLeft: {fileID: 2800000, guid: 21584dd181d70d649a1f6218b23d83d0, type: 3}
+  imageMiddle: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageRight: {fileID: 2800000, guid: 7f34a7e25b445884d9f4f72238aa1ef0, type: 3}
 --- !u!114 &2350727214068701711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +626,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: 4705333749467806607}
+        node: {fileID: -7928953159337221062}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -621,8 +671,8 @@ MonoBehaviour:
   speech: Hello I am james
   exits:
   - Nice to meet you
-  - Go to Jake
---- !u!114 &4705333749467806607
+  - Go to Next person
+--- !u!114 &5338453606239727926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -635,31 +685,31 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 312, y: -248}
+  position: {x: 1976, y: -392}
   ports:
     keys:
     - entry
     - exit
     values:
     - _fieldName: entry
-      _node: {fileID: 4705333749467806607}
+      _node: {fileID: 5338453606239727926}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: 1879047742599048718}
+        node: {fileID: -7863795040202025321}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: exit
-      _node: {fileID: 4705333749467806607}
+      _node: {fileID: 5338453606239727926}
       _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: 2350727214068701711}
+        node: {fileID: -8212824086208886953}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -669,7 +719,55 @@ MonoBehaviour:
   exit: 0
   character: ...
   speech: Hey.. I need your help!
-  mouseColour: {r: 0, g: 0.8023877, b: 1, a: 1}
+  fingerColour: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &7100337924731504735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e571c19c07fce468c356c9087136ab, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1976, y: -136}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 7100337924731504735}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 8742330148275108583}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 7100337924731504735}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -4539270031964382747}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entry: 0
+  exit: 0
+  character: ...
+  speech: Hey.. I need your help!
+  fingerColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &8534876875604231978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -780,7 +878,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: -4539270031964382747}
+        node: {fileID: 7100337924731504735}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

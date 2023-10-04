@@ -31,7 +31,7 @@ namespace Dialogue {
 
         private List<GameObject> buttons = new List<GameObject>();
 
-        private Color mouseColour = Color.white;
+        private Color fingerColour = Color.white;
 
         private void Awake() {
             if (Instance == null) {
@@ -159,8 +159,8 @@ namespace Dialogue {
         }
 
         public void ChangeColour(Color colour) {
-            mouseColour = colour;
-            mouseIcon.GetComponent<Image>().color = new Color(mouseColour.r, mouseColour.g, mouseColour.b, mouseColour.a);
+            fingerColour = colour;
+            mouseIcon.GetComponent<Image>().color = new Color(fingerColour.r, fingerColour.g, fingerColour.b, fingerColour.a);
         }
 
         public void SetMouseIconActive(bool active) {
