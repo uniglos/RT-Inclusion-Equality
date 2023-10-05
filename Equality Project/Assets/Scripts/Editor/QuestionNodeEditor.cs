@@ -22,7 +22,7 @@ namespace DialogueEditor {
         public override void OnCreate() {
             _speech = serializedObject.FindProperty("speech");
 
-            this._propertyActions = new List<PropertyActionChanged<QuestionNode>>
+            _propertyActions = new List<PropertyActionChanged<QuestionNode>>
     {
             new PropertyActionChanged<QuestionNode>(_speech, ExpandSpeechProperty),
         };

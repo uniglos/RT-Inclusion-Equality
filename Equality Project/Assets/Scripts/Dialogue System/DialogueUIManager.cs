@@ -5,6 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using XNode;
@@ -27,7 +28,9 @@ namespace Dialogue {
         [Header("Background Image")]
         [SerializeField] private Image background;
 
-        public bool ShouldRefresh { get; set; }
+		CharacterNames characterNames;
+
+		public bool ShouldRefresh { get; set; }
 
         private List<GameObject> buttons = new List<GameObject>();
 
@@ -41,12 +44,15 @@ namespace Dialogue {
             } else {
                 Destroy(Instance);
             }
-        }
 
-        /// <summary>
-        /// Ends the Dialogue
-        /// </summary>
-        public void EndDialogue() {
+			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/Scriptable Objects/CharacterNames.asset");
+
+		}
+
+		/// <summary>
+		/// Ends the Dialogue
+		/// </summary>
+		public void EndDialogue() {
 
         }
 
@@ -70,7 +76,7 @@ namespace Dialogue {
                 speechText.text = dialogueNode.speech;
             } else if (node is DialogueNode) {
                 DialogueNode dialogueNode = (DialogueNode)node;
-                characterText.text = dialogueNode.character;
+                characterText.text = characterNames.list[dialogueNode.characterNameIndex];
                 speechText.text = dialogueNode.speech;
             }
         }
