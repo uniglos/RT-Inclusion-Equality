@@ -9,106 +9,117 @@ using XNode;
 using XNodeEditor;
 
 namespace DialogueEditor {
-    [CustomNodeEditor(typeof(QuestionNode))]
-    public class QuestionNodeEditor : BaseNodeEditor {
+	[CustomNodeEditor(typeof(QuestionNode))]
+	public class QuestionNodeEditor : BaseNodeEditor {
 
-        private int _speechFieldHeight = 50;
-        private bool _isExpanded = false;
+		CharacterNames characterNames;
 
-        private List<PropertyActionChanged<QuestionNode>> _propertyActions;
+		int test;
 
-        private SerializedProperty _speech;
+		private int _speechFieldHeight = 50;
+		private bool _isExpanded = false;
 
-        public override void OnCreate() {
-            _speech = serializedObject.FindProperty("speech");
+		private List<PropertyActionChanged<QuestionNode>> _propertyActions;
 
-            _propertyActions = new List<PropertyActionChanged<QuestionNode>>
-    {
-            new PropertyActionChanged<QuestionNode>(_speech, ExpandSpeechProperty),
-        };
-        }
+		private SerializedProperty _speech;
 
-        public override void OnBodyGUI() {
-            QuestionNode node = (QuestionNode)target;
+		public override void OnCreate() {
+			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/Scriptable Objects/CharacterNames.asset");
 
-            serializedObject.Update();
+			_speech = serializedObject.FindProperty("speech");
 
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("entry"));
+			_propertyActions = new List<PropertyActionChanged<QuestionNode>>
+	{
+			new PropertyActionChanged<QuestionNode>(_speech, ExpandSpeechProperty),
+		};
+		}
 
-            SerializedProperty characterName = serializedObject.FindProperty("character");
+		public override void OnBodyGUI() {
+			QuestionNode node = (QuestionNode)target;
 
-            EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
-            EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+			serializedObject.Update();
 
-            //Draw Port list
-            NodeEditorGUILayout.DynamicPortList(
-                "exits",
-                typeof(QuestionNode), //TODO: Change this to Luca's struct 
-                serializedObject,
-                NodePort.IO.Output,
-                Node.ConnectionType.Override,
-                Node.TypeConstraint.Strict);
+			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("entry"));
 
-            //Change the size of the object based on an event system.
-            this._propertyActions.ForEach(action => {
-                serializedObject.ApplyModifiedProperties();
+			//SerializedProperty characterName = serializedObject.FindProperty("character");
 
-                ExpandSpeechProperty(node);
-            });
-        }
+			SerializedProperty nameIndexProperty = serializedObject.FindProperty("characterNameIndex");
 
-        private void OnCreateReorderableList(ReorderableList list) {
-            // Override drawHeaderCallback to display node's name instead
-            QuestionNode node = (QuestionNode)target;
+			//test = EditorGUILayout.Popup(test, characterNames.list);
+			nameIndexProperty.intValue = EditorGUILayout.Popup(nameIndexProperty.intValue, characterNames.list);
 
-            list.drawHeaderCallback = (Rect rect) => {
-                EditorGUI.LabelField(rect, "Answers");
-            };
-        }
+			//EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
+			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+			EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
+			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
 
-        private void ExpandSpeechProperty(QuestionNode node) {
-            //Expanding the Speech Property
-            {
-                //Check if the current node is selected. If is not the same node then we don't update the text
-                //However this does mean that the user has to select the node
-                if (node != Selection.activeObject as QuestionNode) {
-                    _speechFieldHeight = 50;
-                    _isExpanded = false;
-                    return;
-                }
+			//Draw Port list
+			NodeEditorGUILayout.DynamicPortList(
+				"exits",
+				typeof(QuestionNode),
+				serializedObject,
+				NodePort.IO.Output,
+				Node.ConnectionType.Override,
+				Node.TypeConstraint.Strict);
 
-                if (node != null) {
-                    //If the user has clicked on the property field
-                    if (EditorGUIUtility.hotControl != 0 && !_isExpanded) {
+			//Change the size of the object based on an event system.
+			_propertyActions.ForEach(action => {
+				serializedObject.ApplyModifiedProperties();
 
-                        if (Selection.objects.Length > 1) {
-                            NodeEditorWindow.current.ShowNotification(new GUIContent("Graph Editor: Multiple Node editing is not supported"), 0.75f);
-                            return;
-                        }
+				ExpandSpeechProperty(node);
+			});
+		}
 
-                        _speechFieldHeight = 200;
-                        _isExpanded = true;
-                    }
+		private void OnCreateReorderableList(ReorderableList list) {
+			// Override drawHeaderCallback to display node's name instead
+			QuestionNode node = (QuestionNode)target;
 
-                    //Get the key event and check if the user has pressed enter
-                    Event e = Event.current;
+			list.drawHeaderCallback = (Rect rect) => {
+				EditorGUI.LabelField(rect, "Answers");
+			};
+		}
 
-                    if (e.keyCode == KeyCode.Return) {
-                        //Check if the speech box is expanded if true reset vars
-                        if (EditorGUIUtility.hotControl == 0 && _isExpanded) {
-                            _speechFieldHeight = 50;
-                            _isExpanded = false;
-                        }
-                    }
-                } else {
-                    _speechFieldHeight = 50;
-                    _isExpanded = false;
-                }
-            }
-        }
-    }
+		private void ExpandSpeechProperty(QuestionNode node) {
+			//Expanding the Speech Property
+			{
+				//Check if the current node is selected. If is not the same node then we don't update the text
+				//However this does mean that the user has to select the node
+				if (node != Selection.activeObject as QuestionNode) {
+					_speechFieldHeight = 50;
+					_isExpanded = false;
+					return;
+				}
+
+				if (node != null) {
+					//If the user has clicked on the property field
+					if (EditorGUIUtility.hotControl != 0 && !_isExpanded) {
+
+						if (Selection.objects.Length > 1) {
+							NodeEditorWindow.current.ShowNotification(new GUIContent("Graph Editor: Multiple Node editing is not supported"), 0.75f);
+							return;
+						}
+
+						_speechFieldHeight = 200;
+						_isExpanded = true;
+					}
+
+					//Get the key event and check if the user has pressed enter
+					Event e = Event.current;
+
+					if (e.keyCode == KeyCode.Return) {
+						//Check if the speech box is expanded if true reset vars
+						if (EditorGUIUtility.hotControl == 0 && _isExpanded) {
+							_speechFieldHeight = 50;
+							_isExpanded = false;
+						}
+					}
+				} else {
+					_speechFieldHeight = 50;
+					_isExpanded = false;
+				}
+			}
+		}
+	}
 }
 
 

@@ -9,7 +9,7 @@ namespace Dialogue {
 
 		CharacterNames characterNames;
 
-		int characterNameIndex;
+		int test;
 
 		private int _speechFieldHeight = 50;
 		private bool _isExpanded = false;
@@ -34,12 +34,10 @@ namespace Dialogue {
 
 			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("entry"));
 
-			//SerializedProperty characterNameIndex = serializedObject.FindProperty("characterNameIndex");
+			SerializedProperty nameIndexProperty = serializedObject.FindProperty("characterNameIndex");
 
-			characterNameIndex = EditorGUILayout.Popup(characterNameIndex, characterNames.list);
-
-			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("characterNameIndex"));
-
+			//test = EditorGUILayout.Popup(test, characterNames.list);
+			nameIndexProperty.intValue = EditorGUILayout.Popup(nameIndexProperty.intValue, characterNames.list);
 			//EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
 			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
 			EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
