@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,6 +35,13 @@ namespace Dialogue {
         private Color fingerColour = Color.white;
         private Color textColour = Color.white;
         private Color nameColour = Color.white;
+
+        [Header("Text Settings")]
+        private string itemInfo;
+        [SerializeField] private float textSpeed = 0.01f;
+
+        //private int currentDisplayingText = 0;
+
 
         private void Awake() {
             if (Instance == null) {
@@ -67,11 +75,22 @@ namespace Dialogue {
             if (node is QuestionNode) {
                 QuestionNode dialogueNode = (QuestionNode)node;
                 characterText.text = dialogueNode.character;
-                speechText.text = dialogueNode.speech;
+                //speechText.text = dialogueNode.speech;
+                itemInfo = dialogueNode.speech;
+                StartCoroutine(AnimateText());
             } else if (node is DialogueNode) {
                 DialogueNode dialogueNode = (DialogueNode)node;
                 characterText.text = dialogueNode.character;
-                speechText.text = dialogueNode.speech;
+                //speechText.text = dialogueNode.speech;
+                itemInfo = dialogueNode.speech;
+                StartCoroutine(AnimateText());
+            }
+        }
+
+        IEnumerator AnimateText() {
+            for (int i = 0; i < itemInfo.Length + 1; i++) {
+                speechText.text = itemInfo.Substring(0, i);
+                yield return new WaitForSeconds(textSpeed);
             }
         }
 

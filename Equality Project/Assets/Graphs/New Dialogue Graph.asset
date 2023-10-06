@@ -103,9 +103,9 @@ MonoBehaviour:
       _dynamic: 1
   entry: 0
   character: Home
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  nameColour: {r: 1, g: 0, b: 0, a: 1}
   speech: Ready to restart
-  textColour: {r: 0, g: 0, b: 0, a: 0}
+  textColour: {r: 1, g: 1, b: 1, a: 1}
   exits:
   - Return
 --- !u!114 &-7928953159337221062
@@ -326,9 +326,9 @@ MonoBehaviour:
       _dynamic: 1
   entry: 0
   character: Jess
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
   speech: I know where the answer is
-  textColour: {r: 0, g: 0, b: 0, a: 0}
+  textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
   exits:
   - I'm done here
   - Now to James
@@ -389,9 +389,9 @@ MonoBehaviour:
       _dynamic: 1
   entry: 0
   character: Home
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  nameColour: {r: 1, g: 0, b: 0, a: 1}
   speech: Ready to restart
-  textColour: {r: 0, g: 0, b: 0, a: 0}
+  textColour: {r: 1, g: 1, b: 1, a: 1}
   exits:
   - Return
 --- !u!114 &-2798792977081820197
@@ -604,7 +604,7 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  imageLeft: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
+  imageLeft: {fileID: 2800000, guid: 1a4e175bb64941c48a81503999607c08, type: 3}
   imageMiddle: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
   imageRight: {fileID: 2800000, guid: 7bba764b6315b064f928eacd30eeb771, type: 3}
 --- !u!114 &2350727214068701711
@@ -676,9 +676,9 @@ MonoBehaviour:
       _dynamic: 1
   entry: 0
   character: James
-  nameColour: {r: 1, g: 0.8724341, b: 0, a: 1}
+  nameColour: {r: 0, g: 0, b: 1, a: 1}
   speech: Hello I am james
-  textColour: {r: 1, g: 0, b: 0.8579731, a: 1}
+  textColour: {r: 0, g: 1, b: 0, a: 1}
   exits:
   - Nice to meet you
   - Go to Next person
@@ -729,9 +729,9 @@ MonoBehaviour:
   exit: 0
   character: James
   speech: Time to head home
-  fingerColour: {r: 1, g: 0, b: 0, a: 0}
-  textColour: {r: 0.26795173, g: 1, b: 0, a: 1}
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  fingerColour: {r: 1, g: 0, b: 0, a: 1}
+  textColour: {r: 0, g: 1, b: 0, a: 1}
+  nameColour: {r: 0, g: 0, b: 1, a: 1}
 --- !u!114 &7100337924731504735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,9 +779,9 @@ MonoBehaviour:
   exit: 0
   character: Jess
   speech: Time to head home
-  fingerColour: {r: 0, g: 0, b: 0, a: 0}
-  textColour: {r: 0, g: 0, b: 0, a: 0}
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  fingerColour: {r: 1, g: 0, b: 0.70456123, a: 1}
+  textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
+  nameColour: {r: 0.47843137, g: 0, b: 1, a: 1}
 --- !u!114 &8534876875604231978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,9 +851,9 @@ MonoBehaviour:
       _dynamic: 1
   entry: 0
   character: James
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  nameColour: {r: 0, g: 0, b: 1, a: 1}
   speech: I'm ready to work
-  textColour: {r: 0, g: 0, b: 0, a: 0}
+  textColour: {r: 0, g: 1, b: 0, a: 1}
   exits:
   - I'm done here
   - Now to Jess
