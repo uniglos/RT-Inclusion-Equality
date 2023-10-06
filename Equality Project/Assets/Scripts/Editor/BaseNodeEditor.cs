@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using XNodeEditor;
+
 [CustomNodeEditor(typeof(BaseNode))]
 public class BaseNodeEditor : NodeEditor
 {

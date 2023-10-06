@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Dialogue;
 using XNodeEditor;
 
 namespace DialogueEditor {
@@ -44,6 +45,21 @@ namespace DialogueEditor {
 				style.wordWrap = true;
 
 				EditorGUILayout.LabelField("Character Names asset has not been found: Please create one", style);
+			}
+
+			EditorGUILayout.Space();
+
+			if (Selection.activeObject is DialogueNode dialogueNode) {
+				//Debug.Log("Selected DialogueNode");
+				EditorGUILayout.LabelField(dialogueNode.name);
+				dialogueNode.nameColour = EditorGUILayout.ColorField(dialogueNode.nameColour);
+				dialogueNode.textColour = EditorGUILayout.ColorField(dialogueNode.textColour);
+				dialogueNode.fingerColour = EditorGUILayout.ColorField(dialogueNode.fingerColour);
+			} else if (Selection.activeObject is QuestionNode questionNode) {
+				//Debug.Log("Selected QuestionNode");
+				EditorGUILayout.LabelField(questionNode.name);
+				questionNode.nameColour = EditorGUILayout.ColorField(questionNode.nameColour);
+				questionNode.textColour = EditorGUILayout.ColorField(questionNode.textColour);
 			}
 		}
 

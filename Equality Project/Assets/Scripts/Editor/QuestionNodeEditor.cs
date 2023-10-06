@@ -49,9 +49,9 @@ namespace DialogueEditor {
 			nameIndexProperty.intValue = EditorGUILayout.Popup(nameIndexProperty.intValue, characterNames.list);
 
 			//EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
-			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
 			EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
-			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
 
 			//Draw Port list
 			NodeEditorGUILayout.DynamicPortList(
