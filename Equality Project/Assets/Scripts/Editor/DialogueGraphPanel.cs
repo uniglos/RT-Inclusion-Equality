@@ -50,16 +50,22 @@ namespace DialogueEditor {
 			EditorGUILayout.Space();
 
 			if (Selection.activeObject is DialogueNode dialogueNode) {
-				//Debug.Log("Selected DialogueNode");
+				SerializedObject serializedObject = new SerializedObject(dialogueNode);
+
 				EditorGUILayout.LabelField(dialogueNode.name);
-				dialogueNode.nameColour = EditorGUILayout.ColorField(dialogueNode.nameColour);
-				dialogueNode.textColour = EditorGUILayout.ColorField(dialogueNode.textColour);
-				dialogueNode.fingerColour = EditorGUILayout.ColorField(dialogueNode.fingerColour);
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
+
+				serializedObject.ApplyModifiedProperties();
 			} else if (Selection.activeObject is QuestionNode questionNode) {
-				//Debug.Log("Selected QuestionNode");
+				SerializedObject serializedObject = new SerializedObject(questionNode);
+
 				EditorGUILayout.LabelField(questionNode.name);
-				questionNode.nameColour = EditorGUILayout.ColorField(questionNode.nameColour);
-				questionNode.textColour = EditorGUILayout.ColorField(questionNode.textColour);
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+				EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+
+				serializedObject.ApplyModifiedProperties();
 			}
 		}
 

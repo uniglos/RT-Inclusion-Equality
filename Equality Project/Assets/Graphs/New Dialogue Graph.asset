@@ -155,9 +155,9 @@ MonoBehaviour:
   exit: 0
   characterNameIndex: 1
   speech: Hey.. I need your help!
-  fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
-  textColour: {r: 0, g: 1, b: 0, a: 1}
-  nameColour: {r: 0, g: 0.016628742, b: 1, a: 1}
+  fingerColour: {r: 1, g: 0, b: 0.80399513, a: 1}
+  textColour: {r: 1, g: 0, b: 0.6971979, a: 1}
+  nameColour: {r: 1, g: 0, b: 0.804821, a: 1}
 --- !u!114 &-7863795040202025321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,9 +676,9 @@ MonoBehaviour:
       _dynamic: 1
   entry: 0
   characterNameIndex: 0
-  nameColour: {r: 1, g: 0.8724341, b: 0, a: 1}
+  nameColour: {r: 0.056737266, g: 0.8018868, b: 0.23508923, a: 1}
   speech: Hello I am james
-  textColour: {r: 1, g: 0, b: 0.8579731, a: 1}
+  textColour: {r: 0.10693307, g: 0.8396226, b: 0.2627303, a: 1}
   exits:
   - Nice to meet you
   - Go to Next person
@@ -695,7 +695,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1976, y: -392}
+  position: {x: 1928, y: -360}
   ports:
     keys:
     - entry
@@ -729,9 +729,9 @@ MonoBehaviour:
   exit: 0
   characterNameIndex: 0
   speech: Time to head home
-  fingerColour: {r: 1, g: 0, b: 0, a: 0}
-  textColour: {r: 0.26795173, g: 1, b: 0, a: 1}
-  nameColour: {r: 0, g: 0, b: 0, a: 0}
+  fingerColour: {r: 1, g: 0, b: 0.82608795, a: 0}
+  textColour: {r: 1, g: 0, b: 0.703887, a: 1}
+  nameColour: {r: 0.8867924, g: 0.10457456, b: 0.6283898, a: 0}
 --- !u!114 &7100337924731504735
 MonoBehaviour:
   m_ObjectHideFlags: 0
