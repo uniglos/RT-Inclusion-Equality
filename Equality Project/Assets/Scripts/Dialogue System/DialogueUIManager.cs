@@ -41,6 +41,10 @@ namespace Dialogue {
 
         //private int currentDisplayingText = 0;
 
+		private Color nameColour = Color.white;
+		private Color textColour = Color.white;
+		private Color fingerColour = Color.white;
+
 		private void Awake() {
 			if (Instance == null) {
 				Instance = this;
@@ -56,25 +60,26 @@ namespace Dialogue {
 		/// Ends the Dialogue
 		/// </summary>
 		public void EndDialogue() {
+		}
 
         /// <summary>
         /// Dispalys Text on the screen
         /// </summary>
-        public void DisplayText(BaseNode node) {
-            if (node is QuestionNode) {
-                QuestionNode dialogueNode = (QuestionNode)node;
-                characterText.text = dialogueNode.character;
-                //speechText.text = dialogueNode.speech;
-                itemInfo = dialogueNode.speech;
-                StartCoroutine(AnimateText());
-            } else if (node is DialogueNode) {
-                DialogueNode dialogueNode = (DialogueNode)node;
-                characterText.text = dialogueNode.character;
-                //speechText.text = dialogueNode.speech;
-                itemInfo = dialogueNode.speech;
-                StartCoroutine(AnimateText());
-            }
-        }
+        //public void DisplayText(BaseNode node) {
+        //    if (node is QuestionNode) {
+        //        QuestionNode dialogueNode = (QuestionNode)node;
+        //        characterText.text = dialogueNode.character;
+        //        //speechText.text = dialogueNode.speech;
+        //        itemInfo = dialogueNode.speech;
+        //        StartCoroutine(AnimateText());
+        //    } else if (node is DialogueNode) {
+        //        DialogueNode dialogueNode = (DialogueNode)node;
+        //        characterText.text = dialogueNode.character;
+        //        //speechText.text = dialogueNode.speech;
+        //        itemInfo = dialogueNode.speech;
+        //        StartCoroutine(AnimateText());
+        //    }
+        //}
 
         IEnumerator AnimateText() {
             for (int i = 0; i < itemInfo.Length + 1; i++) {
@@ -94,15 +99,19 @@ namespace Dialogue {
 		}
 
 		/// <summary>
-		/// Dispalys Text on the screen
+		/// Displays Text on the screen
 		/// </summary>
 		public void DisplayText(BaseNode node) {
 			if (node is QuestionNode questionNode) {
 				characterText.text = characterNames.list[questionNode.characterNameIndex];
-				speechText.text = questionNode.speech;
+				//speechText.text = questionNode.speech;
+				itemInfo = questionNode.speech;
+				StartCoroutine(AnimateText());
 			} else if (node is DialogueNode dialogueNode) {
 				characterText.text = characterNames.list[dialogueNode.characterNameIndex];
-				speechText.text = dialogueNode.speech;
+				//speechText.text = dialogueNode.speech;
+				itemInfo = dialogueNode.speech;
+				StartCoroutine(AnimateText());
 			}
 		}
 

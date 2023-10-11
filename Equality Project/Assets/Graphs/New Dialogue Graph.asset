@@ -102,7 +102,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: Home
+  characterNameIndex: 0
   nameColour: {r: 1, g: 0, b: 0, a: 1}
   speech: Ready to restart
   textColour: {r: 1, g: 1, b: 1, a: 1}
@@ -153,11 +153,11 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  character: ...
+  characterNameIndex: 0
   speech: Hey.. I need your help!
-  fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
-  textColour: {r: 0, g: 1, b: 0, a: 1}
-  nameColour: {r: 0, g: 0.016628742, b: 1, a: 1}
+  fingerColour: {r: 1, g: 0, b: 0.8792534, a: 1}
+  textColour: {r: 1, g: 0, b: 0.77521896, a: 1}
+  nameColour: {r: 0.9622642, g: 0.14978641, b: 0.85455376, a: 1}
 --- !u!114 &-7863795040202025321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: Jess
+  characterNameIndex: 0
   nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
   speech: I know where the answer is
   textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
@@ -388,7 +388,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: Home
+  characterNameIndex: 0
   nameColour: {r: 1, g: 0, b: 0, a: 1}
   speech: Ready to restart
   textColour: {r: 1, g: 1, b: 1, a: 1}
@@ -675,7 +675,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: James
+  characterNameIndex: 0
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   speech: Hello I am james
   textColour: {r: 0, g: 1, b: 0, a: 1}
@@ -727,7 +727,7 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  character: James
+  characterNameIndex: 0
   speech: Time to head home
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
@@ -777,7 +777,7 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  character: Jess
+  characterNameIndex: 0
   speech: Time to head home
   fingerColour: {r: 1, g: 0, b: 0.70456123, a: 1}
   textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
@@ -850,7 +850,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: James
+  characterNameIndex: 0
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   speech: I'm ready to work
   textColour: {r: 0, g: 1, b: 0, a: 1}
