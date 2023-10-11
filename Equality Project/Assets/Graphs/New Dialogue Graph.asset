@@ -156,8 +156,8 @@ MonoBehaviour:
   characterNameIndex: 1
   speech: Hey.. I need your help!
   fingerColour: {r: 1, g: 0, b: 0.80399513, a: 1}
-  textColour: {r: 1, g: 0, b: 0.6971979, a: 1}
-  nameColour: {r: 1, g: 0, b: 0.804821, a: 1}
+  textColour: {r: 0.6603774, g: 0.27070913, b: 0.12771448, a: 1}
+  nameColour: {r: 0.3070488, g: 0.39213812, b: 0.5660378, a: 1}
 --- !u!114 &-7863795040202025321
 MonoBehaviour:
   m_ObjectHideFlags: 0

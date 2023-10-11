@@ -7,6 +7,9 @@ using Dialogue;
 namespace DialogueEditor {
 	[CustomNodeGraphEditor(typeof(DialogueGraph))]
 	public class DialogueGraphEditor : NodeGraphEditor {
+
+		DialogueGraphPanel dialogueGraphPanel;
+
 		public override string GetNodeMenuName(Type type) {
 			if (type.BaseType != typeof(BaseNode)) {
 				return null;
@@ -16,17 +19,11 @@ namespace DialogueEditor {
 		}
 
 		public override void OnGUI() {
-			using (new EditorGUILayout.VerticalScope(GUI.skin.box, GUILayout.Width(50))) {
+			if (!dialogueGraphPanel)
+				dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
 
-				if (GUILayout.Button("Open Panel")) {
-					EditorWindow.GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
-				}
-			}
-
-			DialogueGraphPanel dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>();
-			if (dialogueGraphPanel != null) {
-				dialogueGraphPanel.Repaint();
-			}
+			dialogueGraphPanel.Repaint();
+			
 		}
 
 	}

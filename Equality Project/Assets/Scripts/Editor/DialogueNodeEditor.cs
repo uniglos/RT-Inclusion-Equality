@@ -1,3 +1,5 @@
+using Codice.Client.BaseCommands;
+using DialogueEditor;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -16,6 +18,8 @@ namespace Dialogue {
 
 		private SerializedProperty _speech;
 
+		DialogueGraphPanel dialogueGraphPanel;
+
 		public override void OnCreate() {
 			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/Scriptable Objects/CharacterNames.asset");
 
@@ -24,6 +28,8 @@ namespace Dialogue {
 			_propertyActions = new List<PropertyActionChanged<DialogueNode>> {
 				new PropertyActionChanged<DialogueNode>(_speech, ExpandSpeechProperty),
 			};
+
+			dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
 		}
 
 		public override void OnBodyGUI() {
@@ -50,6 +56,15 @@ namespace Dialogue {
 
 				ExpandSpeechProperty(node);
 			});
+
+			//if (EditorGUI.EndChangeCheck()) {
+			//	dialogueGraphPanel.Repaint();
+			//}
+
+			//if (_propertyActions.Count > 0) {
+				//DialogueGraphPanel dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>();
+				//dialogueGraphPanel.Repaint();
+			//}
 		}
 
 		private void ExpandSpeechProperty(DialogueNode node) {
