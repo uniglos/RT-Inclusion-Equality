@@ -5,10 +5,9 @@ using UnityEngine;
 namespace Dialogue {
     public class QuestionNode : BaseNode {
         [Input()] public int entry;
-
-		public int characterNameIndex;
-		//public string character; 
-		public Color nameColour;
+        
+        public string character; 
+        public Color nameColour;
         public string speech;
         public Color textColour;
 

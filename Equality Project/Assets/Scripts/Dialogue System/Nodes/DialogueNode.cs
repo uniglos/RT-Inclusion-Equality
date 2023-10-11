@@ -10,7 +10,7 @@ namespace Dialogue {
         [Input] public int entry;
         [Output] public int exit;
 
-        public int characterNameIndex;
+        public string character;
         public string speech;
         public Color fingerColour;
         public Color textColour;

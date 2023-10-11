@@ -12,9 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ddb53f0668e034ea11044c76a8ba54, type: 3}
   m_Name: CharacterNames
   m_EditorClassIdentifier: 
-  list:
-  - James
-  - Susan
-  - Helen
-  - Jess
-  - Sam
+  characterNames:
+  - 
