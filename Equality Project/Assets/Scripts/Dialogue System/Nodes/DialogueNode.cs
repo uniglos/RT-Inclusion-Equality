@@ -11,13 +11,13 @@ namespace Dialogue {
         [Input] public int entry;
         [Output] public int exit;
 
-        public string character;
+        public int characterNameIndex;
         public string speech;
-        public Color fingerColour;
-        public Color textColour;
         public Color nameColour;
+		public Color textColour;
+		public Color fingerColour;
 
-        public override IEnumerator Run() {
+		public override IEnumerator Run() {
             DialogueUIManager.Instance.ClearButton();
             DialogueUIManager.Instance.SetMouseIconActive(true);
             DialogueUIManager.Instance.DisplayText(this);

@@ -102,9 +102,9 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: Home
-  nameColour: {r: 1, g: 0, b: 0, a: 1}
+  characterNameIndex: 0
   speech: Ready to restart
+  nameColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   exits:
   - Return
@@ -153,11 +153,11 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  character: ...
+  characterNameIndex: 0
   speech: Hey.. I need your help!
-  fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
-  textColour: {r: 0, g: 1, b: 0, a: 1}
   nameColour: {r: 0, g: 0.016628742, b: 1, a: 1}
+  textColour: {r: 0, g: 1, b: 0, a: 1}
+  fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
 --- !u!114 &-7863795040202025321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,9 +325,9 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: Jess
-  nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
+  characterNameIndex: 1
   speech: I know where the answer is
+  nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
   exits:
   - I'm done here
@@ -388,9 +388,9 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: Home
-  nameColour: {r: 1, g: 0, b: 0, a: 1}
+  characterNameIndex: 0
   speech: Ready to restart
+  nameColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   exits:
   - Return
@@ -675,9 +675,9 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: James
-  nameColour: {r: 0, g: 0, b: 1, a: 1}
+  characterNameIndex: 0
   speech: Hello I am james
+  nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
   exits:
   - Nice to meet you
@@ -727,11 +727,11 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  character: James
+  characterNameIndex: 0
   speech: Time to head home
-  fingerColour: {r: 1, g: 0, b: 0, a: 1}
-  textColour: {r: 0, g: 1, b: 0, a: 1}
   nameColour: {r: 0, g: 0, b: 1, a: 1}
+  textColour: {r: 0, g: 1, b: 0, a: 1}
+  fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7100337924731504735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,11 +777,11 @@ MonoBehaviour:
       _dynamic: 0
   entry: 0
   exit: 0
-  character: Jess
+  characterNameIndex: 0
   speech: Time to head home
-  fingerColour: {r: 1, g: 0, b: 0.70456123, a: 1}
-  textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
   nameColour: {r: 0.47843137, g: 0, b: 1, a: 1}
+  textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
+  fingerColour: {r: 1, g: 0, b: 0.70456123, a: 1}
 --- !u!114 &8534876875604231978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,9 +850,9 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
-  character: James
-  nameColour: {r: 0, g: 0, b: 1, a: 1}
+  characterNameIndex: 0
   speech: I'm ready to work
+  nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
   exits:
   - I'm done here

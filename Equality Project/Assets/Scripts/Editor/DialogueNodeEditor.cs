@@ -21,7 +21,7 @@ namespace Dialogue {
 		DialogueGraphPanel dialogueGraphPanel;
 
 		public override void OnCreate() {
-			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/Scriptable Objects/CharacterNames.asset");
+			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
 
 			_speech = serializedObject.FindProperty("speech");
 

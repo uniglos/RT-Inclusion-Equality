@@ -12,6 +12,8 @@ namespace DialogueEditor {
     [CustomNodeEditor(typeof(QuestionNode))]
     public class QuestionNodeEditor : BaseNodeEditor {
 
+		CharacterNames characterNames;
+
         private int _speechFieldHeight = 50;
         private bool _isExpanded = false;
 
@@ -20,9 +22,11 @@ namespace DialogueEditor {
         private SerializedProperty _speech;
 
         public override void OnCreate() {
-            _speech = serializedObject.FindProperty("speech");
+			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
 
-            this._propertyActions = new List<PropertyActionChanged<QuestionNode>>
+			_speech = serializedObject.FindProperty("speech");
+
+            _propertyActions = new List<PropertyActionChanged<QuestionNode>>
     {
             new PropertyActionChanged<QuestionNode>(_speech, ExpandSpeechProperty),
         };
@@ -35,15 +39,17 @@ namespace DialogueEditor {
 
             NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("entry"));
 
-            SerializedProperty characterName = serializedObject.FindProperty("character");
+   //         SerializedProperty characterName = serializedObject.FindProperty("character");
 
-            EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
-            EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
-            NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+			SerializedProperty nameIndexProperty = serializedObject.FindProperty("characterNameIndex");
 
-            //Draw Port list
-            NodeEditorGUILayout.DynamicPortList(
+			nameIndexProperty.intValue = EditorGUILayout.Popup(nameIndexProperty.intValue, characterNames.list);
+			EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
+
+			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("exit"));
+
+			//Draw Port list
+			NodeEditorGUILayout.DynamicPortList(
                 "exits",
                 typeof(QuestionNode), //TODO: Change this to Luca's struct 
                 serializedObject,
@@ -52,7 +58,7 @@ namespace DialogueEditor {
                 Node.TypeConstraint.Strict);
 
             //Change the size of the object based on an event system.
-            this._propertyActions.ForEach(action => {
+            _propertyActions.ForEach(action => {
                 serializedObject.ApplyModifiedProperties();
 
                 ExpandSpeechProperty(node);
