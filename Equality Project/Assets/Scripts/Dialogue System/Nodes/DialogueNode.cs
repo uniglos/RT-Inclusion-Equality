@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -22,13 +23,13 @@ namespace Dialogue {
             DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.ChangeColour(fingerColour);
             DialogueUIManager.Instance.SetColour(nameColour, textColour);
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-            NextNode("exit");
-            DialogueUIManager.Instance.SetMouseIconActive(false);
+            yield return null;
+            DialogueUIManager.Instance.tapButton.onClick.AddListener(() => 
+            {
+                DialogueUIManager.Instance.SetMouseIconActive(false);
+                NextNode("exit");
+            });
         }
-
-
-        
     }
 }
 

@@ -30,11 +30,15 @@ namespace Dialogue {
 
         public bool ShouldRefresh { get; set; }
 
+        public bool waitedForMouse = false;
+
         private List<GameObject> buttons = new List<GameObject>();
 
         private Color fingerColour = Color.white;
         private Color textColour = Color.white;
         private Color nameColour = Color.white;
+
+        public Button tapButton;
 
         [Header("Text Settings")]
         private string itemInfo;
@@ -196,6 +200,7 @@ namespace Dialogue {
                 fingerIcon.enabled = active;
             }
         }
+
     }
 
 }
