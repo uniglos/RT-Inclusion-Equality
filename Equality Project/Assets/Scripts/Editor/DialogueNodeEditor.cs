@@ -56,15 +56,6 @@ namespace Dialogue {
 
 				ExpandSpeechProperty(node);
 			});
-
-			//if (EditorGUI.EndChangeCheck()) {
-			//	dialogueGraphPanel.Repaint();
-			//}
-
-			//if (_propertyActions.Count > 0) {
-				//DialogueGraphPanel dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>();
-				//dialogueGraphPanel.Repaint();
-			//}
 		}
 
 		private void ExpandSpeechProperty(DialogueNode node) {
