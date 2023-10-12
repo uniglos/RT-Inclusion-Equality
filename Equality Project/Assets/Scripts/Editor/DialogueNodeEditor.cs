@@ -40,13 +40,8 @@ namespace Dialogue {
 
 			SerializedProperty nameIndexProperty = serializedObject.FindProperty("characterNameIndex");
 
-			//test = EditorGUILayout.Popup(test, characterNames.list);
 			nameIndexProperty.intValue = EditorGUILayout.Popup(nameIndexProperty.intValue, characterNames.list);
-			//EditorGUILayout.PropertyField(characterName, new GUIContent("Character Name"));
-			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
 			EditorGUILayout.PropertyField(_speech, new GUIContent("Speech"), GUILayout.Height(_speechFieldHeight));
-			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
-			//NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
 
 			NodeEditorGUILayout.PropertyField(serializedObject.FindProperty("exit"));
 
