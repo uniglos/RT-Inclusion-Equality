@@ -24,14 +24,7 @@ namespace Dialogue {
 
 		[SerializeField] private Image fingerIcon;
 
-		[Header("Character Images")]
-		[SerializeField] private List<Image> images = new List<Image>();
-		[Header("Background Image")]
-		[SerializeField] private Image background;
-
 		public bool ShouldRefresh { get; set; }
-
-		public bool waitedForMouse = false;
 
 		private List<GameObject> buttons = new List<GameObject>();
 
@@ -47,10 +40,15 @@ namespace Dialogue {
 		private string itemInfo;
 		[SerializeField] private float textSpeed = 0.01f;
 
-		//private int currentDisplayingText = 0;
+        //private int currentDisplayingText = 0;
+
+        [Header("Character Images")]
+        [SerializeField] private List<Image> images = new List<Image>();
+        [Header("Background Image")]
+        [SerializeField] private Image background;
 
 
-		private void Awake() {
+        private void Awake() {
 			if (Instance == null) {
 				Instance = this;
 			} else {
@@ -83,11 +81,13 @@ namespace Dialogue {
 		public void DisplayText(BaseNode node) {
 			if (node is QuestionNode questionNode) {
 				characterText.text = characterNames.list[questionNode.characterNameIndex];
-				speechText.text = questionNode.speech;
-			} else if (node is DialogueNode dialogueNode) {
+                itemInfo = questionNode.speech;
+                StartCoroutine(AnimateText());
+            } else if (node is DialogueNode dialogueNode) {
 				characterText.text = characterNames.list[dialogueNode.characterNameIndex];
-				speechText.text = dialogueNode.speech;
-			}
+                itemInfo = dialogueNode.speech;
+                StartCoroutine(AnimateText());
+            }
 		}
 
 		IEnumerator AnimateText() {
