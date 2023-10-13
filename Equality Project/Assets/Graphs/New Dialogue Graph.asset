@@ -330,7 +330,7 @@ MonoBehaviour:
   nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
   exits:
-  - I'm done here
+  - I'm off the clock
   - Now to James
 --- !u!114 &-4539270031964382747
 MonoBehaviour:
@@ -855,7 +855,7 @@ MonoBehaviour:
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
   exits:
-  - I'm done here
+  - I'm off the clock
   - Now to Jess
 --- !u!114 &8742330148275108583
 MonoBehaviour:
