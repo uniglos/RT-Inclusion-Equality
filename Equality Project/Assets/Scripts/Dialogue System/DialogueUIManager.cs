@@ -1,52 +1,55 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using XNode;
 
 namespace Dialogue {
 	public class DialogueUIManager : MonoBehaviour {
+
+		// --- Properties
+
 		public static DialogueUIManager Instance { get; private set; }
 
-		[Header("Dialogue UI Elements")]
+        public Button TapButton { get; private set; }
+
+		// --- End
+
+		// --- Unity Inspector Properties
+
+        [Header("Dialogue UI Elements")]
 		[SerializeField] private TMPro.TMP_Text characterText;
 		[SerializeField] private TMPro.TMP_Text speechText;
 
 		[SerializeField] private GameObject buttonObject;
 		[SerializeField] private Transform buttonHolder;
 
-		[SerializeField] private Image fingerIcon;
+		[Header("Finger Icon")]
+        [SerializeField] private Image fingerIcon;
+        [SerializeField] private GameObject fingerObject;
 
-		public bool ShouldRefresh { get; set; }
+        [Header("Text Settings")]
+        [SerializeField] private float textSpeed = 0.01f;
 
-		private List<GameObject> buttons = new List<GameObject>();
+        [Header("UI Images")]
+        [SerializeField] private List<Image> images = new List<Image>();
+        [SerializeField] private Image background;
+
+        // --- End
+
+        // --- Private Variables
+
+        private List<GameObject> buttons = new List<GameObject>();
 
 		private Color fingerColour = Color.white;
 		private Color textColour = Color.white;
 		private Color nameColour = Color.white;
 
-		CharacterNames characterNames;
+		private CharacterNames characterNames;
 
-		public Button tapButton;
+        private string itemInfo;
 
-		[Header("Text Settings")]
-		private string itemInfo;
-		[SerializeField] private float textSpeed = 0.01f;
-
-        //private int currentDisplayingText = 0;
-
-        [Header("Character Images")]
-        [SerializeField] private List<Image> images = new List<Image>();
-        [Header("Background Image")]
-        [SerializeField] private Image background;
-
+        // --- End
 
         private void Awake() {
 			if (Instance == null) {
@@ -55,7 +58,9 @@ namespace Dialogue {
 				Destroy(Instance);
 			}
 
-			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
+			TapButton = GameObject.Find("TapButton").GetComponent<Button>();
+
+            characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
 		}
 
 		/// <summary>
@@ -98,7 +103,9 @@ namespace Dialogue {
 		}
 
 		public void ClearButton() {
-			buttons.Clear();
+            buttonHolder.gameObject.SetActive(false);
+
+            buttons.Clear();
 
 			foreach (Transform child in buttonHolder) {
 				Destroy(child.gameObject);
@@ -111,7 +118,9 @@ namespace Dialogue {
 		public void DisplayButtons(BaseNode node) {
 			QuestionNode dialogueNode = (QuestionNode)node;
 
-			buttons.Clear();
+			buttonHolder.gameObject.SetActive(true);
+
+            buttons.Clear();
 
 			foreach (Transform child in buttonHolder) {
 				Destroy(child.gameObject);
@@ -195,11 +204,9 @@ namespace Dialogue {
 
 		public void SetMouseIconActive(bool active) {
 			if (fingerIcon) {
+				fingerObject.SetActive(active);
 				fingerIcon.enabled = active;
 			}
 		}
-
 	}
-
 }
-

@@ -1,23 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Dialogue {
-    public class QuestionNode : BaseNode {
-        [Input()] public int entry;
+    public class QuestionNode : DialogueBaseNode {
         
-        public int characterNameIndex;
-		public string speech;
-		public Color nameColour;
-		public Color textColour;
+		[Output(dynamicPortList = true)][HideInInspector] public List<string> exits = new List<string>();
 
-		[Output(dynamicPortList = true)] public List<string> exits = new List<string>();
-
-        public override IEnumerator Run() {
-            DialogueUIManager.Instance.DisplayText(this);
+        protected override void DisplayUI() {
+            base.DisplayUI();
             DialogueUIManager.Instance.DisplayButtons(this);
-            DialogueUIManager.Instance.SetColour(nameColour, textColour);
-            yield return null;
         }
     }
 }

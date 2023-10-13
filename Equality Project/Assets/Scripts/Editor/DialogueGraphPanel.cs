@@ -1,18 +1,15 @@
 using Dialogue;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using XNodeEditor;
 
 namespace DialogueEditor {
     public class DialogueGraphPanel : EditorWindow {
 
-        CharacterNames characterNames;
+        private CharacterNames characterNames;
 
-        SerializedProperty characterNamesProperty;
+        private SerializedProperty characterNamesProperty;
 
-        SerializedObject serializedNames;
+        private SerializedObject serializedNames;
 
         public static void ShowWindow() {
             GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
@@ -46,10 +43,12 @@ namespace DialogueEditor {
 
 			EditorGUILayout.Space();
 
+			//TODO: use the new dialogue base node here
+
 			if (Selection.activeObject is DialogueNode dialogueNode) {
 				SerializedObject serializedObject = new SerializedObject(dialogueNode);
 
-				EditorGUILayout.LabelField(dialogueNode.name);
+				EditorGUILayout.LabelField(dialogueNode.name + " Node");
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
 				EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));

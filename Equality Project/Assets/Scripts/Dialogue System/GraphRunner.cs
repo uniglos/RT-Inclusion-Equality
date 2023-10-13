@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using XNode;
 
 namespace Dialogue {
     public class GraphRunner : MonoBehaviour {
@@ -15,13 +12,18 @@ namespace Dialogue {
             //Finds the first node in the graph
             foreach(BaseNode node in graph.nodes) {
                 if(node is StartNode) {
-                    graph.StartGraph(node);
+                    graph.CurrentNode = node;
+                    //This it the starting a coroutine for a the start node
                     StartCoroutine(node.Run());
                 }
             }
         }
 
-        public void Run() {
+        /// <summary>
+        /// Runs the next node in the graph
+        /// </summary>
+        public void Run(BaseNode next) {
+            graph.CurrentNode = next;
             StartCoroutine(graph.CurrentNode.Run());
         }
     }
