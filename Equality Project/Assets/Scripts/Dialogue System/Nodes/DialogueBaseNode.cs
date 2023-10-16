@@ -11,6 +11,13 @@ namespace Dialogue {
         [HideInInspector] public Color nameColour;
         [HideInInspector] public Color textColour;
 
+        public float FontSize;
+
+        protected override void Create() {
+            if(FontSize <= 0)
+                FontSize = 45.0f;
+        }
+
         public override IEnumerator Run() {
             DisplayUI();
             yield return null;
@@ -21,6 +28,7 @@ namespace Dialogue {
         /// Display this DialogueNode UI
         /// </summary>
         protected virtual void DisplayUI() {
+            DialogueUIManager.Instance.SetFontSize(FontSize);
             DialogueUIManager.Instance.ClearButton();
             DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.SetColour(nameColour, textColour);

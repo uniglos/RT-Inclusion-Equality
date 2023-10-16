@@ -10,6 +10,8 @@ namespace XNodeEditor {
     public partial class NodeEditorWindow : EditorWindow {
         public static NodeEditorWindow current;
 
+        public static bool hasClosed;
+
         /// <summary> Stores node positions for all nodePorts. </summary>
         public Dictionary<XNode.NodePort, Rect> portConnectionPoints { get { return _portConnectionPoints; } }
         private Dictionary<XNode.NodePort, Rect> _portConnectionPoints = new Dictionary<XNode.NodePort, Rect>();
@@ -202,6 +204,11 @@ namespace XNodeEditor {
             NodeEditorWindow w = GetWindow(typeof(NodeEditorWindow), false, "xNode", true) as NodeEditorWindow;
             w.wantsMouseMove = true;
             w.graph = graph;
+
+            w.minSize = new Vector2(850, 500);
+
+            hasClosed = false;
+
             return w;
         }
 
@@ -211,6 +218,10 @@ namespace XNodeEditor {
             for (int i = 0; i < windows.Length; i++) {
                 windows[i].Repaint();
             }
+        }
+
+        private void OnDestroy() {
+            hasClosed = true;
         }
     }
 }

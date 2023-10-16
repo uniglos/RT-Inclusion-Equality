@@ -1,6 +1,8 @@
+using Codice.CM.Client.Differences;
 using Dialogue;
 using UnityEditor;
 using UnityEngine;
+using XNodeEditor;
 
 namespace DialogueEditor {
     public class DialogueGraphPanel : EditorWindow {
@@ -11,8 +13,10 @@ namespace DialogueEditor {
 
         private SerializedObject serializedNames;
 
+        private bool showColourSettings = true, showTextSettings = true;
+
         public static void ShowWindow() {
-            GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
+            //GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
         }
 
         private void OnEnable() {
@@ -29,42 +33,103 @@ namespace DialogueEditor {
         }
 
         private void OnGUI() {
-			if (characterNames != null) {
-				EditorGUILayout.PropertyField(characterNamesProperty);
 
-				serializedNames.ApplyModifiedProperties();
+            if (NodeEditorWindow.hasClosed) { Close(); return; }
 
-			} else {
-				GUIStyle style = GUI.skin.textArea;
-				style.wordWrap = true;
+            if (characterNames != null) {
+                EditorGUILayout.PropertyField(characterNamesProperty);
 
-				EditorGUILayout.LabelField("Character Names asset has not been found: Please create one", style);
-			}
+                serializedNames.ApplyModifiedProperties();
 
-			EditorGUILayout.Space();
+            } else {
+                GUIStyle style = GUI.skin.textArea;
+                style.wordWrap = true;
 
-			//TODO: use the new dialogue base node here
+                EditorGUILayout.LabelField("Character Names asset has not been found: Please create one", style);
+            }
 
-			if (Selection.activeObject is DialogueNode dialogueNode) {
-				SerializedObject serializedObject = new SerializedObject(dialogueNode);
+            EditorGUILayout.Space();
 
-				EditorGUILayout.LabelField(dialogueNode.name + " Node");
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
+            //TODO: use the new dialogue base node here
 
-				serializedObject.ApplyModifiedProperties();
-			} else if (Selection.activeObject is QuestionNode questionNode) {
-				SerializedObject serializedObject = new SerializedObject(questionNode);
+            if (Selection.activeObject is DialogueNode dialogueNode) {
+                SerializedObject serializedObject = new SerializedObject(dialogueNode);
 
-				EditorGUILayout.LabelField(questionNode.name);
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
-				EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+                EditorGUILayout.LabelField(dialogueNode.name + " Node");
 
-				serializedObject.ApplyModifiedProperties();
-			}
-		}
+                GUIStyle style = EditorStyles.textField;
+                style.wordWrap = true;
 
+                showColourSettings = EditorGUILayout.Foldout(showColourSettings, "Customisation Settings");
+                EditorGUI.indentLevel++;
+                {
+                    if (showColourSettings) {
+
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
+                        dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
+                    }
+                }
+                EditorGUI.indentLevel--;
+
+                EditorGUILayout.Space(15);
+
+                showTextSettings = EditorGUILayout.Foldout(showTextSettings, "Text Settings");
+
+                EditorGUI.indentLevel++;
+                {
+                    if (showTextSettings) {
+                        dialogueNode.speech = EditorGUILayout.TextArea(dialogueNode.speech, style, GUILayout.Height(150));
+                    }
+                }
+                EditorGUI.indentLevel--;
+
+                serializedObject.ApplyModifiedProperties();
+            } else if (Selection.activeObject is QuestionNode questionNode) {
+                SerializedObject serializedObject = new SerializedObject(questionNode);
+
+                EditorGUILayout.LabelField(questionNode.name + " Node");
+
+                GUIStyle style = EditorStyles.textField;
+                style.wordWrap = true;
+
+                showColourSettings = EditorGUILayout.Foldout(showColourSettings, "Customisation Settings");
+
+                EditorGUI.indentLevel++;
+                {
+                    if (showColourSettings) {
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+                        EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+                        questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
+                    }
+                }
+                EditorGUI.indentLevel--;
+
+                EditorGUILayout.Space(15);
+
+                showTextSettings = EditorGUILayout.Foldout(showTextSettings, "Text Settings");
+
+                EditorGUI.indentLevel++;
+                {
+                    if (showTextSettings) {
+                        questionNode.speech = EditorGUILayout.TextArea(questionNode.speech, style, GUILayout.Height(150));
+
+                        EditorGUILayout.Space(5);
+                        EditorGUILayout.LabelField("Dialogue Node Exits");
+                        EditorGUILayout.Space(5);
+
+                        for (int i = 0; i < questionNode.exits.Count; i++) {
+                            questionNode.exits[i] = EditorGUILayout.TextArea(questionNode.exits[i], GUILayout.Height(50));
+                        }
+
+                    }
+                }
+                EditorGUI.indentLevel--;
+
+                serializedObject.ApplyModifiedProperties();
+            }
+        }
     }
 }
 

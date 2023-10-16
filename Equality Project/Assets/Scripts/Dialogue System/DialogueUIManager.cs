@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -5,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Dialogue {
+	[ExecuteAlways]
 	public class DialogueUIManager : MonoBehaviour {
 
 		// --- Properties
@@ -208,5 +210,9 @@ namespace Dialogue {
 				fingerIcon.enabled = active;
 			}
 		}
-	}
+
+        public void SetFontSize(float fontSize) {
+			speechText.fontSize = fontSize;
+        }
+    }
 }
