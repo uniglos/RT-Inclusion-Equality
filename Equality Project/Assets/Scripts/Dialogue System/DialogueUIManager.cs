@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -6,7 +5,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Dialogue {
-	[ExecuteAlways]
 	public class DialogueUIManager : MonoBehaviour {
 
 		// --- Properties
@@ -30,16 +28,15 @@ namespace Dialogue {
         [SerializeField] private Image fingerIcon;
         [SerializeField] private GameObject fingerObject;
 
-        [Header("Text Settings")]
-        [SerializeField] private float textSpeed = 0.01f;
-
         [Header("UI Images")]
         [SerializeField] private List<Image> images = new List<Image>();
         [SerializeField] private Image background;
 
-        // --- End
+		// --- End
 
-        // --- Private Variables
+		// --- Private Variables
+
+		private const float TEXTSPEED = 3.0f;
 
         private List<GameObject> buttons = new List<GameObject>();
 
@@ -62,7 +59,9 @@ namespace Dialogue {
 
 			TapButton = GameObject.Find("TapButton").GetComponent<Button>();
 
-            characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
+#if UNITY_EDITOR
+			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
+#endif
 		}
 
 		/// <summary>
@@ -86,21 +85,29 @@ namespace Dialogue {
 		/// Displays Text on the screen
 		/// </summary>
 		public void DisplayText(BaseNode node) {
+			itemInfo = null;
+
 			if (node is QuestionNode questionNode) {
 				characterText.text = characterNames.list[questionNode.characterNameIndex];
                 itemInfo = questionNode.speech;
-                StartCoroutine(AnimateText());
+
+                if (questionNode.ShowTextScrolling) {
+                    StartCoroutine(AnimateText(questionNode.textSpeed));
+                }
             } else if (node is DialogueNode dialogueNode) {
 				characterText.text = characterNames.list[dialogueNode.characterNameIndex];
                 itemInfo = dialogueNode.speech;
-                StartCoroutine(AnimateText());
+
+				if (dialogueNode.ShowTextScrolling) {
+                    StartCoroutine(AnimateText(dialogueNode.textSpeed));
+                }
             }
 		}
 
-		IEnumerator AnimateText() {
+		IEnumerator AnimateText(float speed) {
 			for (int i = 0; i < itemInfo.Length + 1; i++) {
 				speechText.text = itemInfo.Substring(0, i);
-				yield return new WaitForSeconds(textSpeed);
+				yield return new WaitForSeconds(1 / (speed * TEXTSPEED));
 			}
 		}
 

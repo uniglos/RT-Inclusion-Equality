@@ -79,6 +79,13 @@ namespace XNodeEditor {
 #endif
         }
 
+        /// <summary>
+        /// Returns the selected node as an C# object
+        /// </summary>
+        public virtual UnityEngine.Object GetSelectedNode(UnityEngine.Object selection) {
+            return null;
+        }
+
         public virtual int GetWidth() {
             Type type = target.GetType();
             int width;

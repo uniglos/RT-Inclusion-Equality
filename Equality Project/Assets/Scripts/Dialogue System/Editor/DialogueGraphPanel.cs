@@ -1,5 +1,6 @@
-using Codice.CM.Client.Differences;
 using Dialogue;
+using System;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 using XNodeEditor;
@@ -13,7 +14,7 @@ namespace DialogueEditor {
 
         private SerializedObject serializedNames;
 
-        private bool showColourSettings = true, showTextSettings = true;
+        private bool showColourSettings = true, showTextSettings = true, showNodeSettings = false;
 
         public static void ShowWindow() {
             //GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
@@ -55,7 +56,9 @@ namespace DialogueEditor {
             if (Selection.activeObject is DialogueNode dialogueNode) {
                 SerializedObject serializedObject = new SerializedObject(dialogueNode);
 
-                EditorGUILayout.LabelField(dialogueNode.name + " Node");
+                DisplayHeader(dialogueNode.name + " Node");
+
+                EditorGUI.indentLevel++;
 
                 GUIStyle style = EditorStyles.textField;
                 style.wordWrap = true;
@@ -69,6 +72,7 @@ namespace DialogueEditor {
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
                         dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
+                        dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 1.0f, 10.0f);
                     }
                 }
                 EditorGUI.indentLevel--;
@@ -89,7 +93,9 @@ namespace DialogueEditor {
             } else if (Selection.activeObject is QuestionNode questionNode) {
                 SerializedObject serializedObject = new SerializedObject(questionNode);
 
-                EditorGUILayout.LabelField(questionNode.name + " Node");
+                DisplayHeader(questionNode.name + " Node");
+
+                EditorGUI.indentLevel++;
 
                 GUIStyle style = EditorStyles.textField;
                 style.wordWrap = true;
@@ -102,6 +108,7 @@ namespace DialogueEditor {
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                         questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
+                        questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 1.0f, 10.0f);
                     }
                 }
                 EditorGUI.indentLevel--;
@@ -116,7 +123,7 @@ namespace DialogueEditor {
                         questionNode.speech = EditorGUILayout.TextArea(questionNode.speech, style, GUILayout.Height(150));
 
                         EditorGUILayout.Space(5);
-                        EditorGUILayout.LabelField("Dialogue Node Exits");
+                        EditorGUILayout.LabelField("Node Exits");
                         EditorGUILayout.Space(5);
 
                         for (int i = 0; i < questionNode.exits.Count; i++) {
@@ -129,7 +136,31 @@ namespace DialogueEditor {
 
                 serializedObject.ApplyModifiedProperties();
             }
+
+            if (Selection.activeObject is BaseNode && Selection.activeObject.GetType() != typeof(StartNode)) {
+
+                BaseNode node = Selection.activeObject as BaseNode;
+
+                DisplayHeader("Node Customisation");
+
+                showNodeSettings = EditorGUILayout.Foldout(showNodeSettings, "Node Customisation Settings");
+
+                EditorGUI.indentLevel++;
+                {
+                    if (showNodeSettings) {
+                        node.NodeColour = EditorGUILayout.ColorField("Node Colour", node.NodeColour);
+                    }
+                }
+                EditorGUI.indentLevel--;
+            }
+        }
+
+        public void DisplayHeader(string title) {
+            GUIStyle style = new GUIStyle();
+            style.fontSize = 20;
+            style.normal.textColor = Color.white;
+
+            EditorGUILayout.LabelField(title, style);
         }
     }
 }
-

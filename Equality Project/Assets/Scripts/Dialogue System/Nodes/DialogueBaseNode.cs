@@ -6,6 +6,10 @@ namespace Dialogue {
 
         [Input()][HideInInspector] public int entry;
 
+        public bool ShowTextScrolling = true;
+
+        [HideInInspector] public float textSpeed = 1.0f;
+
         [HideInInspector] public int characterNameIndex;
         [HideInInspector] public string speech;
         [HideInInspector] public Color nameColour;

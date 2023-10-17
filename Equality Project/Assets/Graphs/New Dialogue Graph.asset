@@ -102,6 +102,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.01
   characterNameIndex: 0
   speech: Ready to restart
   nameColour: {r: 1, g: 0, b: 0, a: 1}
@@ -153,6 +155,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 10
   characterNameIndex: 0
   speech: 'Hey.. I need your help!
 
@@ -329,6 +333,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.01
   characterNameIndex: 1
   speech: I know where the answer is
   nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
@@ -393,6 +399,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.01
   characterNameIndex: 0
   speech: Ready to restart
   nameColour: {r: 1, g: 0, b: 0, a: 1}
@@ -626,7 +634,7 @@ MonoBehaviour:
   m_Name: Question
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: -328}
+  position: {x: 632, y: -312}
   ports:
     keys:
     - entry
@@ -681,6 +689,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.5
   characterNameIndex: 0
   speech: 'Hello World
 
@@ -735,6 +745,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.01
   characterNameIndex: 0
   speech: Time to head home
   nameColour: {r: 0, g: 0, b: 1, a: 1}
@@ -786,6 +798,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.01
   characterNameIndex: 0
   speech: Time to head home
   nameColour: {r: 0.47843137, g: 0, b: 1, a: 1}
@@ -861,6 +875,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   entry: 0
+  ShowTextScrolling: 1
+  textSpeed: 0.5
   characterNameIndex: 0
   speech: I'm ready to work
   nameColour: {r: 0, g: 0, b: 1, a: 1}

@@ -15,7 +15,7 @@ namespace DialogueEditor {
         void OnGUI() {
             nodeColour = EditorGUILayout.ColorField("New Color", nodeColour);
             if (GUILayout.Button("Change Colour")) {
-                nodeEditor.ChangeColour(nodeColour);
+                //nodeEditor.ChangeColour(nodeColour);
 
             }
         }

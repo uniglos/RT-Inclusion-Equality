@@ -2,7 +2,6 @@ using System;
 using UnityEditor;
 using XNodeEditor;
 using Dialogue;
-using UnityEngine.UIElements;
 using UnityEngine;
 
 namespace DialogueEditor {
@@ -14,10 +13,10 @@ namespace DialogueEditor {
         public override void OnOpen() {
             dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
 
-            dialogueGraphPanel.position = new Rect(new Rect(NodeEditorWindow.current.position.x - 455, NodeEditorWindow.current.position.y, 350, 720));
+            dialogueGraphPanel.position = new Rect(new Rect(NodeEditorWindow.current.position.x - 455, NodeEditorWindow.current.position.y, 350, NodeEditorWindow.current.position.size.y));
 
-            dialogueGraphPanel.minSize = new Vector2(450, 720);
-            dialogueGraphPanel.maxSize = new Vector2(450, 720);
+            dialogueGraphPanel.minSize = new Vector2(450, NodeEditorWindow.current.position.size.y);
+            dialogueGraphPanel.maxSize = new Vector2(450, NodeEditorWindow.current.position.size.y);
         }
 
         public override string GetNodeMenuName(Type type) {
@@ -33,5 +32,3 @@ namespace DialogueEditor {
         }
     }
 }
-
-

@@ -50,6 +50,8 @@ namespace Dialogue {
 
         // --- Xnode overrides
 
+        public Color NodeColour = new Color32(90, 97, 105, 255);
+
         protected override void Init()
         {
             Create();
