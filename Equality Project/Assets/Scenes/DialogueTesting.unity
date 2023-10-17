@@ -592,6 +592,8 @@ MonoBehaviour:
   - {fileID: 1796404600}
   - {fileID: 2051703029}
   background: {fileID: 550651136}
+  waitedForMouse: 0
+  tapButton: {fileID: 1540601098}
   textSpeed: 0.05
 --- !u!4 &1017068228
 Transform:
@@ -782,7 +784,7 @@ GameObject:
   - component: {fileID: 1540601097}
   - component: {fileID: 1540601098}
   m_Layer: 5
-  m_Name: F1 UI
+  m_Name: Tap UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
