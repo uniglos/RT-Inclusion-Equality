@@ -59,9 +59,10 @@ namespace Dialogue {
 
 			TapButton = GameObject.Find("TapButton").GetComponent<Button>();
 
-#if UNITY_EDITOR
-			characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
-#endif
+//#if UNITY_EDITOR
+			//characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
+			characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
+//#endif
 		}
 
 		/// <summary>
@@ -96,7 +97,8 @@ namespace Dialogue {
                 }
             } else if (node is DialogueNode dialogueNode) {
 				characterText.text = characterNames.list[dialogueNode.characterNameIndex];
-                itemInfo = dialogueNode.speech;
+
+				itemInfo = dialogueNode.speech;
 
 				if (dialogueNode.ShowTextScrolling) {
                     StartCoroutine(AnimateText(dialogueNode.textSpeed));

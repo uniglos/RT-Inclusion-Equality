@@ -22,9 +22,9 @@ namespace DialogueEditor {
 
         private void OnEnable() {
 
-            characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
+			characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
 
-            if (characterNames != null) {
+			if (characterNames != null) {
                 serializedNames = new UnityEditor.SerializedObject(characterNames);
 
                 characterNamesProperty = serializedNames.FindProperty("list");

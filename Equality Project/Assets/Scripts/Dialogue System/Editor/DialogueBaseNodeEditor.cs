@@ -19,9 +19,9 @@ namespace DialogueEditor {
         protected virtual void GUIBody() { }
 
         public override void OnCreate() {
-            characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
+			characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
 
-            _speech = serializedObject.FindProperty("speech");
+			_speech = serializedObject.FindProperty("speech");
         }
 
         public override void OnBodyGUI() {
