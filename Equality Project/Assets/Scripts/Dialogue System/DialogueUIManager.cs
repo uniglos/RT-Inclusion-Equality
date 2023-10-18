@@ -45,7 +45,6 @@ namespace Dialogue {
 
 
         //private int currentDisplayingText = 0;
-        // --- End
 
         private void Awake() {
 			if (Instance == null) {
