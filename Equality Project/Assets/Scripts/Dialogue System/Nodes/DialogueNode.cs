@@ -1,30 +1,20 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Dialogue {
-    public class DialogueNode : BaseNode {
+    public class DialogueNode : DialogueBaseNode {
 
-        [Input] public int entry;
-        [Output] public int exit;
+        [Output][HideInInspector] public int exit;
 
-        public string character;
-        public string speech;
-        public Color fingerColour;
-        public Color textColour;
-        public Color nameColour;
+        [HideInInspector] public Color fingerColour;
 
-        public override IEnumerator Run() {
-            DialogueUIManager.Instance.ClearButton();
+        protected override void DisplayUI() {
+            base.DisplayUI();
             DialogueUIManager.Instance.SetMouseIconActive(true);
-            DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.ChangeColour(fingerColour);
-            DialogueUIManager.Instance.SetColour(nameColour, textColour);
-            yield return null;
-            DialogueUIManager.Instance.tapButton.onClick.AddListener(() => 
-            {
+        }
+
+        protected override void CallNextNode() {
+            DialogueUIManager.Instance.TapButton.onClick.AddListener(() => {
                 DialogueUIManager.Instance.SetMouseIconActive(false);
                 NextNode("exit");
             });

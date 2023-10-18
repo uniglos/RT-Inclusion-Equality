@@ -1,23 +1,15 @@
-﻿using Dialogue;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using XNode;
-using static XNode.Node;
-
-/// <summary>
-/// FIX On the dialogue node remove the Answer Questions and implement the NextNode function
-/// </summary>
 
 namespace Dialogue {
     public class CharactersNode : BaseNode {
 
-        [Input] public int entry;
-        [Output] public int exit;
+        [Input][HideInInspector] public int entry;
+        [Output][HideInInspector] public int exit;
 
-        public Texture2D imageLeft;
-        public Texture2D imageMiddle;
-        public Texture2D imageRight;
+        [HideInInspector] public Texture2D imageLeft;
+        [HideInInspector] public Texture2D imageMiddle;
+        [HideInInspector] public Texture2D imageRight;
 
         public override IEnumerator Run() {
             DialogueUIManager.Instance.DisplayImages(this);
