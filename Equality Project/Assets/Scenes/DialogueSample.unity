@@ -572,12 +572,6 @@ MonoBehaviour:
   - {fileID: 1796404600}
   - {fileID: 2051703029}
   background: {fileID: 550651136}
-<<<<<<< Updated upstream:Equality Project/Assets/Scenes/DialogueSample.unity
-=======
-  waitedForMouse: 0
-  tapButton: {fileID: 1540601098}
-  textSpeed: 0.025
->>>>>>> Stashed changes:Equality Project/Assets/Scenes/DialogueTesting.unity
 --- !u!4 &1017068228
 Transform:
   m_ObjectHideFlags: 0
