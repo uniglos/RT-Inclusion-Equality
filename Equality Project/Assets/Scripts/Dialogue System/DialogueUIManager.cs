@@ -7,15 +7,9 @@ using UnityEngine.UI;
 namespace Dialogue {
 	public class DialogueUIManager : MonoBehaviour {
 
-		// --- Properties
-
 		public static DialogueUIManager Instance { get; private set; }
 
         public Button TapButton { get; private set; }
-
-		// --- End
-
-		// --- Unity Inspector Properties
 
         [Header("Dialogue UI Elements")]
 		[SerializeField] private TMPro.TMP_Text characterText;
@@ -32,10 +26,6 @@ namespace Dialogue {
         [SerializeField] private List<Image> images = new List<Image>();
         [SerializeField] private Image background;
 
-		// --- End
-
-		// --- Private Variables
-
 		private const float TEXTSPEED = 3.0f;
 
         private List<GameObject> buttons = new List<GameObject>();
@@ -47,8 +37,7 @@ namespace Dialogue {
 		private CharacterNames characterNames;
 
         private string itemInfo;
-<<<<<<< Updated upstream
-=======
+
         [SerializeField] private float textSpeed = 0.025f;
 
         //private float oldTextSpeed = 0.05f;
@@ -56,9 +45,6 @@ namespace Dialogue {
 
 
         //private int currentDisplayingText = 0;
->>>>>>> Stashed changes
-
-        // --- End
 
         private void Awake() {
 			if (Instance == null) {
@@ -123,7 +109,6 @@ namespace Dialogue {
 			}
 		}
 
-<<<<<<< Updated upstream
 		public void ClearButton() {
             buttonHolder.gameObject.SetActive(false);
 
@@ -133,85 +118,6 @@ namespace Dialogue {
 				Destroy(child.gameObject);
 			}
 		}
-=======
-        }
-
-        public void ClearImageAtIndex(int index) {
-            images[index].sprite = null;
-        }
-
-        public void ClearAllImages() {
-            foreach (var image in images) {
-                image.gameObject.SetActive(false);
-            }
-        }
-
-        /// <summary>
-        /// Dispalys Text on the screen
-        /// </summary>
-        public void DisplayText(BaseNode node) {
-            if (node is QuestionNode) {
-                QuestionNode dialogueNode = (QuestionNode)node;
-                characterText.text = dialogueNode.character;
-                //speechText.text = dialogueNode.speech;
-                itemInfo = dialogueNode.speech;
-                //ClearingText();
-                StartCoroutine(AnimateText());
-            } else if (node is DialogueNode) {
-                DialogueNode dialogueNode = (DialogueNode)node;
-                characterText.text = dialogueNode.character;
-                //speechText.text = dialogueNode.speech;
-                itemInfo = dialogueNode.speech;
-                StartCoroutine(AnimateText());
-            }
-        }
-
-        IEnumerator AnimateText() {
-            for (int i = 0; i < itemInfo.Length + 1; i++) {
-                speechText.text = itemInfo.Substring(0, i);
-                //if (textShouldClear) {
-                //    itemInfo.Length = 0;
-                //}
-                        
-                yield return new WaitForSeconds(textSpeed);
-            }
-            
-        }
-
-        IEnumerator ClearText() {
-            //textSpeed = 0f;
-            //yield return new WaitForSeconds(0.04f);
-            //textSpeed = oldTextSpeed;
-
-            //textShouldClear = true;
-            yield return new WaitForSeconds(0.01f);
-            //textShouldClear = false;
-        }
-
-        public void ClearingText() {
-            //StartCoroutine(ClearText());
-        }
-
-        public void ClearButton()
-        {
-            buttons.Clear();
-            foreach (Transform child in buttonHolder) {
-                Destroy(child.gameObject);
-            }
-        }
-
-        /// <summary>
-        /// Displays the buttons on the screen
-        /// </summary>
-        public void DisplayButtons(BaseNode node) {
-            QuestionNode dialogueNode = (QuestionNode)node;
-
-            buttons.Clear();
-            //ClearingText();
-            foreach (Transform child in buttonHolder) {
-                Destroy(child.gameObject);
-            }
->>>>>>> Stashed changes
 
 		/// <summary>
 		/// Displays the buttons on the screen
