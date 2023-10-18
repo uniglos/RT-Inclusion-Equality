@@ -36,7 +36,7 @@ namespace Dialogue {
 
 		// --- Private Variables
 
-		private const float TEXTSPEED = 3.0f;
+		private const float TEXTSPEED = 5.0f;
 
         private List<GameObject> buttons = new List<GameObject>();
 
@@ -86,29 +86,44 @@ namespace Dialogue {
 		/// Displays Text on the screen
 		/// </summary>
 		public void DisplayText(BaseNode node) {
-			itemInfo = null;
+			Debug.Log("Stopping All Coroutines");
+			StopAllCoroutines();
+			//StopAllCoroutines();
+			//itemInfo = null;
 
-			if (node is QuestionNode questionNode) {
-				characterText.text = characterNames.list[questionNode.characterNameIndex];
-                itemInfo = questionNode.speech;
+			if (node is DialogueBaseNode dialogueBaseNode) {
+				characterText.text = characterNames.list[dialogueBaseNode.characterNameIndex];
+				itemInfo = dialogueBaseNode.speech;
 
-                if (questionNode.ShowTextScrolling) {
-                    StartCoroutine(AnimateText(questionNode.textSpeed));
-                }
-            } else if (node is DialogueNode dialogueNode) {
-				characterText.text = characterNames.list[dialogueNode.characterNameIndex];
+				if (dialogueBaseNode.ShowTextScrolling) {
+					Debug.Log("Starting Coroutine");
+					StartCoroutine(AnimateText(dialogueBaseNode.textSpeed));
+				}
+			}
 
-				itemInfo = dialogueNode.speech;
+			//if (node is QuestionNode questionNode) {
+			//	characterText.text = characterNames.list[questionNode.characterNameIndex];
+   //             itemInfo = questionNode.speech;
 
-				if (dialogueNode.ShowTextScrolling) {
-                    StartCoroutine(AnimateText(dialogueNode.textSpeed));
-                }
-            }
+   //             if (questionNode.ShowTextScrolling) {
+   //                 StartCoroutine(AnimateText(questionNode.textSpeed));
+   //             }
+   //         } else if (node is DialogueNode dialogueNode) {
+			//	characterText.text = characterNames.list[dialogueNode.characterNameIndex];
+
+			//	itemInfo = dialogueNode.speech;
+
+			//	if (dialogueNode.ShowTextScrolling) {
+   //                 StartCoroutine(AnimateText(dialogueNode.textSpeed));
+   //             }
+   //         }
 		}
 
 		IEnumerator AnimateText(float speed) {
+			Debug.Log("AnimateText");
 			for (int i = 0; i < itemInfo.Length + 1; i++) {
-				speechText.text = itemInfo.Substring(0, i);
+				speechText.text = itemInfo[..i];
+				Debug.Log(i);
 				yield return new WaitForSeconds(1 / (speed * TEXTSPEED));
 			}
 		}
