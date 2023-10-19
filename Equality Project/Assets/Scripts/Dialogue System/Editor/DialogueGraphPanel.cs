@@ -15,9 +15,14 @@ namespace DialogueEditor {
         private SerializedObject serializedNames;
 
         private bool showColourSettings = true, showTextSettings = true, showNodeSettings = false;
+        private static bool isOpen = false;
 
         public static void ShowWindow() {
-            //GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
+            if (!EditorWindow.HasOpenInstances<DialogueGraphPanel>()) {
+                GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
+            } else {
+                NodeEditorWindow.current.ShowNotification(new GUIContent("The Dialogue Graph Panel is already open within this graph window"), 1.0f);
+            }
         }
 
         private void OnEnable() {
@@ -153,6 +158,10 @@ namespace DialogueEditor {
                 }
                 EditorGUI.indentLevel--;
             }
+        }
+
+        private void OnDestroy() {
+            isOpen = false;
         }
 
         public void DisplayHeader(string title) {

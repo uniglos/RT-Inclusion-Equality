@@ -18,11 +18,6 @@ namespace DialogueEditor {
 
         public override void AddContextMenuItems(GenericMenu menu) {
             base.AddContextMenuItems(menu);
-            //Adds the change colour menu to the scripts
-            if (Selection.objects.Length == 1 && Selection.activeObject is BaseNode) {
-                BaseNode node = Selection.activeObject as BaseNode;
-                menu.AddItem(new GUIContent("Change Colour"), false, () => NodeColourWheel.Init(this));
-            }
         }
 
         /// <summary>
@@ -40,14 +35,10 @@ namespace DialogueEditor {
 
                 string fieldName = fields[i].Name;
 
-                //Removes both the position and graph from within the inspector
-                if (fieldName == "position") {
-                    break;
-                }
-
-                if (fieldName == "graph") {
-                    break;
-                }
+                //Removes properties which are present within the graph panel or should not be present at all
+                if (fieldName == "position") break;
+                if (fieldName == "graph") break;
+                if (fieldName == "NodeColour") break;
 
                 //Creates the property inside the insepctor
                 NodeEditorGUILayout.PropertyField(serializedObject.FindProperty(fieldName));
