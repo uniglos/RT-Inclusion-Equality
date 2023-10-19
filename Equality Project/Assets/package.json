@@ -1,0 +1,25 @@
+{
+    "name": "com.researchers.visualnoveltool",
+    "version": "1.0.0",
+    "displayName": "Visual Novel Tool",
+    "description": "A Visual Novel Tool to make visual novels using the built in graph editor.",
+    "unity": "2022.3",
+    "unityRelease": "0b5",
+    "documentationUrl": "https://github.com/uniglos/RT-Inclusion-Equality/wiki",
+    "changelogUrl": "https://github.com/uniglos/RT-Inclusion-Equality/wiki#changelog",
+    "licensesUrl": "",
+    "dependencies": {
+        "com.unity.textmeshpro": "3.0.6",
+        "com.unity.cinemachine": "2.9.7"
+    },
+   "keywords": [
+      "Visual",
+      "Tool",
+      "Visual Novel"
+    ],
+    "author": {
+      "name": "Researchers",
+      "email": "researchplacementstudents23-24@connectglosac.onmicrosoft.com",
+      "url": "https://github.com/uniglos/RT-Inclusion-Equality"
+    }
+  }
