@@ -15,7 +15,6 @@ namespace DialogueEditor {
         private SerializedObject serializedNames;
 
         private bool showColourSettings = true, showTextSettings = true, showNodeSettings = false;
-        private static bool isOpen = false;
 
         public static void ShowWindow() {
             if (!EditorWindow.HasOpenInstances<DialogueGraphPanel>()) {
@@ -77,7 +76,7 @@ namespace DialogueEditor {
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
                         dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
-                        dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 1.0f, 10.0f);
+                        dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 1.5f, 10.0f);
                     }
                 }
                 EditorGUI.indentLevel--;
@@ -113,7 +112,7 @@ namespace DialogueEditor {
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                         questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
-                        questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 1.0f, 10.0f);
+                        questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 1.5f, 10.0f);
                     }
                 }
                 EditorGUI.indentLevel--;
@@ -158,10 +157,6 @@ namespace DialogueEditor {
                 }
                 EditorGUI.indentLevel--;
             }
-        }
-
-        private void OnDestroy() {
-            isOpen = false;
         }
 
         public void DisplayHeader(string title) {

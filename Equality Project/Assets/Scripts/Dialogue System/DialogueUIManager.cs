@@ -59,10 +59,7 @@ namespace Dialogue {
 
 			TapButton = GameObject.Find("TapButton").GetComponent<Button>();
 
-//#if UNITY_EDITOR
-			//characterNames = AssetDatabase.LoadAssetAtPath<CharacterNames>("Assets/Scripts/Dialogue System/ScriptableObjects/CharacterNames.asset");
 			characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
-//#endif
 		}
 
 		/// <summary>
@@ -208,7 +205,7 @@ namespace Dialogue {
 		public void SetMouseIconActive(bool active) {
 			if (fingerIcon) {
 				fingerObject.SetActive(active);
-				fingerIcon.enabled = active;
+                fingerIcon.enabled = active;
 			}
 		}
 
