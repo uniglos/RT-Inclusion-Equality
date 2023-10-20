@@ -32,11 +32,14 @@ namespace Dialogue {
         [SerializeField] private List<Image> images = new List<Image>();
         [SerializeField] private Image background;
 
-		// --- End
+        [Header("UI Images")]
+		[SerializeField] private AudioClip audioSound;
 
-		// --- Private Variables
+        // --- End
 
-		private const float TEXTSPEED = 5.0f;
+        // --- Private Variables
+
+        private const float TEXTSPEED = 5.0f;
 
         private List<GameObject> buttons = new List<GameObject>();
 
@@ -190,7 +193,14 @@ namespace Dialogue {
 			return background;
 		}
 
-		public void ChangeColour(Color colour) {
+        public AudioClip PlaySound(AudioClip audioSound) {
+
+            
+
+            return audioSound;
+        }
+
+        public void ChangeColour(Color colour) {
 			fingerColour = colour;
 			fingerIcon.GetComponent<Image>().color = new Color(fingerColour.r, fingerColour.g, fingerColour.b, fingerColour.a);
 		}

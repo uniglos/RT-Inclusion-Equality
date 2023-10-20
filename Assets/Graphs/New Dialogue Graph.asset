@@ -573,6 +573,7 @@ MonoBehaviour:
   - {fileID: -7928953159337221062}
   - {fileID: 5338453606239727926}
   - {fileID: 7100337924731504735}
+  - {fileID: 8665348138387636095}
 --- !u!114 &1879047742599048718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +702,7 @@ MonoBehaviour:
   NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
   entry: 0
   ShowTextScrolling: 1
-  textSpeed: 0.5
+  textSpeed: 1.5
   characterNameIndex: 0
   speech: 'Hello World
 
@@ -899,6 +900,47 @@ MonoBehaviour:
   exits:
   - I'm off the clock
   - Now to Jess
+--- !u!114 &8665348138387636095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3294640696f3a438a81b69f6e91100, type: 3}
+  m_Name: Audio
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 535.5, y: 167.5}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 8665348138387636095}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 8665348138387636095}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
+  entry: 0
+  exit: 0
+  audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
 --- !u!114 &8742330148275108583
 MonoBehaviour:
   m_ObjectHideFlags: 0
