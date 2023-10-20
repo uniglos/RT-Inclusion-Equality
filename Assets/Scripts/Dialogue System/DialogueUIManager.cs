@@ -32,8 +32,9 @@ namespace Dialogue {
         [SerializeField] private List<Image> images = new List<Image>();
         [SerializeField] private Image background;
 
-        [Header("UI Images")]
-		[SerializeField] private AudioClip audioSound;
+        [Header("Audio")]
+        private AudioSource audioManager;
+        private AudioClip audioSound;
 
         // --- End
 
@@ -193,11 +194,13 @@ namespace Dialogue {
 			return background;
 		}
 
-        public AudioClip PlaySound(AudioClip audioSound) {
+        public AudioSource PlaySound(AudioClip audioSound) {
 
-            
+			audioManager = GetComponent<AudioSource>();
+			audioManager.clip = audioSound;
+            audioManager.Play();
 
-            return audioSound;
+            return audioManager;
         }
 
         public void ChangeColour(Color colour) {
