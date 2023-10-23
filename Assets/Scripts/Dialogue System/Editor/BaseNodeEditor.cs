@@ -39,6 +39,7 @@ namespace DialogueEditor {
                 if (fieldName == "position") break;
                 if (fieldName == "graph") break;
                 if (fieldName == "NodeColour") break;
+                if (fieldName == "volume") break;
 
                 //Creates the property inside the insepctor
                 NodeEditorGUILayout.PropertyField(serializedObject.FindProperty(fieldName));

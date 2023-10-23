@@ -614,6 +614,7 @@ MonoBehaviour:
   entry: 0
   exit: 0
   audioSound: {fileID: 8300000, guid: 0cbb889115000c34b8aa988a2e6f4ba7, type: 3}
+  volume: 1
 --- !u!114 &1879047742599048718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +979,7 @@ MonoBehaviour:
   entry: 0
   exit: 0
   audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
+  volume: 0.1
 --- !u!114 &8742330148275108583
 MonoBehaviour:
   m_ObjectHideFlags: 0

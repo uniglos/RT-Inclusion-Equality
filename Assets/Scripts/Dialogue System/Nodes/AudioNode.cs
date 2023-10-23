@@ -8,9 +8,10 @@ namespace Dialogue {
         [Output][HideInInspector] public int exit;
 
         [HideInInspector] public AudioClip audioSound;
+        [HideInInspector] public float volume;
 
         public override IEnumerator Run() {
-            DialogueUIManager.Instance.PlaySound(audioSound);
+            DialogueUIManager.Instance.PlaySound(audioSound, this);
             yield return null;
             NextNode("exit");
         }

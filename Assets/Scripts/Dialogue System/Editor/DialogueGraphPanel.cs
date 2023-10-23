@@ -76,7 +76,8 @@ namespace DialogueEditor {
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
                         dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
-                        dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 1.5f, 10.0f);
+                        EditorGUILayout.LabelField("Text speed");
+                        dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 5.0f, 10.0f);
                     }
                 }
                 EditorGUI.indentLevel--;
@@ -112,7 +113,8 @@ namespace DialogueEditor {
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
                         EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                         questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
-                        questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 1.5f, 10.0f);
+                        EditorGUILayout.LabelField("Text speed");
+                        questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 5.0f, 10.0f);
                     }
                 }
                 EditorGUI.indentLevel--;
@@ -141,7 +143,13 @@ namespace DialogueEditor {
                 serializedObject.ApplyModifiedProperties();
             }
 
-            if (Selection.activeObject is BaseNode && Selection.activeObject.GetType() != typeof(StartNode)) {
+            if (Selection.activeObject is AudioNode audioNode) {
+                SerializedObject serializedObject = new SerializedObject(audioNode);
+                EditorGUILayout.LabelField("Volume");
+                audioNode.volume = EditorGUILayout.Slider(audioNode.volume, 0.0f, 1.0f);
+            }
+
+                if (Selection.activeObject is BaseNode && Selection.activeObject.GetType() != typeof(StartNode)) {
 
                 BaseNode node = Selection.activeObject as BaseNode;
 

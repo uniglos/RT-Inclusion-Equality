@@ -194,10 +194,11 @@ namespace Dialogue {
 			return background;
 		}
 
-        public AudioSource PlaySound(AudioClip audioSound) {
+        public AudioSource PlaySound(AudioClip audioSound, AudioNode node) {
 
 			audioManager = GetComponent<AudioSource>();
 			audioManager.clip = audioSound;
+			audioManager.volume = node.volume;
             audioManager.Play();
 
             return audioManager;
