@@ -18,9 +18,9 @@ namespace DialogueEditor {
 
         public static void ShowWindow() {
             if (!EditorWindow.HasOpenInstances<DialogueGraphPanel>()) {
-                GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
+                GetWindow<DialogueGraphPanel>("Node Inspector");
             } else {
-                NodeEditorWindow.current.ShowNotification(new GUIContent("The Dialogue Graph Panel is already open within this graph window"), 1.0f);
+                NodeEditorWindow.current.ShowNotification(new GUIContent("The Node Inspector is already open within this graph window"), 1.0f);
             }
         }
 

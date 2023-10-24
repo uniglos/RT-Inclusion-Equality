@@ -15,7 +15,7 @@ namespace DialogueEditor {
 		private DialogueGraphPanel dialogueGraphPanel;
 
         public override void OnOpen() {
-            dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>("Dialogue Graph Panel");
+            dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>("Node Inspector");
 
             dialogueGraphPanel.position = new Rect(new Rect(NodeEditorWindow.current.position.x - 455, NodeEditorWindow.current.position.y, 350, NodeEditorWindow.current.position.size.y));
 
@@ -37,7 +37,7 @@ namespace DialogueEditor {
 
         public override void AddMenuItems(GenericMenu menu) {
             menu.AddSeparator("");
-            menu.AddItem(new GUIContent("Show Dialogue Graph Panel"), false, () => DialogueGraphPanel.ShowWindow());
+            menu.AddItem(new GUIContent("Show Node Inspector"), false, () => DialogueGraphPanel.ShowWindow());
         }
 
         public override void OnGUI() {
