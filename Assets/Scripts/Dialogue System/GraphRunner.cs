@@ -30,6 +30,8 @@ namespace Dialogue {
         public void Run(BaseNode next) {
             graph.CurrentNode = next;
             StartCoroutine(graph.CurrentNode.Run());
+
+            //Debug.Log("Next Node: " + next.name);
         }
     }
 }

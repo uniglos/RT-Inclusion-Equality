@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using XNode;
+using Unity.Jobs;
+using Unity.Burst;
+using Unity.Collections;
+
 
 namespace Dialogue {
     public class BaseNode : Node {
@@ -25,7 +29,6 @@ namespace Dialogue {
         /// <param name="exit">The name of the [Output] attribute name as a string</param>
         public void NextNode(string exit) {
             BaseNode node = null;
-
             foreach (NodePort port in this.Ports) {
                 if(port.fieldName == exit) {
                     //Node we have found
@@ -40,8 +43,15 @@ namespace Dialogue {
                 }
             }
 
+            //NodeJob job = new NodeJob {
+            //    Current = node
+            //};
+            //
+            //JobHandle handle = job.Schedule(graph.nodes.Count, 64);
+
             if (node != null) {
                 //Have moved the graph.CurrentNode = node into this method to clear some reduant casting
+                //Debug.Log(node.name);
                 GraphRunner.Current.Run(node);
             }else if(node is null) {
                 Debug.LogError("Cannot find next avaible node: Please make sure that all ports are connected.");
@@ -63,6 +73,15 @@ namespace Dialogue {
         public override object GetValue(NodePort port)
         {
             return null;
+        }
+    }
+
+    struct NodeJob : IJobParallelFor {
+
+        public BaseNode Current { get; set; }
+
+        public void Execute(int index) {
+            GraphRunner.Current.Run(Current);
         }
     }
 }

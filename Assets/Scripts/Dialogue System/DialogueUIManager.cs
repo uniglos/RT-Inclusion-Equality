@@ -23,8 +23,9 @@ namespace Dialogue {
 
 		[SerializeField] private GameObject buttonObject;
 		[SerializeField] private Transform buttonHolder;
+        [SerializeField] private GameObject mainPanel;
 
-		[Header("Finger Icon")]
+        [Header("Finger Icon")]
         [SerializeField] private Image fingerIcon;
         [SerializeField] private GameObject fingerObject;
 
@@ -70,7 +71,8 @@ namespace Dialogue {
 		/// Ends the Dialogue
 		/// </summary>
 		public void EndDialogue() {
-
+			mainPanel.SetActive(false);
+			ClearButton();
 		}
 
 		public void ClearImageAtIndex(int index) {

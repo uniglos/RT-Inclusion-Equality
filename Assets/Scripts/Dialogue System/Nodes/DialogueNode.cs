@@ -17,6 +17,7 @@ namespace Dialogue {
             DialogueUIManager.Instance.TapButton.onClick.AddListener(() => {
                 DialogueUIManager.Instance.SetMouseIconActive(false);
                 NextNode("exit");
+                DialogueUIManager.Instance.TapButton.onClick.RemoveAllListeners(); //Removes the nodes duplicating.
             });
         }
     }
