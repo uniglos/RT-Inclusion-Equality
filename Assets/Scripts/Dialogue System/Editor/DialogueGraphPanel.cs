@@ -8,6 +8,8 @@ using XNodeEditor;
 namespace DialogueEditor {
     public class DialogueGraphPanel : EditorWindow {
 
+        public static DialogueGraphPanel Current { get; private set; }
+
         private CharacterNames characterNames;
 
         private SerializedProperty characterNamesProperty;
@@ -16,12 +18,15 @@ namespace DialogueEditor {
 
         private bool showColourSettings = true, showTextSettings = true, showNodeSettings = false;
 
-        public static void ShowWindow() {
+        public static DialogueGraphPanel ShowWindow() {
             if (!EditorWindow.HasOpenInstances<DialogueGraphPanel>()) {
-                GetWindow<DialogueGraphPanel>("Node Inspector");
+                Current = GetWindow<DialogueGraphPanel>("Node Inspector");
+                return Current;
             } else {
                 NodeEditorWindow.current.ShowNotification(new GUIContent("The Node Inspector is already open within this graph window"), 1.0f);
             }
+
+            return Current;
         }
 
         private void OnEnable() {

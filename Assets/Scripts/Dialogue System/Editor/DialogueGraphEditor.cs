@@ -14,13 +14,16 @@ namespace DialogueEditor {
 
 		private DialogueGraphPanel dialogueGraphPanel;
 
-        public override void OnOpen() {
-            dialogueGraphPanel = EditorWindow.GetWindow<DialogueGraphPanel>("Node Inspector");
+        public override void OnOpen()
+        {
+            dialogueGraphPanel = DialogueGraphPanel.ShowWindow();
 
-            dialogueGraphPanel.position = new Rect(new Rect(NodeEditorWindow.current.position.x - 455, NodeEditorWindow.current.position.y, 350, NodeEditorWindow.current.position.size.y));
-
-            dialogueGraphPanel.minSize = new Vector2(450, NodeEditorWindow.current.position.size.y);
-            dialogueGraphPanel.maxSize = new Vector2(450, NodeEditorWindow.current.position.size.y);
+            if (dialogueGraphPanel)
+            {
+                dialogueGraphPanel.position = new Rect(new Rect(NodeEditorWindow.current.position.x - 455, NodeEditorWindow.current.position.y, 350, NodeEditorWindow.current.position.size.y));
+                dialogueGraphPanel.minSize = new Vector2(450, NodeEditorWindow.current.position.size.y);
+                dialogueGraphPanel.maxSize = new Vector2(450, NodeEditorWindow.current.position.size.y);
+            }
         }
 
         public override string GetNodeMenuName(Type type) {
@@ -41,7 +44,8 @@ namespace DialogueEditor {
         }
 
         public override void OnGUI() {
-            dialogueGraphPanel.Repaint();
+            if(dialogueGraphPanel)
+                dialogueGraphPanel.Repaint();
         }
     }
 }
