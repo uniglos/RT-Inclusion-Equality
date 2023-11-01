@@ -10,6 +10,8 @@ namespace DialogueEditor {
 
         public static DialogueGraphPanel Current { get; private set; }
 
+        private bool scanning = false;
+
         private CharacterNames characterNames;
 
         private SerializedProperty characterNamesProperty;
@@ -31,9 +33,9 @@ namespace DialogueEditor {
 
         private void OnEnable() {
 
-			characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
+            characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
 
-			if (characterNames != null) {
+            if (characterNames != null) {
                 serializedNames = new UnityEditor.SerializedObject(characterNames);
 
                 characterNamesProperty = serializedNames.FindProperty("list");
@@ -46,133 +48,157 @@ namespace DialogueEditor {
 
             if (NodeEditorWindow.hasClosed) { Close(); return; }
 
-            if (characterNames != null) {
-                EditorGUILayout.PropertyField(characterNamesProperty);
+            using (new EditorGUI.DisabledGroupScope(scanning)) {
+                if (GUILayout.Button("Scan for keywords")) {
+                    scanning = true;
+                    try {
+                        foreach (var n in NodeEditorWindow.current.graph.nodes) {
+                            if (n.GetType().BaseType == typeof(DialogueBaseNode)) {
+                                string[] words = (n as DialogueBaseNode).speech.Split(' ');
+                                foreach (string word in words) {
+                                    if (word == "Equality") {
+                                        Debug.Log(word);
+                                    }
 
-                serializedNames.ApplyModifiedProperties();
-
-            } else {
-                GUIStyle style = GUI.skin.textArea;
-                style.wordWrap = true;
-
-                EditorGUILayout.LabelField("Character Names asset has not been found: Please create one", style);
-            }
-
-            EditorGUILayout.Space();
-
-            //TODO: use the new dialogue base node here
-
-            if (Selection.activeObject is DialogueNode dialogueNode) {
-                SerializedObject serializedObject = new SerializedObject(dialogueNode);
-
-                DisplayHeader(dialogueNode.name + " Node");
-
-                EditorGUI.indentLevel++;
-
-                GUIStyle style = EditorStyles.textField;
-                style.wordWrap = true;
-
-                showColourSettings = EditorGUILayout.Foldout(showColourSettings, "Customisation Settings");
-                EditorGUI.indentLevel++;
-                {
-                    if (showColourSettings) {
-
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
-                        dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
-                        EditorGUILayout.LabelField("Text speed");
-                        dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 5.0f, 10.0f);
-                    }
-                }
-                EditorGUI.indentLevel--;
-
-                EditorGUILayout.Space(15);
-
-                showTextSettings = EditorGUILayout.Foldout(showTextSettings, "Text Settings");
-
-                EditorGUI.indentLevel++;
-                {
-                    if (showTextSettings) {
-                        dialogueNode.speech = EditorGUILayout.TextArea(dialogueNode.speech, style, GUILayout.Height(150));
-                    }
-                }
-                EditorGUI.indentLevel--;
-
-                serializedObject.ApplyModifiedProperties();
-            } else if (Selection.activeObject is QuestionNode questionNode) {
-                SerializedObject serializedObject = new SerializedObject(questionNode);
-
-                DisplayHeader(questionNode.name + " Node");
-
-                EditorGUI.indentLevel++;
-
-                GUIStyle style = EditorStyles.textField;
-                style.wordWrap = true;
-
-                showColourSettings = EditorGUILayout.Foldout(showColourSettings, "Customisation Settings");
-
-                EditorGUI.indentLevel++;
-                {
-                    if (showColourSettings) {
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
-                        EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
-                        questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
-                        EditorGUILayout.LabelField("Text speed");
-                        questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 5.0f, 10.0f);
-                    }
-                }
-                EditorGUI.indentLevel--;
-
-                EditorGUILayout.Space(15);
-
-                showTextSettings = EditorGUILayout.Foldout(showTextSettings, "Text Settings");
-
-                EditorGUI.indentLevel++;
-                {
-                    if (showTextSettings) {
-                        questionNode.speech = EditorGUILayout.TextArea(questionNode.speech, style, GUILayout.Height(150));
-
-                        EditorGUILayout.Space(5);
-                        EditorGUILayout.LabelField("Node Exits");
-                        EditorGUILayout.Space(5);
-
-                        for (int i = 0; i < questionNode.exits.Count; i++) {
-                            questionNode.exits[i] = EditorGUILayout.TextArea(questionNode.exits[i], GUILayout.Height(50));
+                                    //Debug.Log("All Words: " + word);
+                                }
+                            }
+                            scanning = false;
                         }
-
+                    } catch (Exception) {
+                        scanning = false;
+                        throw;
                     }
                 }
-                EditorGUI.indentLevel--;
 
-                serializedObject.ApplyModifiedProperties();
-            }
+                if (characterNames != null) {
+                    EditorGUILayout.PropertyField(characterNamesProperty);
 
-            if (Selection.activeObject is AudioNode audioNode) {
-                SerializedObject serializedObject = new SerializedObject(audioNode);
-                EditorGUILayout.LabelField("Volume");
-                audioNode.volume = EditorGUILayout.Slider(audioNode.volume, 0.0f, 1.0f);
-            }
+                    serializedNames.ApplyModifiedProperties();
+
+                } else {
+                    GUIStyle style = GUI.skin.textArea;
+                    style.wordWrap = true;
+
+                    EditorGUILayout.LabelField("Character Names asset has not been found: Please create one", style);
+                }
+
+                EditorGUILayout.Space();
+
+                //TODO: use the new dialogue base node here
+
+                if (Selection.activeObject is DialogueNode dialogueNode) {
+                    SerializedObject serializedObject = new SerializedObject(dialogueNode);
+
+                    DisplayHeader(dialogueNode.name + " Node");
+
+                    EditorGUI.indentLevel++;
+
+                    GUIStyle style = EditorStyles.textField;
+                    style.wordWrap = true;
+
+                    showColourSettings = EditorGUILayout.Foldout(showColourSettings, "Customisation Settings");
+                    EditorGUI.indentLevel++;
+                    {
+                        if (showColourSettings) {
+
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
+                            dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
+                            EditorGUILayout.LabelField("Text speed");
+                            dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 5.0f, 10.0f);
+                        }
+                    }
+                    EditorGUI.indentLevel--;
+
+                    EditorGUILayout.Space(15);
+
+                    showTextSettings = EditorGUILayout.Foldout(showTextSettings, "Text Settings");
+
+                    EditorGUI.indentLevel++;
+                    {
+                        if (showTextSettings) {
+                            dialogueNode.speech = EditorGUILayout.TextArea(dialogueNode.speech, style, GUILayout.Height(150));
+                        }
+                    }
+                    EditorGUI.indentLevel--;
+
+                    serializedObject.ApplyModifiedProperties();
+                } else if (Selection.activeObject is QuestionNode questionNode) {
+                    SerializedObject serializedObject = new SerializedObject(questionNode);
+
+                    DisplayHeader(questionNode.name + " Node");
+
+                    EditorGUI.indentLevel++;
+
+                    GUIStyle style = EditorStyles.textField;
+                    style.wordWrap = true;
+
+                    showColourSettings = EditorGUILayout.Foldout(showColourSettings, "Customisation Settings");
+
+                    EditorGUI.indentLevel++;
+                    {
+                        if (showColourSettings) {
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+                            questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
+                            EditorGUILayout.LabelField("Text speed");
+                            questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 5.0f, 10.0f);
+                        }
+                    }
+                    EditorGUI.indentLevel--;
+
+                    EditorGUILayout.Space(15);
+
+                    showTextSettings = EditorGUILayout.Foldout(showTextSettings, "Text Settings");
+
+                    EditorGUI.indentLevel++;
+                    {
+                        if (showTextSettings) {
+                            questionNode.speech = EditorGUILayout.TextArea(questionNode.speech, style, GUILayout.Height(150));
+
+                            EditorGUILayout.Space(5);
+                            EditorGUILayout.LabelField("Node Exits");
+                            EditorGUILayout.Space(5);
+
+                            for (int i = 0; i < questionNode.exits.Count; i++) {
+                                questionNode.exits[i] = EditorGUILayout.TextArea(questionNode.exits[i], GUILayout.Height(50));
+                            }
+
+                        }
+                    }
+                    EditorGUI.indentLevel--;
+
+                    serializedObject.ApplyModifiedProperties();
+                }
+
+                if (Selection.activeObject is AudioNode audioNode) {
+                    SerializedObject serializedObject = new SerializedObject(audioNode);
+                    EditorGUILayout.LabelField("Volume");
+                    audioNode.volume = EditorGUILayout.Slider(audioNode.volume, 0.0f, 1.0f);
+                }
 
                 if (Selection.activeObject is BaseNode && Selection.activeObject.GetType() != typeof(StartNode)) {
 
-                BaseNode node = Selection.activeObject as BaseNode;
+                    BaseNode node = Selection.activeObject as BaseNode;
 
-                DisplayHeader("Node Customisation");
+                    DisplayHeader("Node Customisation");
 
-                showNodeSettings = EditorGUILayout.Foldout(showNodeSettings, "Node Customisation Settings");
+                    showNodeSettings = EditorGUILayout.Foldout(showNodeSettings, "Node Customisation Settings");
 
-                EditorGUI.indentLevel++;
-                {
-                    if (showNodeSettings) {
-                        node.NodeColour = EditorGUILayout.ColorField("Node Colour", node.NodeColour);
+                    EditorGUI.indentLevel++;
+                    {
+                        if (showNodeSettings) {
+                            node.NodeColour = EditorGUILayout.ColorField("Node Colour", node.NodeColour);
+                        }
                     }
+                    EditorGUI.indentLevel--;
                 }
-                EditorGUI.indentLevel--;
             }
         }
 
-        public void DisplayHeader(string title) {
+        private static void DisplayHeader(string title) {
             GUIStyle style = new GUIStyle();
             style.fontSize = 20;
             style.normal.textColor = Color.white;

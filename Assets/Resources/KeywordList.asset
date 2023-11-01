@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ac1de29ea2c3143951bb6052c1fd9b, type: 3}
+  m_Name: KeywordList
+  m_EditorClassIdentifier: 
+  keywords:
+    _serializedList:
+    - Key: Equality
+      Value: 'Equality means each individual or group of people is given the same
+        resources and opportunity, regardless of their circumstances.  Providing
+        equal opportunities to everyone and protecting people from being discriminated
+        against. '
+    - Key: Equity
+      Value: Equity recognises that each person has a unique set of circumstances
+        and allocates the exact resources and opportunities needed to reach an equal
+        outcome.
+    - Key: 'Diversity '
+      Value: Recognises that everyone is different in a variety of visible and non-visible
+        ways, and those differences are recognised, promoted and celebrated.
+    - Key: Inclusion
+      Value: Inclusion is about ensuring that everyone feels valued and respected
+        as an individual, is comfortable and confident to be themselves and appreciated
+        as valuable.
+    - Key: Protected characteristics
+      Value: In the Equality Act 2010 nine characteristics were identified as protected.
+        These are Sex; Sexual Orientation; Gender Reassignment; Age; Disability;
+        Race; Religion or Belief; Pregnancy and Maternity and Marriage or Civil Partnership.
+    - Key: Discrimination
+      Value: Unfavourable or less favourable treatment because of a protected characteristic.
+    - Key: Direct Discrimination
+      Value: 'Direct discrimination - this is when someone treats you differently
+        and worse because of a protected characteristic. '
+    - Key: Indirect Discrimination
+      Value: Indirect discrimination - this is when a policy or rule has a worse
+        effect on you because of a protected characteristic.
+    - Key: Discrimination by Association
+      Value: "Discrimination by association \u2013 when you are treated worse than
+        another person, or other people, because you are connected to someone with
+        a protected characteristic. (Definition from the Equality and Human Rights
+        Commission)"
+    - Key: Perceived Discrimination
+      Value: "Perceived discrimination \u2013 when you are treated worse than another
+        person, or group of people because someone thinks that you have a protected
+        characteristic (Definition from the Equality and Human Rights Commission)"
+    - Key: Stereotype
+      Value: A stereotype is a generalised, widely held, often untrue and unfair
+        belief that people have about all people (or things) with a particular characteristic.
+    - Key: Micro Aggression
+      Value: Microaggressions are the everyday verbal, nonverbal, and environmental
+        slights, snubs, or insults, whether intentional or unintentional, which communicate
+        hostile, derogatory, or negative messages to target persons based solely
+        upon their marginalized group membership. In many cases, these hidden messages
+        may invalidate the group identity or experiential reality of target persons,
+        demean them on a personal or group level, communicate they are lesser human
+        beings, suggest they do not belong with the majority group, threaten and
+        intimidate, or relegate them to inferior status and treatment. (Derald Wing
+        Sue)
+    - Key: Micro Affirmation
+      Value: Micro-affirmations apparently small acts, which are often ephemeral
+        and hard-to-see, events that are public and private, often unconscious but
+        very effective, which occur wherever people wish to help others to succeed.
+        Micro-affirmations are tiny acts of opening doors to opportunity, gestures
+        of inclusion and caring, and graceful acts of listening. Micro-affirmations
+        lie in the practice of generosity, in consistently giving credit to others.
+        (Mary Rowe).
+    - Key: Bias
+      Value: A particular tendency, inclination, feeling or opinion to prefer one
+        thing over another that prevents objectivity.
+    - Key: Unconscious Bias
+      Value: Unconscious bias is when we make judgments or decisions based on our
+        prior experience, our own personal deep-seated thought patterns, assumptions
+        or interpretations, and we are not aware that we are doing it.
+    - Key: Privilege
+      Value: "Simple definition: A special advantage or opportunity that is available
+        to certain individuals, or groups. Privilege is a series of interrelated
+        hierarchies and power dynamics that touch all facets of social life: race,
+        class, gender, sexual orientation, education, religion, physical ability
+        etc. One thing to keep in mind when looking at how privilege operates is
+        that privilege, discrimination, and social groups all operate within interrelated
+        hierarchies of power, dominance, and exclusion. Just because someone is privileged
+        in one way doesn\u2019t mean they may not be underprivileged in another (and
+        vice-versa). It is therefore important to be aware of the various groups
+        to which one belongs in order to be able to question our own participation
+        in a system of discrimination and privilege (Peggy McIntosh) "
