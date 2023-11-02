@@ -52,6 +52,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &-6237062745644285256
@@ -106,6 +108,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &-5924864884783155258
@@ -121,7 +125,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2744, y: 216}
+  position: {x: 2872, y: 248}
   ports:
     keys:
     - entry
@@ -156,7 +160,7 @@ MonoBehaviour:
   m_Name: Start
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: -120}
+  position: {x: -456, y: -56}
   ports:
     keys:
     - exit
@@ -188,7 +192,7 @@ MonoBehaviour:
   m_Name: Characters
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -88}
+  position: {x: 280, y: -72}
   ports:
     keys:
     - entry
@@ -265,7 +269,7 @@ MonoBehaviour:
   m_Name: Characters
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 40, y: -104}
+  position: {x: 24, y: -72}
   ports:
     keys:
     - entry
@@ -353,6 +357,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &2067780649394909785
@@ -368,7 +374,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2376, y: 264}
+  position: {x: 2488, y: 264}
   ports:
     keys:
     - entry
@@ -401,12 +407,14 @@ MonoBehaviour:
   NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
   entry: 0
   ShowTextScrolling: 1
-  textSpeed: 1
+  textSpeed: 5
   characterNameIndex: 0
   speech: DEATH
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 0.089728706, b: 0, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &2406326448133103444
@@ -422,7 +430,7 @@ MonoBehaviour:
   m_Name: Background
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: -120}
+  position: {x: -216, y: -56}
   ports:
     keys:
     - entry
@@ -469,7 +477,7 @@ MonoBehaviour:
   m_Name: Dialogue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2376, y: 88}
+  position: {x: 2488, y: 88}
   ports:
     keys:
     - entry
@@ -508,6 +516,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &4879102779817130150
@@ -562,6 +572,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5206797931720448082
@@ -616,6 +628,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5395457192514148138
@@ -670,6 +684,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &8145723628785544222
@@ -685,7 +701,7 @@ MonoBehaviour:
   m_Name: Question
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2136, y: 24}
+  position: {x: 2184, y: 24}
   ports:
     keys:
     - entry
@@ -748,6 +764,8 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 25
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exits:
   - My empty arms were open.
   - My open arms were empty.
@@ -803,5 +821,7 @@ MonoBehaviour:
   nameColour: {r: 1, g: 1, b: 1, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}

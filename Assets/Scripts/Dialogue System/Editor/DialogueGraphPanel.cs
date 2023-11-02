@@ -36,7 +36,7 @@ namespace DialogueEditor {
             characterNames = Resources.Load("ScriptableObjects/CharacterNames") as CharacterNames;
 
             if (characterNames != null) {
-                serializedNames = new UnityEditor.SerializedObject(characterNames);
+                serializedNames = new SerializedObject(characterNames);
 
                 characterNamesProperty = serializedNames.FindProperty("list");
             } else {
@@ -54,14 +54,8 @@ namespace DialogueEditor {
                     try {
                         foreach (var n in NodeEditorWindow.current.graph.nodes) {
                             if (n.GetType().BaseType == typeof(DialogueBaseNode)) {
-                                string[] words = (n as DialogueBaseNode).speech.Split(' ');
-                                foreach (string word in words) {
-                                    if (word == "Equality") {
-                                        Debug.Log(word);
-                                    }
-
-                                    //Debug.Log("All Words: " + word);
-                                }
+                                DialogueBaseNode node = (DialogueBaseNode)n;
+                                node.CheckText();
                             }
                             scanning = false;
                         }

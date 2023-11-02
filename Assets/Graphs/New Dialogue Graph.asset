@@ -109,6 +109,7 @@ MonoBehaviour:
   nameColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
   exits:
   - Return
 --- !u!114 &-7928953159337221062
@@ -159,12 +160,11 @@ MonoBehaviour:
   ShowTextScrolling: 1
   textSpeed: 10
   characterNameIndex: 0
-  speech: 'Hey.. I need your help! Equality
-
-'
+  speech: Hey.. I need your help! <color=#00ff44>Equality</color>
   nameColour: {r: 0, g: 0.016628742, b: 1, a: 1}
-  textColour: {r: 0, g: 1, b: 0, a: 1}
+  textColour: {r: 1, g: 0.18094024, b: 0, a: 1}
   FontSize: 35
+  isFinishedGeneratingTextColour: 0
   exit: 0
   fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
 --- !u!114 &-7863795040202025321
@@ -379,6 +379,7 @@ MonoBehaviour:
   nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
   FontSize: 40
+  isFinishedGeneratingTextColour: 0
   exits:
   - I'm off the clock
   - Now to James
@@ -445,6 +446,7 @@ MonoBehaviour:
   nameColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
   exits:
   - Return
 --- !u!114 &-2798792977081820197
@@ -778,12 +780,11 @@ MonoBehaviour:
   ShowTextScrolling: 1
   textSpeed: 5
   characterNameIndex: 0
-  speech: 'Hello World
-
-'
+  speech: Hello World
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 25
+  isFinishedGeneratingTextColour: 0
   exits:
   - Nice to meet you
   - Go to Next person
@@ -839,6 +840,7 @@ MonoBehaviour:
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7100337924731504735
@@ -893,6 +895,7 @@ MonoBehaviour:
   nameColour: {r: 0.47843137, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
   FontSize: 45
+  isFinishedGeneratingTextColour: 0
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0.70456123, a: 1}
 --- !u!114 &8534876875604231978
@@ -971,6 +974,7 @@ MonoBehaviour:
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 55
+  isFinishedGeneratingTextColour: 0
   exits:
   - I'm off the clock
   - Now to Jess

@@ -1,4 +1,8 @@
+using System;
 using System.Collections;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 namespace Dialogue {
@@ -17,12 +21,17 @@ namespace Dialogue {
 
         public float FontSize;
 
+        public bool isFinishedGeneratingTextColour = false;
+
+        public string newSpeech = String.Empty;
+
         protected override void Create() {
             if(FontSize <= 0)
                 FontSize = 45.0f;
         }
 
         public override IEnumerator Run() {
+            CheckText();
             DisplayUI();
             yield return null;
             CallNextNode();
@@ -38,6 +47,36 @@ namespace Dialogue {
             DialogueUIManager.Instance.SetColour(nameColour, textColour);
         }
 
-        protected virtual void CallNextNode() { }
+        protected virtual void CallNextNode()
+        {
+        }
+
+        public void CheckText()
+        {
+            HighlightWord();
+        }
+
+        void HighlightWord()
+        {
+            string wordToHighlight = "Equality";
+
+            speech = speech.Replace("\n", string.Empty);
+
+            newSpeech = speech;
+
+            string[] words = newSpeech.Split(' ');
+
+            foreach (string word in words) {
+
+                if (word == wordToHighlight) // Check if the current word matches the wordToHighlight
+                {
+                    string newWord = "<color=#00ff44>" + wordToHighlight + "</color>";
+
+                    newSpeech = newSpeech.Replace(wordToHighlight, newWord);
+                }
+            }
+
+            isFinishedGeneratingTextColour = true;
+        }
     }
 }
