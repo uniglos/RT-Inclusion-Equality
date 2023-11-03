@@ -110,6 +110,7 @@ MonoBehaviour:
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exits:
   - Return
 --- !u!114 &-7928953159337221062
@@ -137,7 +138,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: 1380665374961569036}
+        node: {fileID: -1801321516072406291}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -149,7 +150,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: 8665348138387636095}
+        node: {fileID: -2161232288621272257}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -165,6 +166,7 @@ MonoBehaviour:
   textColour: {r: 1, g: 0.18094024, b: 0, a: 1}
   FontSize: 35
   isFinishedGeneratingTextColour: 0
+  newSpeech: Hey.. I need your help! <color=#00ff44>Equality</color>
   exit: 0
   fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
 --- !u!114 &-7863795040202025321
@@ -380,6 +382,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
   FontSize: 40
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exits:
   - I'm off the clock
   - Now to James
@@ -447,6 +450,7 @@ MonoBehaviour:
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exits:
   - Return
 --- !u!114 &-2798792977081820197
@@ -533,6 +537,54 @@ MonoBehaviour:
   imageLeft: {fileID: 2800000, guid: caff2d161b5ac0544ba724527d940845, type: 3}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 2800000, guid: 1a4e175bb64941c48a81503999607c08, type: 3}
+--- !u!114 &-2161232288621272257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3294640696f3a438a81b69f6e91100, type: 3}
+  m_Name: Sound Effect
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 488, y: -72}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -2161232288621272257}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: -7928953159337221062}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -2161232288621272257}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: 2350727214068701711}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
+  entry: 0
+  exit: 0
+  audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
+  volume: 0
 --- !u!114 &-2137497597794675930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +632,54 @@ MonoBehaviour:
   entry: 0
   exit: 0
   background: {fileID: 2800000, guid: 2ed135f51aa54004bbf51c08fa71c173, type: 3}
+--- !u!114 &-1801321516072406291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee3294640696f3a438a81b69f6e91100, type: 3}
+  m_Name: Sound Effect
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 232, y: -24}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: -1801321516072406291}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 2015819192184993124}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: -1801321516072406291}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -7928953159337221062}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
+  entry: 0
+  exit: 0
+  audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
+  volume: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,57 +708,10 @@ MonoBehaviour:
   - {fileID: -7928953159337221062}
   - {fileID: 5338453606239727926}
   - {fileID: 7100337924731504735}
-  - {fileID: 8665348138387636095}
-  - {fileID: 1380665374961569036}
   - {fileID: -6854231429567518701}
---- !u!114 &1380665374961569036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3294640696f3a438a81b69f6e91100, type: 3}
-  m_Name: Audio
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 104, y: -40}
-  ports:
-    keys:
-    - entry
-    - exit
-    values:
-    - _fieldName: entry
-      _node: {fileID: 1380665374961569036}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: exit
-        node: {fileID: 1879047742599048718}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: 1380665374961569036}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: entry
-        node: {fileID: -7928953159337221062}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
-  entry: 0
-  exit: 0
-  audioSound: {fileID: 8300000, guid: 0cbb889115000c34b8aa988a2e6f4ba7, type: 3}
-  volume: 1
+  - {fileID: -1801321516072406291}
+  - {fileID: -2161232288621272257}
+  - {fileID: 2015819192184993124}
 --- !u!114 &1879047742599048718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +749,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: entry
-        node: {fileID: 1380665374961569036}
+        node: {fileID: 2015819192184993124}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -708,6 +761,54 @@ MonoBehaviour:
   imageLeft: {fileID: 2800000, guid: 1a4e175bb64941c48a81503999607c08, type: 3}
   imageMiddle: {fileID: 2800000, guid: 904db9ecfd63e8c42bd4e5f84df079cd, type: 3}
   imageRight: {fileID: 2800000, guid: 7bba764b6315b064f928eacd30eeb771, type: 3}
+--- !u!114 &2015819192184993124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a4c07a9adf631438b8d1c7164f4700, type: 3}
+  m_Name: BGM
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 134.5, y: 135}
+  ports:
+    keys:
+    - entry
+    - exit
+    values:
+    - _fieldName: entry
+      _node: {fileID: 2015819192184993124}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: exit
+        node: {fileID: 1879047742599048718}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 2015819192184993124}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: entry
+        node: {fileID: -1801321516072406291}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
+  entry: 0
+  exit: 0
+  audioSound: {fileID: 8300000, guid: aa103a027fb3e6840aeee0c6ec419159, type: 3}
+  volume: 1
 --- !u!114 &2350727214068701711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,7 +836,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       connections:
       - fieldName: exit
-        node: {fileID: 8665348138387636095}
+        node: {fileID: -2161232288621272257}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -785,6 +886,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 25
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exits:
   - Nice to meet you
   - Go to Next person
@@ -841,6 +943,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 45
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7100337924731504735
@@ -896,6 +999,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
   FontSize: 45
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0.70456123, a: 1}
 --- !u!114 &8534876875604231978
@@ -975,57 +1079,10 @@ MonoBehaviour:
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 55
   isFinishedGeneratingTextColour: 0
+  newSpeech: 
   exits:
   - I'm off the clock
   - Now to Jess
---- !u!114 &8665348138387636095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee3294640696f3a438a81b69f6e91100, type: 3}
-  m_Name: Audio
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 440, y: -56}
-  ports:
-    keys:
-    - entry
-    - exit
-    values:
-    - _fieldName: entry
-      _node: {fileID: 8665348138387636095}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: exit
-        node: {fileID: -7928953159337221062}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: exit
-      _node: {fileID: 8665348138387636095}
-      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      connections:
-      - fieldName: entry
-        node: {fileID: 2350727214068701711}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
-  entry: 0
-  exit: 0
-  audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
-  volume: 0.1
 --- !u!114 &8742330148275108583
 MonoBehaviour:
   m_ObjectHideFlags: 0

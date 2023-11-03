@@ -167,10 +167,17 @@ namespace DialogueEditor {
                     serializedObject.ApplyModifiedProperties();
                 }
 
-                if (Selection.activeObject is AudioNode audioNode) {
+                if (Selection.activeObject is SoundEffectNode audioNode) {
                     SerializedObject serializedObject = new SerializedObject(audioNode);
                     EditorGUILayout.LabelField("Volume");
                     audioNode.volume = EditorGUILayout.Slider(audioNode.volume, 0.0f, 1.0f);
+                }
+
+                if (Selection.activeObject is BGMNode BGMaudioNode)
+                {
+                    SerializedObject serializedObject = new SerializedObject(BGMaudioNode);
+                    EditorGUILayout.LabelField("Volume");
+                    BGMaudioNode.volume = EditorGUILayout.Slider(BGMaudioNode.volume, 0.0f, 1.0f);
                 }
 
                 if (Selection.activeObject is BaseNode && Selection.activeObject.GetType() != typeof(StartNode)) {

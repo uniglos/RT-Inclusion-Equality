@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace DialogueEditor {
-    [CustomNodeEditor(typeof(AudioNode))]
-    public class AudioNodeEditor : BaseNodeEditor {
+    [CustomNodeEditor(typeof(BGMNode))]
+    public class BGMEditor : BaseNodeEditor {
         public override void OnBodyGUI() {
-            AudioNode node = target as AudioNode;
+            BGMNode node = target as BGMNode;
             GenerateFields(node, serializedObject);
         }
     }

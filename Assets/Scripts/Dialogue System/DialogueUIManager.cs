@@ -43,7 +43,7 @@ namespace Dialogue {
 
         [Header("Audio")]
         private AudioSource audioManager;
-        private AudioClip audioSound;
+        //private AudioClip audioSound;
 
         // --- End
 
@@ -203,7 +203,7 @@ namespace Dialogue {
             return background;
         }
 
-        public AudioSource PlaySound(AudioClip audioSound, AudioNode node) {
+        public AudioSource PlaySoundEffect(AudioClip audioSound, SoundEffectNode node) {
 
             audioManager = GetComponent<AudioSource>();
             audioManager.clip = audioSound;
@@ -212,6 +212,7 @@ namespace Dialogue {
 
             return audioManager;
         }
+
 
         public void ChangeColour(Color colour) {
             fingerColour = colour;
