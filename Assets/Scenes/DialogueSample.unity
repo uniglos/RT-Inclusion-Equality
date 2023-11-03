@@ -404,6 +404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 550621486}
   - component: {fileID: 550621487}
+  - component: {fileID: 550621488}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -522,6 +523,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &550621488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550621485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff920cf38b936441bb10c5be452d68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMController: {fileID: 550621487}
 --- !u!1 &550651134
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +685,7 @@ GameObject:
   - component: {fileID: 1017068228}
   - component: {fileID: 1017068227}
   - component: {fileID: 1017068229}
+  - component: {fileID: 1017068230}
   m_Layer: 0
   m_Name: UI manager
   m_TagString: Untagged
@@ -702,7 +717,6 @@ MonoBehaviour:
   - {fileID: 1796404600}
   - {fileID: 2051703029}
   background: {fileID: 550651136}
-  BGMManager: {fileID: 550621487}
 --- !u!4 &1017068228
 Transform:
   m_ObjectHideFlags: 0
@@ -814,6 +828,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1017068230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017068226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff920cf38b936441bb10c5be452d68d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGMController: {fileID: 0}
 --- !u!1 &1129760788
 GameObject:
   m_ObjectHideFlags: 0
