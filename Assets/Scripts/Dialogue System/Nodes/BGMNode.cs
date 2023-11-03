@@ -8,7 +8,7 @@ namespace Dialogue {
         [Output][HideInInspector] public int exit;
 
         [HideInInspector] public AudioClip audioSound;
-        [HideInInspector] public float volume;
+        [HideInInspector] public float volume = 1f;
 
         public override IEnumerator Run() {
             BGMManager.Instance.PlaySoundBGM(audioSound, this);

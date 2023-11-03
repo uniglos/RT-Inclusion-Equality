@@ -1,13 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Dialogue {
     public class EndNode : BaseNode {
         [Input] public int entry;
 
-        public override IEnumerator Run() {
+        [SerializeField] string changeScene;
 
+
+
+        public override IEnumerator Run() {
+            
+            if(changeScene != null)
+            {
+                SceneManager.LoadScene(changeScene);
+            }
+            
             DialogueUIManager.Instance.EndDialogue();
             yield return null;
 

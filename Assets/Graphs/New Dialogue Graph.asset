@@ -110,7 +110,7 @@ MonoBehaviour:
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
   isFinishedGeneratingTextColour: 0
-  newSpeech: 
+  newSpeech: Ready to restart
   exits:
   - Return
 --- !u!114 &-7928953159337221062
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: End
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2664, y: -200}
+  position: {x: 2712, y: -136}
   ports:
     keys:
     - entry
@@ -305,6 +305,7 @@ MonoBehaviour:
       _dynamic: 0
   NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
   entry: 0
+  changeScene: test
 --- !u!114 &-5180030236870841224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -584,7 +585,7 @@ MonoBehaviour:
   entry: 0
   exit: 0
   audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
-  volume: 0
+  volume: 1
 --- !u!114 &-2137497597794675930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,7 +775,7 @@ MonoBehaviour:
   m_Name: BGM
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 134.5, y: 135}
+  position: {x: -8, y: -40}
   ports:
     keys:
     - entry
@@ -886,7 +887,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 25
   isFinishedGeneratingTextColour: 0
-  newSpeech: 
+  newSpeech: Hello World
   exits:
   - Nice to meet you
   - Go to Next person
@@ -943,7 +944,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 45
   isFinishedGeneratingTextColour: 0
-  newSpeech: 
+  newSpeech: Time to head home
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7100337924731504735
@@ -1079,7 +1080,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 1, b: 0, a: 1}
   FontSize: 55
   isFinishedGeneratingTextColour: 0
-  newSpeech: 
+  newSpeech: I'm ready to work
   exits:
   - I'm off the clock
   - Now to Jess
