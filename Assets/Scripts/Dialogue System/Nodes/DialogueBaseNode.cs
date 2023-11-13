@@ -25,8 +25,12 @@ namespace Dialogue {
 
         public string newSpeech = String.Empty;
 
+        private KeywordsList keywordList;
+
         protected override void Create() {
-            if(FontSize <= 0)
+            keywordList = Resources.Load<KeywordsList>("KeywordList");
+
+            if (FontSize <= 0)
                 FontSize = 45.0f;
         }
 
@@ -56,10 +60,11 @@ namespace Dialogue {
             HighlightWord();
         }
 
-        void HighlightWord()
+        /// <summary>
+        /// TODO: Call from the button inside the graph inspector
+        /// </summary>
+        public void HighlightWord()
         {
-            string wordToHighlight = "Equality";
-
             speech = speech.Replace("\n", string.Empty);
 
             newSpeech = speech;
@@ -68,11 +73,15 @@ namespace Dialogue {
 
             foreach (string word in words) {
 
-                if (word == wordToHighlight) // Check if the current word matches the wordToHighlight
+                foreach (var keyword in keywordList.keywords.Keys)
                 {
-                    string newWord = "<color=#00ff44>" + wordToHighlight + "</color>";
+                    if (word == keyword.ToString()) // Check if the current word matches the wordToHighlight
+                    {
+                        //string newWord = "<color=#00ff44>" + keyword + "</color>";
+                        string newWord = "<b><i>" + keyword + "</i></b>";
 
-                    newSpeech = newSpeech.Replace(wordToHighlight, newWord);
+                        newSpeech = newSpeech.Replace(keyword.ToString(), newWord);
+                    }
                 }
             }
 
