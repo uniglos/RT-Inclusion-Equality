@@ -99,6 +99,7 @@ namespace DialogueEditor {
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("fingerColour"));
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("fontAsset"));
                             dialogueNode.FontSize = EditorGUILayout.FloatField("Font Size", dialogueNode.FontSize);
                             EditorGUILayout.LabelField("Text speed");
                             dialogueNode.textSpeed = EditorGUILayout.Slider(dialogueNode.textSpeed, 5.0f, 10.0f);
@@ -136,6 +137,7 @@ namespace DialogueEditor {
                         if (showColourSettings) {
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("nameColour"));
                             EditorGUILayout.PropertyField(serializedObject.FindProperty("textColour"));
+                            EditorGUILayout.PropertyField(serializedObject.FindProperty("fontAsset"));
                             questionNode.FontSize = EditorGUILayout.FloatField("Font Size", questionNode.FontSize);
                             EditorGUILayout.LabelField("Text speed");
                             questionNode.textSpeed = EditorGUILayout.Slider(questionNode.textSpeed, 5.0f, 10.0f);

@@ -109,6 +109,7 @@ MonoBehaviour:
   nameColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  fontAsset: {fileID: 0}
   isFinishedGeneratingTextColour: 1
   newSpeech: Ready to restart
   exits:
@@ -159,14 +160,15 @@ MonoBehaviour:
   NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
   entry: 0
   ShowTextScrolling: 1
-  textSpeed: 10
+  textSpeed: 6.83
   characterNameIndex: 0
   speech: Hey.. I need your help! Equality
   nameColour: {r: 0, g: 0.016628742, b: 1, a: 1}
   textColour: {r: 1, g: 0.18094024, b: 0, a: 1}
   FontSize: 35
+  fontAsset: {fileID: 11400000, guid: cbf5b29df83f0c14b898340e4d4890c5, type: 2}
   isFinishedGeneratingTextColour: 0
-  newSpeech: Hey.. I need your help! <color=#00ff44>Equality</color>
+  newSpeech: Hey.. I need your help! <b><i>Equality</i></b>
   exit: 0
   fingerColour: {r: 0, g: 0.8562715, b: 1, a: 1}
 --- !u!114 &-7863795040202025321
@@ -382,6 +384,7 @@ MonoBehaviour:
   nameColour: {r: 0.47789955, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.8985245, b: 1, a: 1}
   FontSize: 40
+  fontAsset: {fileID: 0}
   isFinishedGeneratingTextColour: 1
   newSpeech: I know where the answer is
   exits:
@@ -450,6 +453,7 @@ MonoBehaviour:
   nameColour: {r: 1, g: 0, b: 0, a: 1}
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
+  fontAsset: {fileID: 0}
   isFinishedGeneratingTextColour: 1
   newSpeech: Ready to restart
   exits:
@@ -886,9 +890,10 @@ MonoBehaviour:
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.885386, b: 1, a: 1}
   FontSize: 25
+  fontAsset: {fileID: 11400000, guid: c4dfd2f6596f7c4428a482b0e0ee2398, type: 2}
   isFinishedGeneratingTextColour: 0
-  newSpeech: Hello <color=#00ff44>Equality</color> World Diversity <color=#00ff44>Equity</color>
-    <color=#00ff44>Inclusion</color>
+  newSpeech: Hello <b><i>Equality</i></b> World <b><i>Diversity</i></b>  <b><i>Equity</i></b>
+    <b><i>Inclusion</i></b>
   exits:
   - Nice to meet you
   - Go to Next person
@@ -944,6 +949,7 @@ MonoBehaviour:
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.6277771, b: 1, a: 1}
   FontSize: 45
+  fontAsset: {fileID: 0}
   isFinishedGeneratingTextColour: 1
   newSpeech: Time to head home
   exit: 0
@@ -1000,6 +1006,7 @@ MonoBehaviour:
   nameColour: {r: 0.47843137, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.8980392, b: 1, a: 1}
   FontSize: 45
+  fontAsset: {fileID: 0}
   isFinishedGeneratingTextColour: 1
   newSpeech: Time to head home
   exit: 0
@@ -1080,7 +1087,8 @@ MonoBehaviour:
   nameColour: {r: 0, g: 0, b: 1, a: 1}
   textColour: {r: 0, g: 0.288177, b: 1, a: 1}
   FontSize: 55
-  isFinishedGeneratingTextColour: 1
+  fontAsset: {fileID: 0}
+  isFinishedGeneratingTextColour: 0
   newSpeech: I'm ready to work
   exits:
   - I'm off the clock

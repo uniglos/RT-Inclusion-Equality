@@ -21,6 +21,8 @@ namespace Dialogue {
 
         public float FontSize;
 
+        public TMP_FontAsset fontAsset;
+
         public bool isFinishedGeneratingTextColour = false;
 
         public string newSpeech = String.Empty;
@@ -49,6 +51,7 @@ namespace Dialogue {
             DialogueUIManager.Instance.ClearButton();
             DialogueUIManager.Instance.DisplayText(this);
             DialogueUIManager.Instance.SetColour(nameColour, textColour);
+            DialogueUIManager.Instance.ChangeFont(fontAsset);
         }
 
         protected virtual void CallNextNode()

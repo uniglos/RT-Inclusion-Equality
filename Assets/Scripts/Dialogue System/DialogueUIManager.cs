@@ -115,6 +115,12 @@ namespace Dialogue {
             }
         }
 
+        public void ChangeFont(TMPro.TMP_FontAsset font)
+        {
+            characterText.font = font;
+            speechText.font = font;
+        }
+
         public void ClearButton() {
             buttonHolder.gameObject.SetActive(false);
 
