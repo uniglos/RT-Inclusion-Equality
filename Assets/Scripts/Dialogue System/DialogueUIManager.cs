@@ -5,9 +5,11 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dialogue {
+namespace Dialogue
+{
     [ExecuteInEditMode]
-    public class DialogueUIManager : MonoBehaviour {
+    public class DialogueUIManager : MonoBehaviour
+    {
 
         // --- Properties
 
@@ -17,7 +19,7 @@ namespace Dialogue {
 
         public TMP_Text SpeechText
         {
-            get { return speechText;  }
+            get { return speechText; }
             set { speechText = value; }
         }
 
@@ -63,10 +65,13 @@ namespace Dialogue {
 
         // --- End
 
-        private void Awake() {
-            if (Instance == null) {
+        private void Awake()
+        {
+            if (Instance == null)
+            {
                 Instance = this;
-            } else {
+            } else
+            {
                 Destroy(Instance);
             }
 
@@ -78,38 +83,56 @@ namespace Dialogue {
         /// <summary>
         /// Ends the Dialogue
         /// </summary>
-        public void EndDialogue() {
+        public void EndDialogue()
+        {
             mainPanel.SetActive(false);
             ClearButton();
         }
 
-        public void ClearImageAtIndex(int index) {
+        public void ClearImageAtIndex(int index)
+        {
             images[index].sprite = null;
         }
 
-        public void ClearAllImages() {
-            foreach (var image in images) {
-                image.gameObject.SetActive(false);
+        public void ClearAllImages(CharactersNode charactersNode)
+        {
+            if (images[0].sprite.texture != charactersNode.imageLeft)
+            {
+                //Debug.Log("images[0].sprite > " + images[0].sprite.texture);
+                //Debug.Log("charactersNode.imageLeft > " + charactersNode.imageLeft);
+                images[0].gameObject.SetActive(false);
+            }
+            if (images[1].sprite.texture != charactersNode.imageMiddle)
+            {
+                images[1].gameObject.SetActive(false);
+            }
+            if (images[2].sprite.texture != charactersNode.imageRight)
+            {
+                images[2].gameObject.SetActive(false);
             }
         }
 
         /// <summary>
         /// Displays Text on the screen
         /// </summary>
-        public void DisplayText(DialogueBaseNode node) {
+        public void DisplayText(DialogueBaseNode node)
+        {
             StopAllCoroutines();
 
             characterText.text = characterNames.list[node.characterNameIndex];
             itemInfo = node.newSpeech;
 
-            if (node.isFinishedGeneratingTextColour) {
+            if (node.isFinishedGeneratingTextColour)
+            {
                 StartCoroutine(AnimateText(node.textSpeed));
                 node.isFinishedGeneratingTextColour = false;
             }
         }
 
-        IEnumerator AnimateText(float speed) {
-            for (int i = 0; i < itemInfo.Length + 1; i++) {
+        IEnumerator AnimateText(float speed)
+        {
+            for (int i = 0; i < itemInfo.Length + 1; i++)
+            {
                 speechText.text = itemInfo[..i];
                 yield return new WaitForSeconds(1 / (speed * TEXTSPEED));
             }
@@ -121,12 +144,14 @@ namespace Dialogue {
             speechText.font = font;
         }
 
-        public void ClearButton() {
+        public void ClearButton()
+        {
             buttonHolder.gameObject.SetActive(false);
 
             buttons.Clear();
 
-            foreach (Transform child in buttonHolder) {
+            foreach (Transform child in buttonHolder)
+            {
                 Destroy(child.gameObject);
             }
         }
@@ -134,21 +159,24 @@ namespace Dialogue {
         /// <summary>
         /// Displays the buttons on the screen
         /// </summary>
-        public void DisplayButtons(BaseNode node) {
+        public void DisplayButtons(BaseNode node)
+        {
             QuestionNode dialogueNode = (QuestionNode)node;
 
             buttonHolder.gameObject.SetActive(true);
 
             buttons.Clear();
 
-            foreach (Transform child in buttonHolder) {
+            foreach (Transform child in buttonHolder)
+            {
                 Destroy(child.gameObject);
             }
 
             int index = 0;
 
             //Loops through the exits in the dialogue node
-            foreach (string n in dialogueNode.exits) {
+            foreach (string n in dialogueNode.exits)
+            {
                 //Creates the button on the UI
                 GameObject button = Instantiate(buttonObject, buttonHolder);
                 buttons.Add(button);
@@ -161,36 +189,44 @@ namespace Dialogue {
             }
         }
 
-        public void DisplayImages(BaseNode node) {
-            if (node is not CharactersNode) {
+        public void DisplayImages(BaseNode node)
+        {
+            if (node is not CharactersNode)
+            {
                 return;
             }
 
             CharactersNode charactersNode = (CharactersNode)node;
 
-            ClearAllImages();
+            ClearAllImages(charactersNode);
 
-            if (charactersNode.imageLeft != null) {
+            if (charactersNode.imageLeft != null)
+            {
                 LoadImageAtIndex(0, charactersNode.imageLeft);
             }
-            if (charactersNode.imageMiddle != null) {
+            if (charactersNode.imageMiddle != null)
+            {
                 LoadImageAtIndex(1, charactersNode.imageMiddle);
             }
-            if (charactersNode.imageRight != null) {
+            if (charactersNode.imageRight != null)
+            {
                 LoadImageAtIndex(2, charactersNode.imageRight);
             }
         }
 
 
-        private void AnswerButton(BaseNode node, int index) {
+        private void AnswerButton(BaseNode node, int index)
+        {
             node.NextNode("exits " + index);
         }
 
         /// <summary>
         /// Returns an Image at the index (0 = left, 1 = centre, 2 = right)
         /// </summary>
-        private Image LoadImageAtIndex(int index, Texture2D imageSprite) {
-            if (images.Count < 0) {
+        private Image LoadImageAtIndex(int index, Texture2D imageSprite)
+        {
+            if (images.Count < 0)
+            {
                 return null;
             }
 
@@ -200,16 +236,19 @@ namespace Dialogue {
             return image;
         }
 
-        public Image LoadBackground(Texture2D backgroundSprite) {
+        public Image LoadBackground(Texture2D backgroundSprite)
+        {
 
-            if (backgroundSprite != null) {
+            if (backgroundSprite != null)
+            {
                 background.sprite = Sprite.Create(backgroundSprite, new Rect(0, 0, backgroundSprite.width, backgroundSprite.height), Vector2.zero);
             }
 
             return background;
         }
 
-        public AudioSource PlaySoundEffect(AudioClip audioSound, SoundEffectNode node) {
+        public AudioSource PlaySoundEffect(AudioClip audioSound, SoundEffectNode node)
+        {
 
             audioManager = GetComponent<AudioSource>();
             audioManager.clip = audioSound;
@@ -220,26 +259,31 @@ namespace Dialogue {
         }
 
 
-        public void ChangeColour(Color colour) {
+        public void ChangeColour(Color colour)
+        {
             fingerColour = colour;
             fingerIcon.GetComponent<Image>().color = new Color(fingerColour.r, fingerColour.g, fingerColour.b, fingerColour.a);
         }
 
-        public void SetColour(Color Ncolour, Color colour) {
+        public void SetColour(Color Ncolour, Color colour)
+        {
             nameColour = Ncolour;
             characterText.GetComponent<TMPro.TMP_Text>().color = new Color(nameColour.r, nameColour.g, nameColour.b, 1);
             textColour = colour;
             speechText.GetComponent<TMPro.TMP_Text>().color = new Color(textColour.r, textColour.g, textColour.b, 1);
         }
 
-        public void SetMouseIconActive(bool active) {
-            if (fingerIcon) {
+        public void SetMouseIconActive(bool active)
+        {
+            if (fingerIcon)
+            {
                 fingerObject.SetActive(active);
                 fingerIcon.enabled = active;
             }
         }
 
-        public void SetFontSize(float fontSize) {
+        public void SetFontSize(float fontSize)
+        {
             speechText.fontSize = fontSize;
         }
     }

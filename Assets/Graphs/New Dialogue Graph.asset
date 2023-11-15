@@ -110,7 +110,7 @@ MonoBehaviour:
   textColour: {r: 1, g: 1, b: 1, a: 1}
   FontSize: 45
   fontAsset: {fileID: 0}
-  isFinishedGeneratingTextColour: 1
+  isFinishedGeneratingTextColour: 0
   newSpeech: Ready to restart
   exits:
   - Return
@@ -217,9 +217,9 @@ MonoBehaviour:
   NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
   entry: 0
   exit: 0
-  imageLeft: {fileID: 2800000, guid: caff2d161b5ac0544ba724527d940845, type: 3}
+  imageLeft: {fileID: 2800000, guid: 7bba764b6315b064f928eacd30eeb771, type: 3}
   imageMiddle: {fileID: 0}
-  imageRight: {fileID: 2800000, guid: 7bba764b6315b064f928eacd30eeb771, type: 3}
+  imageRight: {fileID: 2800000, guid: caff2d161b5ac0544ba724527d940845, type: 3}
 --- !u!114 &-7604247560053376042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
   NodeColour: {r: 0.3529412, g: 0.38039216, b: 0.4117647, a: 1}
   entry: 0
   exit: 0
-  imageLeft: {fileID: 2800000, guid: 7bba764b6315b064f928eacd30eeb771, type: 3}
+  imageLeft: {fileID: 2800000, guid: 1a4e175bb64941c48a81503999607c08, type: 3}
   imageMiddle: {fileID: 0}
   imageRight: {fileID: 2800000, guid: caff2d161b5ac0544ba724527d940845, type: 3}
 --- !u!114 &-6854231429567518701
@@ -589,7 +589,7 @@ MonoBehaviour:
   entry: 0
   exit: 0
   audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
-  volume: 1
+  volume: 0
 --- !u!114 &-2137497597794675930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   entry: 0
   exit: 0
   audioSound: {fileID: 8300000, guid: 525f1ba7e8212da4aa85634a0603ff43, type: 3}
-  volume: 1
+  volume: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   entry: 0
   exit: 0
   audioSound: {fileID: 8300000, guid: aa103a027fb3e6840aeee0c6ec419159, type: 3}
-  volume: 1
+  volume: 0
 --- !u!114 &2350727214068701711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,7 +950,7 @@ MonoBehaviour:
   textColour: {r: 0, g: 0.6277771, b: 1, a: 1}
   FontSize: 45
   fontAsset: {fileID: 0}
-  isFinishedGeneratingTextColour: 1
+  isFinishedGeneratingTextColour: 0
   newSpeech: Time to head home
   exit: 0
   fingerColour: {r: 1, g: 0, b: 0, a: 1}
